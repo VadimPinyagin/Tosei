@@ -1,0 +1,18 @@
+@import "https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;444&display=swap";
+// заменить ; на %3B
+
+// Для заголовков для примера шрифт из гугла Comfortaa
+// Для обычного текста с локальным подключениям Mulish
+
+@mixin font-face($name, $path, $weight: null, $style: null) {
+  @font-face {
+    font-family: $name;
+    src: url("#{$path}.woff2") format("woff2");
+    font-weight: $weight;
+    font-style: $style;
+    font-display: swap;
+  }
+}
+
+// TODO: Не забудь добавить шрифты в /source/data/global, раздел preloadFonts для формирования preload
+@include font-face("Mulish", "../../fonts/Mulish-Regular", 400, normal);

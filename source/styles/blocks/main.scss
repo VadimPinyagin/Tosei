@@ -1,0 +1,9 @@
+.main {
+  word-break: break-word;
+
+  a:not([class]) {
+    color: var(--bright, #ff0000);
+    text-decoration: none;
+    font-weight: 500;
+  }
+}

@@ -1,0 +1,23 @@
+/* GLOBAL */
+@use "global/fonts";
+@use "global/root";
+@use "global/root-icons";
+@use "global/global";
+
+/* BLOCKS */
+@use "blocks/header";
+@use "blocks/footer";
+@use "blocks/main";
+@use "blocks/nav";
+@use "blocks/btn-toggle";
+@use "blocks/theme-toggle";
+@use "blocks/btn";
+@use "blocks/to-top";
+@use "blocks/modal";
+@use "blocks/form";
+@use "blocks/is-valid";
+@use "blocks/social";
+@use "blocks/scroll-table";
+@use "blocks/logo";
+@use "blocks/content";
+@use "blocks/intro";

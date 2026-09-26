@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Мы в контакте",
+    "prefix": "vk",
+    "link": "#",
+    "icon": "social-vk"
+  },
+  {
+    "title": "Мы в телеграме",
+    "prefix": "tg",
+    "link": "#",
+    "icon": "social-telegram"
+  }
+]

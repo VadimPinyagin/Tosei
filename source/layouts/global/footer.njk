@@ -1,0 +1,21 @@
+<footer class="page__footer footer">
+  <div class="footer__inner container">
+
+    {% include "../blocks/social.njk" %}
+
+    <p>
+      {% for phone in global.author.phones %}
+        <a href="tel:{{ phone | replace(" ", "") }}">{{ phone }}</a>
+      {% endfor %}
+    </p>
+    <p>
+      {{ global.author.address | safe }}
+    </p>
+    <p>
+      {{ global.author.schedule | safe }}
+    </p>
+
+    <p class="footer__year year" data-copyright>© <span data-startYear>{{ global.startDate }}</span>
+    </p>
+  </div>
+</footer>

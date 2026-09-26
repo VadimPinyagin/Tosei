@@ -1,0 +1,120 @@
+@use "../global/variables";
+@use "../global/mixins";
+
+:root {
+  // цвета для обозначения темы
+  --white-theme: #ffffff;
+  --dark-theme: #333333;
+
+  // цвет для третьей, фирменной темы
+  --unique-color-theme: rgba(0, 191, 255, 0.75);
+}
+
+.theme-toggle {
+  align-self: center;
+  position: relative;
+  display: grid;
+  gap: 5px;
+  border-radius: 1em;
+}
+
+.theme-toggle__title {
+  margin: 0;
+  font-size: 0.7rem;
+  font-weight: var(--main-font-weight, 400);
+  font-family: inherit;
+  color: inherit;
+  text-align: center;
+
+  @include mixins.md-max {
+    @include mixins.visually-hidden;
+  }
+}
+
+.theme-toggle__block {
+  display: none;
+
+  .theme-toggle:focus-within & {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 10px);
+    display: grid;
+    grid-template-columns: repeat(3, min-content);
+    gap: 0.8em;
+    padding: 0.7em;
+    border-radius: 1em;
+    background: var(--color-bg, #ffffff) linear-gradient(rgba(180, 180, 180, 0.2), rgba(180, 180, 180, 0.2));
+  }
+}
+
+.theme-toggle__btn {
+  justify-self: center;
+  display: flex;
+  place-items: center;
+  gap: 5px;
+  padding: 0.7em;
+  border: 0;
+  border-radius: 1em;
+  font-family: inherit;
+  background: rgba(180, 180, 180, 0.2);
+  color: inherit;
+
+  &::before {
+    --gradient-size: 1em;
+
+    --theme-light: var(--white-theme);
+    --theme-green: var(--unique-color-theme);
+    --theme-dark: var(--dark-theme);
+
+    --color1: var(--theme-green);
+    --color2: var(--theme-dark);
+
+    content: "";
+    width: 2.2em;
+    aspect-ratio: 2/1;
+
+    background: radial-gradient(circle closest-side, var(--color1) 0 95%, transparent 100%) no-repeat left center/ var(--gradient-size), radial-gradient(circle closest-side, var(--color2) 0 95%, transparent 100%) no-repeat right center /var(--gradient-size);
+
+    [data-color-theme="green"] & {
+      --color1: var(--theme-light);
+      --color2: var(--theme-dark);
+    }
+
+    [data-color-theme="dark"] & {
+      --color1: var(--theme-light);
+      --color2: var(--theme-green);
+    }
+  }
+}
+
+.theme-toggle__item {
+  margin: 0;
+}
+
+.theme-toggle__radio {
+  --check-color: transparent;
+  appearance: none;
+  display: flex;
+  place-items: center;
+  width: 1.8em;
+  aspect-ratio: 1;
+  margin: 0;
+  border-radius: 50%;
+  background-color: var(--radio-bg-color);
+
+  &:checked {
+    box-shadow: 0 0 0 3px var(--color, currencolor);
+  }
+}
+
+[value="light"] {
+  --radio-bg-color: #ffffff;
+}
+
+[value="dark"] {
+  --radio-bg-color: #333333;
+}
+
+[value="green"] {
+  --radio-bg-color: var(--unique-color-theme);
+}

@@ -1,0 +1,63 @@
+@use "variables";
+@use "mixins";
+
+:root {
+  --font-main: "Mulish", "Arial", sans-serif;
+  --font-second: "Comfortaa", "Arial", sans-serif;
+  --font-title: var(--font-second);
+  --font-btn: var(--font-main);
+  --font-input: var(--font-main);
+  --bold-fw: 700; // Опционально  --transparent: rgba(0, 0, 0, 0);
+  --color-inverse: #ffffff;
+  --gray-light: #ececec;
+  --gray: #c8c8c8;
+  --gray-semi: #a7a7a7;
+  --gray-dark: #373737;
+  --gray-darken: #191919;
+
+  --bright: #cf4551;
+  --light: #d3bbd7;
+  --dark: #0d2a49;
+
+  --bright-50: #{mixins.opacity(red, 50%)}; // color-mix
+
+  // Используется в градиенте и в частности в градиенте h1
+  --accent-1: #953c55;
+  --accent-2: #ee5f52;
+
+  --dark-color: #040303;
+
+  --danger: var(--bright);
+
+  --color-bg: var(--color-inverse);
+  --color: var(--gray-darken);
+  --color-nav-link: var(--bright);
+  --color-link: var(--bright);
+  --color-placeholder: var(--color);
+  --color-caret: var(--bright);
+  //--color-input: var(--color-inverse);
+  --color-input: inherit;
+  --color-input-border: var(--bright);
+  --color-input-bg: transparent;
+  --color-scroll: var(--bright);
+
+  --x-padding: 20px;
+  --y-padding: 30px;
+  --padding-section: 50px;
+
+  --section-indent: #{mixins.clampvw(50, 150)};
+
+  --gradient: linear-gradient(to right bottom, var(--accent-1), var(--accent-2));
+
+  --title-gradient: linear-gradient(to right, var(--accent-1), var(--accent-2));
+
+  --scroll-table-th-color: #e3d6fa;
+}
+
+@media (prefers-color-scheme: dark) {
+  //
+}
+
+@media (prefers-color-scheme: light) {
+  //
+}

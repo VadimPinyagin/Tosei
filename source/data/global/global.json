@@ -1,0 +1,25 @@
+{
+  "title": "Заголовок сайта",
+  "url": "https://my-site.ru/",
+  "language": "ru",
+  "description": "",
+  "startDate": "2025",
+  "author": {
+    "name": "Имя автора",
+    "tg": "name",
+    "tgNick": "name",
+    "whatsapp": "79111111111",
+    "email": "mail@list.ru",
+    "url": "https://mysite.ru",
+    "schedule": "Пн. – Пт.: с 9:00 до 18:00",
+    "address": "<span>Санкт-Петербург,</span> ул.&nbsp;Улица, д.1",
+    "phones": [
+      "+7 (812) 000 00 00",
+      "+7 (812) 000 00 00"
+    ]
+  },
+  "themeColor": "#990000",
+  "preloadFonts": [
+    "Mulish-Regular.woff2"
+  ]
+}

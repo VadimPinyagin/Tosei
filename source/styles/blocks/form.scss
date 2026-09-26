@@ -1,0 +1,134 @@
+@use "../global/variables";
+@use "../global/mixins";
+
+
+.form {
+  --form-base-font-size: 1rem;
+  font-size: var(--form-base-font-size);
+
+  //*:user-invalid {
+  //	color: var(--danger, #ff0000);
+  //}
+}
+
+.form__list {
+  display: grid;
+  row-gap: mixins.clampvw(35, 60);
+  padding-left: 0;
+  margin-bottom: mixins.clampvw(35, 80);
+  list-style-type: none;
+
+  @include mixins.sm {
+    grid-template-columns: 1fr 1fr;
+    column-gap: mixins.clampvw(50, 96);
+  }
+}
+
+.form__item {
+  display: grid;
+  height: 1.5em;
+}
+
+.form__item--textarea {
+  grid-column: 1/-1;
+  height: auto;
+}
+
+.form__input,
+.form__input--textarea {
+  --input-pl: 0;
+  //--input-pt: #{mixins.clampvw(8,12)};
+  --input-pt: 0;
+  //--input-pb: #{mixins.clampvw(8,12)};
+  --input-pb: 0; // из-за шрифта, но проверь в Сафари. Или что-то из ascent-override, descent-override и line-gap-override
+  grid-column: 1/2;
+  grid-row: 1/2;
+  width: 100%;
+  height: 100%;
+  font-size: inherit;
+
+  &:focus,
+  &:not(:placeholder-shown) {
+    z-index: 1;
+  }
+
+  &::placeholder {
+    display: none;
+    opacity: 0;
+  }
+}
+
+.form__label {
+  --pos: 1.5em;
+  position: relative;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  color: var(--color-label, currentColor);
+  transition: transform 0.5s, font-size 0.5s, color 0.5s;
+
+  .form__input:focus + & {
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  .form__input:focus + &,
+  .form__input:not(:placeholder-shown) + & {
+    //padding-bottom: var(--pos);
+    transform: translateY(calc(0px - var(--pos) - 3px));
+    font-size: 0.8rem;
+  }
+
+  span {
+    color: var(--danger, #ff0000);
+  }
+}
+
+.form__attention {
+  margin-top: 0.1em;
+  font-size: 0.8rem;
+}
+
+.form__attention--danger {
+  &::before {
+    //content: "❗";
+    content: "!!! ";
+    color: var(--danger, #ff0000);
+    font-weight: 700;
+  }
+}
+
+.form__conditions {
+  margin-bottom: mixins.clampvw(34, 60);
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+  }
+
+  label {
+    opacity: 0.5;
+  }
+
+  input {
+    --bgi: var(--icon-checkbox-empty, unset);
+    appearance: none;
+    display: inline-block;
+    vertical-align: middle;
+    width: 1.5em;
+    height: 1.5em;
+    mask: var(--bgi) no-repeat center / contain;
+    background: var(--bright, #999999);
+
+    &:checked {
+      --bgi: var(--icon-checkbox-checked, unset);
+    }
+  }
+}
+
+.form__links {
+
+  @include mixins.md-max {
+    display: none;
+  }
+}

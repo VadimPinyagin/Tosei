@@ -1,0 +1,73 @@
+<div class="modal hide lock-block" id="ask-question">
+  <div class="modal__body">
+
+    <section class="modal__content">
+      <h2 class="visually-hidden">Обратная связь</h2>
+      <form id="tg-form" class="form" method="post" action="/send.php">
+
+        {% set hasBtn = false %}
+        {% set blockClasses = "form__links" %}
+        {% set modifier = "contacts--modal" %}
+        {% set socialModifier = "social--modal" %}
+        {#        {% include "includes/contacts.njk" %} #}
+
+        <section id="is-valid-error" class="is-valid is-valid--error hide">
+          <div class="is-valid__body">
+            <h2>Ошибка</h2>
+            <p>Пожалуйста, проверьте правильность заполнения полей</p>
+          </div>
+        </section>
+        <ul class="form__list">
+          <li class="form__item">
+            <input id="username" class="form__input" name="user" type="text" placeholder="Ваше имя" data-focus required>
+            <label class="form__label" for="username">Ваше имя</label>
+          </li>
+          <li class="form__item">
+            <input id="email" class="form__input" name="email" type="email" placeholder="Ваш e-mail">
+            <label class="form__label" for="email">Ваш e-mail</label>
+          </li>
+          <li class="form__item">
+            <p class="form__attention">В любом формате</p>
+            <input id="phone" class="form__input" name="phone" type="tel" placeholder="Контактный телефон" required>
+            <label class="form__label" for="phone">Контактный телефон</label>
+          </li>
+          <li class="form__item">
+            <input id="tg" class="form__input" name="tg" type="text" placeholder="Телеграм" required>
+            <label class="form__label" for="tg">Ваш телеграм</label>
+          </li>
+          <li class="form__item form__item--textarea">
+            <p class="form__attention form__attention--danger">Тексты со ссылками отправлены не будут</p>
+            <textarea id="message" class="form__input form__input--textarea" name="message"
+                      placeholder="Текст сообщения" required></textarea>
+            <label class="form__label" for="message">Текст сообщения</label>
+          </li>
+        </ul>
+
+        <p class="form__conditions">
+          <input type="checkbox" name="conditions" id="conditions" required>
+          <label for="conditions">
+            Я прочитал(а) и принимаю условия <a href="#footer">политики конфиденциальности</a>.
+          </label>
+        </p>
+
+        <button class="btn btn--bright unlock" type="submit">Написать</button>
+      </form>
+    </section>
+    <button class="modal__btn btn btn--close unlock">╳</button>
+  </div>
+</div>
+
+<section id="is-valid-ok" class="is-valid is-valid--ok hide modal">
+  <div class="is-valid__body modal__body">
+    <h2>Ваше сообщение отправлено</h2>
+    <button class="modal__btn btn btn--close unlock">X</button>
+  </div>
+</section>
+
+{#<section id="is-valid-error" class="is-valid is-valid--error hide modal">
+  <div class="is-valid__body modal__body">
+    <h2>Ошибка</h2>
+    <p>Пожалуйста, заполните все обязательные поля</p>
+    <button class="modal__btn btn btn--close unlock">X</button>
+  </div>
+</section>#}

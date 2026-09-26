@@ -1,0 +1,67 @@
+{
+  "name": "gulp-template-njk",
+  "description": "Project template based on Gulp 4 and Nunjucks",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": "^22.15"
+  },
+  "type": "module",
+  "browserslist": [
+    "last 2 versions",
+    "not dead",
+    "not op_mini all",
+    "not and_uc > 0",
+    "not < 0.25%"
+  ],
+  "scripts": {
+    "lint:spaces": "editorconfig-cli",
+    "lint:styles": "stylelint \"source/styles/**/*.scss\"",
+    "lint:markup": "cd build && html-validator --quiet --continue",
+    "lint:html": "linthtml source/**/*.html --config .linthtmlrc",
+    "lint:bem": "gulp lintBem --silent",
+    "lint:scripts": "eslint . --ignore-path .gitignore",
+    "prelint": "gulp processMarkup --silent",
+    "lint": "npm-run-all -p lint:**",
+    "optimizeRaster": "gulp optimizeRaster",
+    "optimizeVector": "gulp optimizeVector",
+    "start": "gulp runDev",
+    "build": "gulp buildProd",
+    "preview": "gulp buildProd && gulp startServer"
+  },
+  "devDependencies": {
+    "@htmlacademy/editorconfig-cli": "3.0.0",
+    "@linthtml/linthtml": "0.10.2 ",
+    "browser-sync": "3.0.4",
+    "browserslist-to-esbuild": "2.1.1",
+    "eslint": "9.26.0",
+    "eslint-config-htmlacademy": "10.0.1",
+    "gulp": "4.0.2",
+    "gulp-data": "^1.3.1",
+    "gulp-esbuild": "0.12.0",
+    "gulp-html-bemlinter": "5.0.1",
+    "gulp-nunjucks": "^6.0.0",
+    "gulp-plumber": "1.2.1",
+    "gulp-postcss": "10.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "6.0.1",
+    "gulp-sharp-responsive": "0.4.1",
+    "gulp-stacksvg": "5.0.1",
+    "gulp-svgmin": "4.1.0",
+    "linthtml-config-htmlacademy": "1.1.0",
+    "npm-run-all": "4.1.5",
+    "postcss": "8.4.31",
+    "postcss-lightningcss": "1.0.0",
+    "postcss-url": "10.1.3",
+    "sass": "1.89.0",
+    "stylelint": "16.19.1",
+    "stylelint-config-htmlacademy": "4.2.3",
+    "w3c-html-validator": "1.8.3"
+  },
+  "overrides": {
+    "es5-ext": "0.10.53"
+  },
+  "volta": {
+    "node": "22.15.1"
+  }
+}

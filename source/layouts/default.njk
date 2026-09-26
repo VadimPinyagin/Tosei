@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="{{ global.language }}">
+<head>
+  {% include "./global/head.njk" %}
+  <title>{{ pageTitle or global.title | escape }}</title>
+</head>
+
+<body>
+
+<div class="page">
+
+  {% include "./global/header.njk" %}
+
+  <main class="page__main">
+
+    {% block main %}
+    {% endblock %}
+
+
+    <section class="container">
+      <h2>Section title</h2>
+      <p>
+        <button class="btn" data-modal-id="ask-question">Открыть модалку</button>
+      </p>
+
+    </section>
+
+
+    {% include "./blocks/ask-question.njk" %}
+
+  </main>
+
+  {# <main class="page__main">
+  {% for component in layout.components %}
+    {% set params = component.params %}
+  #}{# {% include "components/" + component.name + "/" + component.name + ".njk" %} #}{#
+  {% include "blocks/" + component.name + ".njk" %}
+{% endfor %}
+</main> #}
+
+  {% include "./global/footer.njk" %}
+
+</div>
+
+{% include "./global/to-top.njk" %}
+
+{% include "./global/scripts.njk" %}
+
+</body>
+</html>

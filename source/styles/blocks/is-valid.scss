@@ -1,0 +1,44 @@
+@use "../global/variables";
+@use "../global/mixins";
+
+.is-valid {
+  grid-column: 1/-1;
+  display: block;
+
+  &.hide {
+    display: none;
+  }
+}
+
+.is-valid--ok {
+  h2 {
+    text-align: center;
+  }
+}
+
+.is-valid--error {
+  padding: 1em;
+  margin-bottom: 3em;
+  font-size: mixins.clampvw(14, 18);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 1.2em;
+
+  .is-valid__body {
+    max-width: unset;
+  }
+
+  h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+    text-align: left;
+    color: var(--danger, #ff0000);
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.is-valid__body {
+  max-width: 500px;
+}

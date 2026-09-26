@@ -1,0 +1,203 @@
+@use "variables";
+@use "mixins";
+
+//* {
+//  --out-width: 2px;
+//  outline: var(--out-width) solid red;
+//  outline-offset: calc(0px - var(--out-width));
+//  &::before, &::after {
+//    outline: var(--out-width) solid lime;
+//    outline-offset: calc(0px - var(--out-width));
+//  }
+//}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: mixins.clampvw(14, 20);
+  font-weight: var(--main-font-weight, 400);
+  line-height: 1.5;
+  font-family: var(--font-main, Arial);
+  background-color: var(--color-bg, #ffffff);
+
+  &.mac {
+    // stylelint-disable-next-line
+    min-height: -webkit-fill-available; //  mobile viewport bug fix (webkit)
+  }
+}
+
+.body-with-open-modal {
+  overflow: hidden;
+}
+
+.page {
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  min-height: 100dvh;
+}
+
+.visually-hidden {
+  @include mixins.visually-hidden;
+}
+
+.wrapper {
+  //display: grid;
+  //grid-template-rows: auto 1fr auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 100vw;
+  min-height: 100vh;
+}
+
+.container {
+  @include mixins.container;
+}
+
+main {
+  flex-grow: 1;
+}
+
+img {
+  max-width: 100%;
+}
+
+@mixin input-style {
+  --input-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  padding: var(--input-pt, 12px) var(--input-pr, 14px) var(--input-pb, 12px) var(--input-pl, 14px);
+  background-color: var(--color-input-bg, #cacaca);
+  border: none;
+  border-bottom: 1px solid var(--color-input-border, currentColor);
+  border-radius: 0;
+  //box-shadow: var(--input-shadow);  font-family: var(--font-input);
+  font-stretch: inherit;
+  font-variation-settings: inherit; // font-size: 1.6rem; //iOS
+  // font-size: inherit;
+  // font-size: clampvw(14, 18);
+  font-size: 14px;
+  color: var(--color-input, inherit);
+  font-weight: 400; // поле с автозаполнением (убираем голубой цвет) - часть 1/2
+  &:-webkit-autofill,
+  &:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
+  }
+
+  // поле с автозаполнением (убираем голубой цвет) - часть 2/2
+  &[data-autocompleted] {
+    // stylelint-disable-next-line
+    background-color: transparent !important;
+  }
+  /* stylelint-disable declaration-no-important  */
+  &:-webkit-autofill::first-line,
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    // stylelint-disable-next-line
+    font-weight: 400;
+    font-family: var(--font-input, inherit) !important;
+  }
+
+  /* stylelint-enable */
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
+}
+
+$input-list: "input[type=\"text\"], input[type=\"email\"], input[type=\"tel\"], input[type=\"url\"], input[type=\"date\"], input[type=\"search\"], input[type=\"password\"], input[type=\"number\"], input[type=\"time\"], input[type=\"month\"], input[type=\"week\"]";
+
+#{$input-list} {
+  @include input-style;
+  line-height: 1;
+}
+
+textarea {
+  @include input-style;
+  min-height: 5em;
+  resize: vertical;
+}
+
+button {
+  font-stretch: inherit;
+  font-variation-settings: inherit;
+}
+
+strong,
+b {
+  font-weight: var(--bold-fw, 700);
+}
+
+h1 {
+  margin-top: 0;
+  font-size: mixins.clampvw(38, 64);
+  font-weight: 500;
+  font-family: var(--font-title, inherit);
+  line-height: 1.2;
+}
+
+h2 {
+  width: fit-content; // для полного заполнения градиентом
+  //margin-top: 0;
+  margin-bottom: 0.78em;
+  font-size: mixins.clampvw(16, 48);
+  font-weight: 400;
+  line-height: 1.09;
+  font-family: var(--font-title, inherit);
+  background: var(--title-gradient, rgba(0, 0, 0, 0)) repeat top;
+  color: transparent;
+  background-clip: text;
+}
+
+h3 {
+  //margin-top: 0;
+  margin-bottom: 0.78em;
+  font-size: mixins.clampvw(16, 24);
+  font-weight: 400;
+  line-height: 1.09;
+  font-family: var(--font-title, inherit);
+}
+
+a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+.bright {
+  color: var(--bright, #ff0000);
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 2px;
+  background: var(--gradient, currentColor);
+  font-size: mixins.clampvw(14, 16);
+  word-break: initial;
+
+  td,
+  th {
+    padding: 5px 20px;
+    background: #ffffff;
+    vertical-align: top;
+  }
+
+  th {
+    background: rgba(255, 255, 255, 0.84);
+  }
+}
+
+ul,
+ol {
+  display: grid;
+  gap: 1em;
+  padding-left: 1.1em;
+}

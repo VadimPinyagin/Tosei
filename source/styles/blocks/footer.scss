@@ -1,0 +1,12 @@
+@use "../global/mixins";
+
+.footer {
+  padding-block: mixins.clampvw(40, 120);
+  // Пример работы с миксином для image-set
+  background: #424242 mixins.image-set("bg.jpg") no-repeat top center / cover;
+  color: var(--color-inverse, #ffffff);
+
+  a {
+    color: inherit;
+  }
+}

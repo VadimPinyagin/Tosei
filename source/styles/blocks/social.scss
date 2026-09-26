@@ -1,0 +1,25 @@
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8em;
+  padding-left: 0;
+  margin-block: 0;
+  list-style-type: none;
+}
+
+.social__item {
+  //
+}
+
+.social__link {
+  color: inherit;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 2em;
+    aspect-ratio: 1;
+    mask: var(--icon, url("../../icons/social-vk.svg")) no-repeat center / contain;
+    background: currentColor;
+  }
+}

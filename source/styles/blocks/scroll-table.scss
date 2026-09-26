@@ -1,0 +1,38 @@
+.scroll-table--scroll {
+  padding: 10px;
+  border: 1px solid var(--gray-light, #dadada);
+  border-radius: var(--radius, 1px);
+  overflow-x: auto;
+
+  th {
+    background: var(--scroll-table-th-color, #ff0000);
+  }
+}
+
+
+.scroll-table--scroll th:first-child::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 8px;
+  height: calc(100% + 1px);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.25), transparent);
+}
+
+.scroll-table--scroll td:first-child,
+.scroll-table--scroll th:first-child {
+  position: sticky;
+  left: 0;
+}
+
+.scroll-table--scroll td:first-child::after,
+.scroll-table--scroll th:first-child::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 8px;
+  height: calc(100% + 1px);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.25), transparent);
+}
