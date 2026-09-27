@@ -1,43 +1,35 @@
 <header class="page__header header">
-
   <div class="header__inner container">
-    <a href="" class="header__logo logo logo--inner-page">
-      <img src="images/logo.svg" width="50" height="46" alt="">
+    <a class="header__logo logo" href="/">
+      <img src="images/logo.svg" width="40" height="40" alt="Tosei - автомобили из Японии с доставкой по все России">
     </a>
+    <button class="nav__toggle burger" type="button">
+      <span class="visually-hidden">Открыть/закрыть меню</span>
+    </button>
     <nav class="header__nav nav nav--inner-page">
-
-
-      {# <ul class="nav__list">
-      {% for item in navList %}
-        <li class="nav__item nav__item--{{ item.class }}">
-          <a href="/{{ item.link }}" class="nav__link nav__link--{{ item.class }}">{{ item.title }}</a>
-        {% if item.hasSubmenu %}
-          <ul class="nav__submenu">
-            {% for subitem in item.submenu %}
-              <li class="nav__sub-item">
-                <a href="/{{ subitem.link }}" class="nav__link nav__link--{{ subitem.class }}">{{ subitem.title }}</a>
-              </li>
-            {% endfor %}
-          </ul>
-        {% endif %}
-        </li>
-      {% endfor %}
-    </ul>
-      #}
-
-
-      {#   <ul class="nav__list">
-      {% for item in navList %}
+      <ul class="nav__list">
         <li class="nav__item">
-          <a href="/{{ item.link }}" class="nav__link nav__link--{{ item.class }}">{{ item.title | replace("__", "") }}</a>
+          <a class="nav__link" href="#">Услуги</a>
         </li>
-      {% endfor %}
-    </ul> #}
-
+        <li class="nav__item">
+          <a class="nav__link" href="#">Каталог&nbsp;техники</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#">Аукционы</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#">Информация</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#">О&nbsp;нас</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#">Отзывы</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#">Контакты</a>
+        </li>
+      </ul>
     </nav>
-
-
-    {% include "./theme-toggle.njk" %}
-
   </div>
 </header>

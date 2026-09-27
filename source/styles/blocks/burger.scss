@@ -1,23 +1,13 @@
 @use "../global/variables";
 @use "../global/mixins";
 
-.btn {
-  display: inline-block;
-  vertical-align: middle;
-  //min-width: 160px;
-  max-width: 100%;
-  //padding: 1.52em 3.24em;
-  padding: 1em 2.8em;
+.burger {
+  position: relative;
+  width: 40px;
+  aspect-ratio: 1;
   border: none;
-  //font-size: 16px;
-  font-size: mixins.clampvw(12, 21);
-  font-family: var(--font-btn, inherit);
-  //font-weight: 600;
-  font-weight: inherit;
-  line-height: normal;
-  text-decoration: none;
-  text-align: center;
   cursor: pointer;
+  background-color: var(--black);
 
   &:disabled {
     opacity: 0.8;
