@@ -1,14 +1,7 @@
-.header {
-  position: sticky;
-  top: 0;
-  border-bottom: 1px solid var(--bright, currentColor);
-  background: var(--color-bg, #ffffff);
-  z-index: 100;
-}
-
 .header__inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 50px;
+  gap: 136px;
+  padding: 20px;
 }

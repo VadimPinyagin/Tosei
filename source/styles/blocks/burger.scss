@@ -2,12 +2,26 @@
 @use "../global/mixins";
 
 .burger {
+  --icon: url("../../icons/burger.svg");
   position: relative;
   width: 40px;
   aspect-ratio: 1;
   border: none;
   cursor: pointer;
-  background-color: var(--black);
+  background-color: var(--black, #000000);
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 32px;
+    aspect-ratio: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    mask: var(--icon) no-repeat center / 34px 34px;
+    background-color: var(--white, #ffffff);
+  }
 
   &:disabled {
     opacity: 0.8;
@@ -20,6 +34,9 @@
   }
 }
 
+.burger--lines {
+
+}
 .btn--bright {
   position: relative;
   border: none;

@@ -1,3 +1,18 @@
 .logo {
   //
 }
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  text-decoration: none;
+}
+
+.logo__title {
+  text-transform: uppercase;
+  font-size: 34px;
+  font-weight: 700;
+  color: var(--black);
+  margin: 0;
+}

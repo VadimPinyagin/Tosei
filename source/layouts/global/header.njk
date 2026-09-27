@@ -2,34 +2,9 @@
   <div class="header__inner container">
     <a class="header__logo logo" href="/">
       <img src="images/logo.svg" width="40" height="40" alt="Tosei - автомобили из Японии с доставкой по все России">
+      <p class="logo__title">tosei</p>
     </a>
-    <button class="nav__toggle burger" type="button">
-      <span class="visually-hidden">Открыть/закрыть меню</span>
-    </button>
-    <nav class="header__nav nav nav--inner-page">
-      <ul class="nav__list">
-        <li class="nav__item">
-          <a class="nav__link" href="#">Услуги</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="#">Каталог&nbsp;техники</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="#">Аукционы</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="#">Информация</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="#">О&nbsp;нас</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="#">Отзывы</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="#">Контакты</a>
-        </li>
-      </ul>
-    </nav>
+    {% include "../blocks/burger.njk" %}
+{#    {% include "../blocks/nav.njk" %}#}
   </div>
 </header>
