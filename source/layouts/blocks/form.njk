@@ -1,24 +1,25 @@
 {% from "macros/fields.njk" import select, input, checkbox %}
 
-<form class="search-form {{ mixClass }}" action="#" method="post">
+<form class="form {{ mixClass }}" action="#" method="post">
 
   {% if formType == "filter" %}
-    <h2 class="search-form__title">Подбор автомобиля</h2>
+    <ul>
+      <li>{{ checkbox("Полная пошлина", "duty", true) }}</li>
+      <li>{{ checkbox("Распил или констуктор", "dismantling", true) }}</li>
+    </ul>
+    <ul>
+      <li>{{ select("Производитель", "brand", [{value: "not selected", text: "Не выбрано"}]) }}</li>
+      <li>{{ select("Марка", "model", [{value: "not selected", text: "Не выбрано"}]) }}</li>
+    </ul>
 
-    {# Вызываем 4 селекта (для примера передам пустые массивы опций []) #}
-    {{ select("Марка", "brand", [{value: "toyota", text: "Toyota"}, {value: "nissan", text: "Nissan"}]) }}
-    {{ select("Модель", "model", []) }}
-    {{ select("Год от", "year_from", []) }}
-    {{ select("Год до", "year_to", []) }}
 
-    {# Вызываем 2 поля ввода (например, цена от и до) #}
-    {{ input("Цена от", "number", "price_from") }}
-    {{ input("Цена до", "number", "price_to") }}
-
-    {# Вызываем 2 чекбокса #}
-    {{ checkbox("С аукциона", "auction", true) }}
-    {{ checkbox("В наличии", "stock") }}
-
+    <div class="form-group">
+      <span class="form-group__label">Год выпуска</span>
+      <ul class="form-group__select-wrapper">
+        <li>{{ select("", "year_from", [{value: "year_from", text: "от"}]) }}</li>
+        <li>{{ select("", "year_to", [{value: "year_to", text: "до"}]) }}</li>
+      </ul>
+    </div>
     <button class="search-form__button" type="submit">Показать авто</button>
   {% endif %}
 

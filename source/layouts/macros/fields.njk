@@ -1,8 +1,9 @@
-{# 1. Компонент выпадающего списка (Select) #}
-
 {% macro select(label, name, options) %}
-  <div class="form-field form-field--select">
-    <label class="form-field__label" for="field-{{ name }}">{{ label }}</label>
+  <div class="form__field form__field--select">
+    {% if label %}
+      <label class="form__field__label" for="field-{{ name }}">{{ label }}</label>
+    {% endif %}
+
     <select class="form-field__select" id="field-{{ name }}" name="{{ name }}">
       {% for option in options %}
         <option value="{{ option.value }}">{{ option.text }}</option>
@@ -11,7 +12,6 @@
   </div>
 {% endmacro %}
 
-{# 2. Компонент поля ввода (Input) #}
 {% macro input(label, type="text", name="", placeholder="") %}
   <div class="form-field form-field--input">
     <label class="form-field__label">{{ label }}</label>
@@ -19,7 +19,6 @@
   </div>
 {% endmacro %}
 
-{# 3. Компонент чекбокса (Checkbox) #}
 {% macro checkbox(label, name, checked=false) %}
   <label class="form-checkbox">
     <input class="form-checkbox__input" type="checkbox" name="{{ name }}" {% if checked %}checked{% endif %}>

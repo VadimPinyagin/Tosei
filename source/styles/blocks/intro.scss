@@ -5,9 +5,9 @@
 }
 
 .intro__bg {
+  background-color: var(--white, #ffffff);
   grid-row: 1/-1;
   grid-column: 1;
-  height: 100%;
   object-fit: cover;
 }
 
