@@ -1,0 +1,13 @@
+@use "../global/variables";
+@use "../global/mixins";
+
+.page{
+  margin: 0;
+  font-family: var(--font-main, "Arial"), sans-serif;
+  font-size: 14px;
+  font-weight: var(--main-font-weight, 400);
+
+  @media (min-width: variables.$lg) {
+//
+  }
+}

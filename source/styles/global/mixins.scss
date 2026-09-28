@@ -39,39 +39,8 @@ $layout-width: 1900; //указываем ширину макета, от кот
 
 //media
 
-@mixin esm {
-  @media (min-width: variables.$esm) {
-    @content;
-  }
-}
-
-@mixin sm {
-  @media (min-width: variables.$sm) {
-    @content;
-  }
-}
-
-@mixin md {
-  @media (min-width: variables.$md) {
-    @content;
-  }
-}
-
 @mixin lg {
   @media (min-width: variables.$lg) {
-    @content;
-  }
-}
-
-//@media (min-width: 1390px) {
-//@mixin _lg {
-//  @media (min-width: 1300px) {
-//    @content;
-//  }
-//}
-
-@mixin elg {
-  @media (min-width: variables.$elg) {
     @content;
   }
 }
@@ -81,61 +50,6 @@ $layout-width: 1900; //указываем ширину макета, от кот
     @content;
   }
 }
-
-@mixin md-max {
-  @media (max-width: variables.$md - 0.02px) {
-    @content;
-  }
-}
-
-@mixin sm-max {
-  @media (max-width: variables.$sm - 0.02px) {
-    @content;
-  }
-}
-
-@mixin esm-max {
-  @media (max-width: variables.$esm - 0.02px) {
-    @content;
-  }
-}
-
-//
-//@mixin _320 {
-//  @media (min-width: 320px) {
-//    @content;
-//  }
-//}
-//
-//@mixin _480 {
-//  @media (min-width: 480px) {
-//    @content;
-//  }
-//}
-//
-//@mixin _600 {
-//  @media (min-width: 600px) {
-//    @content;
-//  }
-//}
-//
-//@mixin _768 {
-//  @media (min-width: 768px) {
-//    @content;
-//  }
-//}
-//
-//@mixin _980 {
-//  @media (min-width: 980px) {
-//    @content;
-//  }
-//}
-//
-//@mixin _1170 {
-//  @media (min-width: 1170px) {
-//    @content;
-//  }
-//}
 
 @function str-replace($string, $search, $replace: "") {
   $index: str-index($string, $search);

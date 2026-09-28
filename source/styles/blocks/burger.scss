@@ -3,8 +3,9 @@
 
 .burger {
   --icon: url("../../icons/burger.svg");
+
   position: relative;
-  width: 40px;
+  min-width: 40px;
   aspect-ratio: 1;
   border: none;
   cursor: pointer;
@@ -14,7 +15,7 @@
     content: "";
     display: block;
     position: absolute;
-    width: 32px;
+    width: 34px;
     aspect-ratio: 1;
     top: 50%;
     left: 50%;
@@ -31,29 +32,5 @@
   &:focus {
     //outline: none;
     //opacity: 0.7;
-  }
-}
-
-.burger--lines {
-
-}
-.btn--bright {
-  position: relative;
-  border: none;
-  border-radius: 100vw; // для адаптивного скругления
-  background: var(--bright, #292929);
-  color: var(--color-inverse, #ffffff);
-  text-decoration: none;
-  //box-shadow: 0px 2px 27px rgba(18, 48, 154, 0.88);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-
-  &:hover,
-  &:focus {
-    //outline: none;
-    //opacity: 0.9;
-  }
-
-  &:active {
-    opacity: 0.8;
   }
 }
