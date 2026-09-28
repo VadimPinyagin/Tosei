@@ -1,0 +1,36 @@
+{% from "macros/fields.njk" import select, input, checkbox %}
+
+<form class="search-form {{ mixClass }}" action="#" method="post">
+
+  {% if formType == "filter" %}
+    <h2 class="search-form__title">Подбор автомобиля</h2>
+
+    {# Вызываем 4 селекта (для примера передам пустые массивы опций []) #}
+    {{ select("Марка", "brand", [{value: "toyota", text: "Toyota"}, {value: "nissan", text: "Nissan"}]) }}
+    {{ select("Модель", "model", []) }}
+    {{ select("Год от", "year_from", []) }}
+    {{ select("Год до", "year_to", []) }}
+
+    {# Вызываем 2 поля ввода (например, цена от и до) #}
+    {{ input("Цена от", "number", "price_from") }}
+    {{ input("Цена до", "number", "price_to") }}
+
+    {# Вызываем 2 чекбокса #}
+    {{ checkbox("С аукциона", "auction", true) }}
+    {{ checkbox("В наличии", "stock") }}
+
+    <button class="search-form__button" type="submit">Показать авто</button>
+  {% endif %}
+
+
+  {% if formType == "callback" %}
+    <h2 class="search-form__title">Оставить заявку</h2>
+
+    {# Для второй формы нам нужны только 2 поля ввода #}
+    {{ input("Ваше имя", "text", "user_name", "Введите имя") }}
+    {{ input("Телефон", "tel", "user_phone", "+7 (___) ___-__-__") }}
+
+    <button class="search-form__button" type="submit">Отправить</button>
+  {% endif %}
+
+</form>
