@@ -4,8 +4,7 @@
     {% include "./global/head.njk" %}
     <title>{{ pageTitle or global.title | escape }}</title>
   </head>
-  <body>
-  <div class="page">
+  <body class="page">
       {% include "./global/header.njk" %}
       {% include "./blocks/nav.njk" %}
     <main class="page__main">
@@ -13,7 +12,6 @@
       {% endblock %}
     </main>
     {% include "./global/footer.njk" %}
-  </div>
     {% include "./global/scripts.njk" %}
   </body>
 </html>

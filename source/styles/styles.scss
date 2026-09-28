@@ -5,6 +5,7 @@
 @use "global/global";
 
 /* BLOCKS */
+@use "blocks/page";
 @use "blocks/header";
 @use "blocks/container";
 @use "blocks/footer";
@@ -12,10 +13,7 @@
 @use "blocks/nav";
 @use "blocks/burger";
 @use "blocks/modal";
-@use "blocks/form";
-@use "blocks/is-valid";
 @use "blocks/social";
-@use "blocks/scroll-table";
 @use "blocks/logo";
 @use "blocks/content";
 @use "blocks/intro";

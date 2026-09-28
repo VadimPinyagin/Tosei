@@ -1,5 +1,26 @@
 @use "../global/mixins";
 
-.intro {
-  //
+.intro__inner {
+  display: grid;
+}
+
+.intro__bg {
+  grid-row: 1/-1;
+  grid-column: 1;
+  height: 100%;
+  object-fit: cover;
+}
+
+.intro__content {
+  grid-row: 1;
+  grid-column: 1;
+  z-index: 1;
+  margin: 44px 20px;
+}
+
+.intro__title {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--white, #ffffff);
+  margin: 0;
 }
