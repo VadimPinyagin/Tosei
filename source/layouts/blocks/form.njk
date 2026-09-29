@@ -1,23 +1,23 @@
 {% from "macros/fields.njk" import select, input, checkbox %}
 <form class="form {{ mixClass }}" action="#" method="post">
   {% if formType == "filter" %}
-    <fieldset class="{{ mixClass }}-modul">
+    <fieldset class="{{ mixClass }}-module">
     <legend class="visually-hidden">Формат таможенного оформления</legend>
       <ul class="{{ mixClass }}-list">
         <li class="{{ mixClass }}-item">{{ checkbox("Полная пошлина", "duty", true, "intro__form") }}</li>
-        <li class="{{ mixClass }}-item">{{ checkbox("Распил или констуктор", "dismantling", true, "intro__form" ) }}</li>
+        <li class="{{ mixClass }}-item">{{ checkbox("Распил или конструктор", "dismantling", true, "intro__form" ) }}</li>
       </ul>
     </fieldset>
-    <fieldset class="{{ mixClass }}-modul">
+    <fieldset class="{{ mixClass }}-module">
     <legend class="visually-hidden">Автомобиль</legend>
     <ul class="{{ mixClass }}-list">
       <li>{{ select("Производитель", "brand", [{value: "not selected", text: "Не выбрано"}], "form") }}</li>
       <li>{{ select("Марка", "model", [{value: "not selected", text: "Не выбрано"}], "form") }}</li>
     </ul>
   </fieldset>
-  <fieldset class="form__modul">
+  <fieldset class="form__module">
     <legend class="">Год выпуска</legend>
-      <ul class="form__modul-list">
+      <ul class="form__module-list">
         <li>{{ select("", "year_from", [{value: "year_from", text: "от"}]) }}</li>
         <li>{{ select("", "year_to", [{value: "year_to", text: "до"}]) }}</li>
       </ul>

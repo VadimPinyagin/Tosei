@@ -2,19 +2,23 @@
     {% if label %}
       <label class="{{ className }}__label" for="field-{{ name }}">{{ label }}</label>
     {% endif %}
-    <select class="{{ className }}__select" id="field-{{ name }}" name="{{ name }}">
+    <select class="{{ className }}__select" id="field-{{ name }}" name="{{ name }}"
+      {% if not label %} aria-label="{{ name }}"{% endif %}>
+
       {% for option in options %}
-        <option value="{{ option.value }}">{{ option.text }}</option>
+        <option value="{{ option.value }}" {% if option.disabled %}disabled{% endif %}{% if option.selected %}selected{% endif %}>
+          {{ option.text }}
+        </option>
       {% endfor %}
     </select>
 {% endmacro %}
 
 {% macro input(label, type="text", name="", placeholder="", className="") %}
-    <label class="{{ className }}__label">{{ label }}</label>
-    <input class="{{ className }}__input" type="{{ type }}" name="{{ name }}" placeholder="{{ placeholder }}">
+    <label class="{{ className }}__label" for="input-{{ name }}">{{ label }}</label>
+    <input class="{{ className }}__input" type="{{ type }}" name="{{ name }}" id="input-{{ name }}" placeholder="{{ placeholder }}">
 {% endmacro %}
 
 {% macro checkbox(label, name, checked=false, className="") %}
-  <input class="{{ className }}-input" type="checkbox" name="{{ name }}" {% if checked %}checked{% endif %}>
-  <label class="{{ className }}-checkbox">{{ label }}</label>
+  <input class="{{ className }}-input" type="checkbox" name="{{ name }}" id="check-{{ name }}" {% if checked %}checked{% endif %}>
+  <label class="{{ className }}-checkbox" for="check-{{ name }}">{{ label }}</label>
 {% endmacro %}
