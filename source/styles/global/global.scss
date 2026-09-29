@@ -17,6 +17,16 @@
   box-sizing: border-box;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 picture {
   display: contents;
+}
+
+.visually-hidden {
+  position: fixed;
+  transform: scale(0);
 }

@@ -1,27 +1,20 @@
-{% macro select(label, name, options) %}
-  <div class="form__field form__field--select">
+{% macro select(label, name, options, className="") %}
     {% if label %}
-      <label class="form__field__label" for="field-{{ name }}">{{ label }}</label>
+      <label class="{{ className }}__label" for="field-{{ name }}">{{ label }}</label>
     {% endif %}
-
-    <select class="form-field__select" id="field-{{ name }}" name="{{ name }}">
+    <select class="{{ className }}__select" id="field-{{ name }}" name="{{ name }}">
       {% for option in options %}
         <option value="{{ option.value }}">{{ option.text }}</option>
       {% endfor %}
     </select>
-  </div>
 {% endmacro %}
 
-{% macro input(label, type="text", name="", placeholder="") %}
-  <div class="form-field form-field--input">
-    <label class="form-field__label">{{ label }}</label>
-    <input class="form-field__input" type="{{ type }}" name="{{ name }}" placeholder="{{ placeholder }}">
-  </div>
+{% macro input(label, type="text", name="", placeholder="", className="") %}
+    <label class="{{ className }}__label">{{ label }}</label>
+    <input class="{{ className }}__input" type="{{ type }}" name="{{ name }}" placeholder="{{ placeholder }}">
 {% endmacro %}
 
-{% macro checkbox(label, name, checked=false) %}
-  <label class="form-checkbox">
-    <input class="form-checkbox__input" type="checkbox" name="{{ name }}" {% if checked %}checked{% endif %}>
-    <span class="form-checkbox__label">{{ label }}</span>
-  </label>
+{% macro checkbox(label, name, checked=false, className="") %}
+  <input class="{{ className }}-input" type="checkbox" name="{{ name }}" {% if checked %}checked{% endif %}>
+  <label class="{{ className }}-checkbox">{{ label }}</label>
 {% endmacro %}
