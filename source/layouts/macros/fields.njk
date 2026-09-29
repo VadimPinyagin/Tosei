@@ -1,8 +1,8 @@
 {% macro select(label, name, options, className="") %}
     {% if label %}
-      <label class="{{ className }}__label" for="field-{{ name }}">{{ label }}</label>
+      <label class="{{ className }}-label" for="field-{{ name }}">{{ label }}</label>
     {% endif %}
-    <select class="{{ className }}__select" id="field-{{ name }}" name="{{ name }}"
+    <select class="{{ className }}-select" id="field-{{ name }}" name="{{ name }}"
       {% if not label %} aria-label="{{ name }}"{% endif %}>
 
       {% for option in options %}
@@ -21,4 +21,8 @@
 {% macro checkbox(label, name, checked=false, className="") %}
   <input class="{{ className }}-input" type="checkbox" name="{{ name }}" id="check-{{ name }}" {% if checked %}checked{% endif %}>
   <label class="{{ className }}-checkbox" for="check-{{ name }}">{{ label }}</label>
+{% endmacro %}
+
+{% macro button(text, type="button", className="") %}
+  <button class="{{ className }}" type="{{ type }}">{{ text }}</button>
 {% endmacro %}

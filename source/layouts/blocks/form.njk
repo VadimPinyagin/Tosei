@@ -1,4 +1,4 @@
-{% from "macros/fields.njk" import select, input, checkbox %}
+{% from "macros/fields.njk" import select, input, checkbox, button %}
 <form class="form {{ mixClass }}" action="#" method="post">
   {% if formType == "filter" %}
     <fieldset class="{{ mixClass }}-module">
@@ -16,19 +16,30 @@
     </ul>
   </fieldset>
   <fieldset class="form__module">
-    <legend class="">Год выпуска</legend>
+    <legend class="form__module-legend">Год выпуска</legend>
       <ul class="form__module-list">
-        <li>{{ select("", "year_from", [{value: "year_from", text: "от"}]) }}</li>
-        <li>{{ select("", "year_to", [{value: "year_to", text: "до"}]) }}</li>
+        <li>{{ select("", "year_from", [{value: "year_from", text: "от"}], "form__module")}}</li>
+        <li>{{ select("", "year_to", [{value: "year_to", text: "до"}] , "form__module") }}</li>
       </ul>
   </fieldset>
-    <button class="form__button" type="submit">Показать авто</button>
+  <ul class="form__action">
+    <li class="form__action-item">{{ button("Расширенный поиск", "button", "form__module-extended") }}</li>
+    <li class="form__action-item">{{ button("Показать авто", "submit", "form__module-submit") }}</li>
+    <li class="form__actions-item form__actions-item--counter">
+      <p class="form__action-counter">Автомобилей в наличии: <output class="form__action-value">256</output></p>
+    </li>
+  </ul>
   {% endif %}
 
-  {% if formType == "callback" %}
-    <h2 class="search-form__title">Оставить заявку</h2>
-    {{ input("Ваше имя", "text", "user_name", "Введите имя") }}
-    {{ input("Телефон", "tel", "user_phone", "+7 (___) ___-__-__") }}
-    <button class="search-form__button" type="submit">Отправить</button>
+    {% if formType == "callback" %}
+    <fieldset class="form__module">
+      <legend class="visually-hidden">Контактные данные для обратной связи</legend>
+      <h2 class="form__title {% if formModifier %}form__title--{{ formModifier }}{% endif %}">Обратная связь</h2>
+      <ul>
+        <li>{{ input("Ваше имя", "text", "user_name", "Ввести", "form") }}</li>
+        <li>{{ input("Контактный телефон", "tel", "user_phone", "+7", "form") }}</li>
+      </ul>
+    </fieldset>
+    <button class="form__submit-btn {% if formModifier %}form__submit-btn--{{ formModifier }}{% endif %}" type="submit">Проконсультировать бесплатно</button>
   {% endif %}
 </form>
