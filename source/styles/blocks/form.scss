@@ -1,6 +1,6 @@
 .form {
   background-color: var(--white, #ffffff);
-  padding: 24px;
+  padding: 25px 24px 24px;
   box-shadow: 0 9px 34px rgba(58, 68, 83, 0.24);
   border-radius: 6px;
   display: flex;
@@ -26,7 +26,8 @@
 
 .form__list-item {
   display: flex;
-  gap: 8px;
+  row-gap: 9px;
+  column-gap: 8px;
   position: relative;
 
   &:not(:has(.form__module-checkbox)) {
@@ -36,7 +37,7 @@
   &:not(:has(.form__module-checkbox))::before {
     content: "";
     position: absolute;
-    right: 16px;
+    right: 10px;
     bottom: 12px;
     width: 20px;
     height: 20px;
@@ -49,6 +50,10 @@
   &:has(.form__module-select:focus-visible)::before {
     transform: rotate(180deg);
   }
+}
+
+.form__list--range {
+  gap: 8px;
 }
 
 .form__module-checkbox {
@@ -78,10 +83,13 @@
   border: none;
   background-color: var(--light-gray, #d3d3d3);
   border-radius: 2px;
-  padding: 12px 10px 12px;
+  padding: 14px 16px;
   font-family: var(--font-main, "Arial"), sans-serif;
   font-size: 16px;
   font-weight: var(--main-font-weight, 400);
   line-height: 1;
 }
 
+.form__legend {
+  padding: 3px 0 9px;
+}
