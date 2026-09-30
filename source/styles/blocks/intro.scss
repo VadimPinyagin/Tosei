@@ -24,29 +24,3 @@
   color: var(--white, #ffffff);
   margin: 44px 0;
 }
-
-.intro__form-modul {
-  margin: 0;
-  padding: 0;
-}
-
-.intro__form-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-.intro__form-item {
-  display: flex;
-}
-
-.intro__form-input {
-  appearance: none;
-  margin: 0;
-  width: 18px;
-  aspect-ratio: 1;
-  border-radius: 4px;
-  background-color: var(--basic-red, #ff0000);
-}

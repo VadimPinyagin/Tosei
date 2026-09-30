@@ -7,10 +7,10 @@
       <legend class="visually-hidden">Формат таможенного оформления</legend>
       <ul class="form__list">
         <li class="form__list-item">
-          {{ checkbox("Полная пошлина", "duty", true, "form") }}
+          {{ checkbox("Полная пошлина", "duty", true, "form__module") }}
         </li>
         <li class="form__list-item">
-          {{ checkbox("Распил или конструктор", "dismantling", true, "form") }}
+          {{ checkbox("Распил или конструктор", "dismantling", true, "form__module") }}
         </li>
       </ul>
     </fieldset>
@@ -19,10 +19,10 @@
       <legend class="visually-hidden">Автомобиль</legend>
       <ul class="form__list">
         <li class="form__list-item">
-          {{ select("Производитель", "brand", [{value: "not selected", text: "Не выбрано"}], "form") }}
+          {{ select("Производитель", "brand", [{value: "not selected", text: "Не выбрано"}], "form__module") }}
         </li>
         <li class="form__list-item">
-          {{ select("Марка", "model", [{value: "not selected", text: "Не выбрано"}], "form") }}
+          {{ select("Марка", "model", [{value: "not selected", text: "Не выбрано"}], "form__module") }}
         </li>
       </ul>
     </fieldset>
@@ -32,10 +32,10 @@
 
       <ul class="form__list form__list--range">
         <li class="form__list-item">
-          {{ select("", "year_from", [{value: "year_from", text: "от"}], "form") }}
+          {{ select("", "year_from", [{value: "year_from", text: "от"}], "form__module") }}
         </li>
         <li class="form__list-item">
-          {{ select("", "year_to", [{value: "year_to", text: "до"}], "form") }}
+          {{ select("", "year_to", [{value: "year_to", text: "до"}], "form__module") }}
         </li>
       </ul>
     </fieldset>

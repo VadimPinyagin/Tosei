@@ -19,8 +19,8 @@
 {% endmacro %}
 
 {% macro checkbox(label, name, checked=false, className="") %}
-  <input class="{{ className }}-input" type="checkbox" name="{{ name }}" id="check-{{ name }}" {% if checked %}checked{% endif %}>
-  <label class="{{ className }}-checkbox" for="check-{{ name }}">{{ label }}</label>
+  <input class="{{ className }}-checkbox" type="checkbox" name="{{ name }}" id="check-{{ name }}" {% if checked %}checked{% endif %}>
+  <label class="{{ className }}-label" for="check-{{ name }}">{{ label }}</label>
 {% endmacro %}
 
 {% macro button(text, type="button", className="") %}
