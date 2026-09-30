@@ -14,7 +14,6 @@
         </li>
       </ul>
     </fieldset>
-
     <fieldset class="form__module">
       <legend class="visually-hidden">Автомобиль</legend>
       <ul class="form__list">
@@ -26,10 +25,8 @@
         </li>
       </ul>
     </fieldset>
-
     <fieldset class="form__module">
       <legend class="form__legend">Год выпуска</legend>
-
       <ul class="form__list form__list--range">
         <li class="form__list-item">
           {{ select("", "year_from", [{value: "year_from", text: "от"}], "form__module") }}
@@ -39,7 +36,6 @@
         </li>
       </ul>
     </fieldset>
-
     <ul class="form__actions">
       <li class="form__actions-item">
         {{ button("Расширенный поиск", "button", "form__btn form__btn--extended") }}

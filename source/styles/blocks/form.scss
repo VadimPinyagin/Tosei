@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
-
+  font-size: 13px;
 }
 
 .form__module {
@@ -27,9 +27,27 @@
 .form__list-item {
   display: flex;
   gap: 8px;
+  position: relative;
 
   &:not(:has(.form__module-checkbox)) {
     flex-direction: column;
+  }
+
+  &:not(:has(.form__module-checkbox))::before {
+    content: "";
+    position: absolute;
+    right: 16px;
+    bottom: 12px;
+    width: 20px;
+    height: 20px;
+    background-color: var(--basic-red, #ff0000);
+    mask: url("../../icons/arrow_select.svg") no-repeat center / contain;
+    pointer-events: none;
+    transition: transform 0.3s ease;
+  }
+
+  &:has(.form__module-select:focus-visible)::before {
+    transform: rotate(180deg);
   }
 }
 
@@ -54,3 +72,16 @@
     line-height: 1.2;
   }
 }
+
+.form__module-select {
+  appearance: none;
+  border: none;
+  background-color: var(--light-gray, #d3d3d3);
+  border-radius: 2px;
+  padding: 12px 10px 12px;
+  font-family: var(--font-main, "Arial"), sans-serif;
+  font-size: 16px;
+  font-weight: var(--main-font-weight, 400);
+  line-height: 1;
+}
+
