@@ -1,17 +1,40 @@
 
 .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: inherit;
   font-weight: 500;
   line-height: 1;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 6px;
+  border-radius: 4px;
+  min-height: var(--h-btn, 44px);
+  background-color: var(--btn-bg);
+  font-size: var(--font-size-btn);
+  color: var(--color);
 }
 
 .btn--extended {
-  min-height: 49px;
+  --font-size-btn: 16px;
+  --color: var(--basic-red, red);
+  --btn-bg: var(--white, white);
+  --h-btn: 49px;
   border: 1px solid var(--medium-grey, gainsboro);
-  background-color: var(--white, white);
+
+  &::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: var(--basic-red, red);
+    mask: var(--arrow) no-repeat center / contain;
+  }
+}
+
+.btn--submit {
+  --font-size-btn: 18px;
+  --color: var(--white, white);
+  --btn-bg: var(--basic-red, red);
+  --h-btn: 54px;
+  border: none;
 }

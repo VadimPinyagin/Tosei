@@ -1,8 +1,6 @@
 .form {
-  --arrow: url("../../icons/arrow_select.svg");
-
   background-color: var(--white, white);
-  padding: 25px 24px 24px;
+  padding: 25px 24px 14px;
   box-shadow: 0 9px 34px var(--shadow-color, transparent);
   border-radius: 6px;
   display: flex;
@@ -100,4 +98,17 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form__counter {
+  color: var(--gray, gray);
+  font-weight: 500;
+  margin-block: 0 10;
+}
+
+.form__counter-value {
+  color: var(--basic-red, red);
 }
