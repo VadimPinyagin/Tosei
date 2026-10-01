@@ -1,0 +1,5 @@
+{% macro button(text, type="button", className="") %}
+  <button class="btn {% if className %}{{ className }}{% endif %}" type="{{ type }}">
+    {{ text }}
+  </button>
+{% endmacro %}

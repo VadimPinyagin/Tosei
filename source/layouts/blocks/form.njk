@@ -1,4 +1,5 @@
-{% from "macros/fields.njk" import select, input, checkbox, button %}
+{% from "macros/fields.njk" import select, input, checkbox %}
+{% from "macros/btn.njk" import button %}
 
 <form class="form {{ mixClass }}" action="#" method="post">
 
@@ -36,14 +37,14 @@
         </li>
       </ul>
     </fieldset>
-    <ul class="form__actions">
-      <li class="form__actions-item">
-        {{ button("Расширенный поиск", "button", "form__btn form__btn--extended") }}
+    <ul class="form__action">
+      <li class="form__action-item">
+        {{ button("Расширенный поиск", "button", "form__btn btn--extended") }}
       </li>
-      <li class="form__actions-item">
-        {{ button("Показать авто", "submit", "form__btn form__btn--submit") }}
+      <li class="form__action-item">
+        {{ button("Найти", "submit", "form__btn btn--submit") }}
       </li>
-      <li class="form__actions-item form__actions-item--counter">
+      <li class="form__action-item form__action-item--counter">
         <p class="form__counter">Автомобилей в наличии: <output class="form__counter-value">256</output></p>
       </li>
     </ul>

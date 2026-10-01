@@ -21,7 +21,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     mask: var(--icon) no-repeat center / 34px 34px;
-    background-color: var(--white, #ffffff);
+    background-color: var(--white, white);
   }
 
   &:disabled {

@@ -1,0 +1,17 @@
+
+.btn {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+}
+
+.btn--extended {
+  min-height: 49px;
+  border: 1px solid var(--medium-grey, gainsboro);
+  background-color: var(--white, white);
+}

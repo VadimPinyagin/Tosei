@@ -1,7 +1,9 @@
 .form {
-  background-color: var(--white, #ffffff);
+  --arrow: url("../../icons/arrow_select.svg");
+
+  background-color: var(--white, white);
   padding: 25px 24px 24px;
-  box-shadow: 0 9px 34px rgba(58, 68, 83, 0.24);
+  box-shadow: 0 9px 34px var(--shadow-color, transparent);
   border-radius: 6px;
   display: flex;
   flex-direction: column;
@@ -41,8 +43,8 @@
     bottom: 12px;
     width: 20px;
     height: 20px;
-    background-color: var(--basic-red, #ff0000);
-    mask: url("../../icons/arrow_select.svg") no-repeat center / contain;
+    background-color: var(--basic-red, red);
+    mask: var(--arrow) no-repeat center / contain;
     pointer-events: none;
     transition: transform 0.3s ease;
   }
@@ -62,7 +64,7 @@
   width: 18px;
   aspect-ratio: 1;
   border-radius: 4px;
-  background-color: var(--basic-red, #ff0000);
+  background-color: var(--basic-red, red);
 
   &[type=checkbox]:checked {
     background-image: url("../../icons/check.svg");
@@ -81,7 +83,7 @@
 .form__module-select {
   appearance: none;
   border: none;
-  background-color: var(--light-gray, #d3d3d3);
+  background-color: var(--light-gray, lightgray);
   border-radius: 2px;
   padding: 14px 16px;
   font-family: var(--font-main, "Arial"), sans-serif;
@@ -92,4 +94,10 @@
 
 .form__legend {
   padding: 3px 0 9px;
+}
+
+.form__action {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }

@@ -5,7 +5,7 @@
 }
 
 .intro__bg {
-  background-color: var(--white, #ffffff);
+  background-color: var(--white, white);
   grid-row: 1/-1;
   grid-column: 1;
   object-fit: cover;
@@ -22,6 +22,6 @@
   font-size: 32px;
   font-weight: 700;
   line-height: 1.2;
-  color: var(--white, #ffffff);
+  color: var(--white, white);
   margin: 44px 0 45px;
 }
