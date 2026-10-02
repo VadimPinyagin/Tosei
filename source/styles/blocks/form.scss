@@ -1,12 +1,11 @@
 .form {
-  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
   background-color: var(--white, white);
   padding:24px 24px 14px;
   box-shadow: 0 9px 34px var(--shadow-color, transparent);
   border-radius: 6px;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
 }
 
 .form__module {
@@ -21,12 +20,16 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 23px;
+  gap: 24px;
+}
+
+.form__list--range {
+  gap: 8px;
 }
 
 .form__list-item {
   display: flex;
-  row-gap: 9px;
+  row-gap: 10px;
   column-gap: 8px;
   position: relative;
 
@@ -52,10 +55,6 @@
   }
 }
 
-.form__list--range {
-  gap: 8px;
-}
-
 .form__module-checkbox {
   appearance: none;
   margin: 0;
@@ -74,11 +73,25 @@
 }
 
 .form__module-label {
-  font-size: 14;
-  font-weight: 500;
-  line-height: 1.2;
+  font-weight: var(--fw);
+  font-size: var(--fs);
+  line-height: var(--lh);
   word-break: break-all;
 }
+
+.form__module-label--checkbox {
+  --fw: 500;
+  --fs: 14px;
+  --lh: 1.2;
+}
+
+.form__module-label--select {
+  --fw: 400;
+  --fs: 13px;
+  --lh: 1;
+}
+
+
 
 .form__module-select {
   appearance: none;
@@ -99,9 +112,9 @@
 
 .form__legend {
   padding: 3px 0 9px;
-  font-size: 14;
-  font-weight: 500;
-  line-height: 1.2;
+  font-size: 13;
+  font-weight: 400;
+  line-height: 1;
   word-break: break-all;
 }
 
@@ -117,6 +130,8 @@
 .form__counter {
   color: var(--gray, gray);
   font-weight: 500;
+  font-size: 13px;
+  line-height: 1;
   margin-block: 0 10;
 }
 

@@ -28,6 +28,7 @@
     height: 20px;
     background-color: var(--basic-red, red);
     mask: var(--arrow) no-repeat center / contain;
+    flex-shrink: 0;
   }
 }
 
