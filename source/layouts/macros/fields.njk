@@ -1,10 +1,11 @@
 {% macro select(label, name, options, className="") %}
     {% if label %}
-      <label class="{{ className }}-label" for="field-{{ name }}">{{ label }}</label>
+      <label class="{{ className }}-label {{ className }}-label--select" for="field-{{ name }}">
+        {{ label }}
+      </label>
     {% endif %}
     <select class="{{ className }}-select" id="field-{{ name }}" name="{{ name }}"
       {% if not label %} aria-label="{{ name }}"{% endif %}>
-
       {% for option in options %}
         <option value="{{ option.value }}" {% if option.disabled %}disabled{% endif %}{% if option.selected %}selected{% endif %}>
           {{ option.text }}
@@ -20,6 +21,6 @@
 
 {% macro checkbox(label, name, checked=false, className="") %}
   <input class="{{ className }}-checkbox" type="checkbox" name="{{ name }}" id="check-{{ name }}" {% if checked %}checked{% endif %}>
-  <label class="{{ className }}-label" for="check-{{ name }}">{{ label }}</label>
+  <label class="{{ className }}-label {{ className }}-label--checkbox" for="check-{{ name }}">{{ label }}</label>
 {% endmacro %}
 
