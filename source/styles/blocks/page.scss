@@ -2,6 +2,9 @@
 @use "../global/mixins";
 
 .page{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   margin: 0;
   font-family: var(--font-main, "Arial"), sans-serif;
   font-size: 14px;
@@ -11,4 +14,8 @@
   @media (min-width: variables.$lg) {
 //
   }
+}
+
+.page__main {
+  flex-grow: 1;
 }
