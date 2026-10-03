@@ -1,9 +1,13 @@
 {% from "macros/card.njk" import card %}
-
+{% from "macros/fields.njk" import radio %}
 <section class="trending">
   <div class="container">
-    <h2 class="trending__title">Выбор автомобилей</h2>
-
+    <h2 class="trending__title">Популярные автомобили</h2>
+    <ul class="trending__radio-list">
+      <li class="trending__radio-list-item">{{radio("Любые", "trending-filter", "any", checked=true, className="trending__radio") }}</li>
+      <li class="trending__radio-list-item">{{radio("В наличии", "trending-filter", "available",checked=false, className="trending__radio") }}</li>
+      <li class="trending__radio-list-item">{{radio("Под заказ", "trending-filter", "order",checked=false, className="trending__radio") }}</li>
+    </ul>
     <ul class="trending__list">
       {% for car in data.cars %}
         <li class="trending__item">
