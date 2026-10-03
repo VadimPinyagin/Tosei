@@ -24,3 +24,7 @@
   <label class="{{ className }}-label {{ className }}-label--checkbox" for="check-{{ name }}">{{ label }}</label>
 {% endmacro %}
 
+{% macro radio(label, name, value, checked=false, className="") %}
+  <input class="{{ className }}-input" type="radio" id="radio-{{ name }}-{{ value }}" name="{{ name }}" value="{{ value }}" {% if checked %}checked{% endif %}>
+  <label class="{{ className }}-label" for="radio-{{ name }}-{{ value }}">{{ label }}</label>
+{% endmacro %}
