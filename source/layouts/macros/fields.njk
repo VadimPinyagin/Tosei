@@ -28,3 +28,14 @@
   <input class="{{ className }}-input" type="radio" id="radio-{{ name }}-{{ value }}" name="{{ name }}" value="{{ value }}" {% if checked %}checked{% endif %}>
   <label class="{{ className }}-label" for="radio-{{ name }}-{{ value }}">{{ label }}</label>
 {% endmacro %}
+
+{% macro dlRow(term, definition, className, modifier="", visuallyHidden=false) %}
+  <div class="{{ className }}__row {% if modifier %}{{ className }}__row--{{ modifier }}{% endif %}">
+    <dt class="{% if visuallyHidden %}visually-hidden{% else %}{{ className }}-term{% endif %}">
+      {{ term }}
+    </dt>
+    <dd class="{{ className }}-definition {% if modifier %}{{ className }}-definition--{{ modifier }}{% endif %}">
+      {{ definition }}
+    </dd>
+  </div>
+{% endmacro %}

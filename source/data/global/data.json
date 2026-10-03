@@ -1,0 +1,52 @@
+{
+  "cars": [
+    {
+      "title": "Honda Fit",
+      "image": "honda-fit",
+      "width": "335",
+      "height": "200",
+      "engine": "1,2 л.с.",
+      "year": "2015 г.",
+      "mileage": "34 000 км",
+      "customs": "Под полную пошлину",
+      "drive": "Задний",
+      "transmission": "Автомат",
+      "priceLabel": "Стоимость во Владивостоке",
+      "priceValue": "630 000 ₽",
+      "status": "available",
+      "statusText": "В наличии"
+    },
+    {
+      "title": "Toyota Prius",
+      "image": "toyota-prius",
+      "width": "335",
+      "height": "200",
+      "engine": "1,8 л.с. / Гибрид",
+      "year": "2018 г.",
+      "mileage": "72 000 км",
+      "customs": "Под полную пошлину",
+      "drive": "Передний",
+      "transmission": "Планетарная",
+      "priceLabel": "Стоимость во Владивостоке",
+      "priceValue": "1 250 000 ₽",
+      "status": "order",
+      "statusText": "Под заказ"
+    },
+    {
+      "title": "Nissan Leaf",
+      "image": "nissan-leaf",
+      "width": "335",
+      "height": "200",
+      "engine": "Электро / 40 кВтч",
+      "year": "2017 г.",
+      "mileage": "51 000 км",
+      "customs": "Под полную пошлину",
+      "drive": "Передний",
+      "transmission": "Редуктор",
+      "priceLabel": "Стоимость во Владивостоке",
+      "priceValue": "980 000 ₽",
+      "status": "available",
+      "statusText": "В наличии"
+    }
+  ]
+}
