@@ -70,10 +70,16 @@
   padding: 15px;
   border: 1px solid var(--card-shadow-color,lightgray);
   border-radius: 4px;
+  text-decoration: none;
+  color: var(--black, black);
 }
 
 .trending-card__title {
   grid-row: 2;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+  margin-block: 8px;
 }
 
 .trending-card__image {
