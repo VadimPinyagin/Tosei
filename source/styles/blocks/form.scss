@@ -101,7 +101,7 @@
   font-weight: 400;
   line-height: 1;
   border: none;
-  background-color: var(--light-gray, lightgray);
+  background-color: var(--color-gray-100, lightgray);
   border-radius: 2px;
   padding: 14px 16px;
   width: 100%;
@@ -125,15 +125,17 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 23px;
 }
 
 .form__counter {
-  color: var(--gray, gray);
+  color: var(--color-gray-600, gray);
   font-weight: 500;
   font-size: 13px;
   line-height: 1;
-  margin-block: 0 10;
+  margin-block: 3px 11px;
+  display: flex;
+  gap: 6px;
 }
 
 .form__counter-value {

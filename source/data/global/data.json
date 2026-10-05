@@ -22,14 +22,14 @@
       "width": "303",
       "height": "198",
       "engine": "1,2 л.с.",
-      "year": "20155 г.",
+      "year": "2015 г.",
       "mileage": "34 000 км",
       "customs": "Под полную пошлину",
       "drive": "Задний",
       "transmission": "Автомат",
       "priceLabel": "Стоимость во Владивостоке",
       "priceValue": "630 000 ₽",
-      "status": "available",
+      "status": "order",
       "statusText": "Под заказ"
     },
     {
@@ -45,7 +45,7 @@
       "transmission": "Автомат",
       "priceLabel": "Стоимость во Владивостоке",
       "priceValue": "630 000 ₽",
-      "status": "order",
+      "status": "available",
       "statusText": "В наличии"
     }
   ]

@@ -16,8 +16,9 @@
       {{ dlRow("Тип оформления", data.customs, className + "__description", modifier="full", visuallyHidden=true) }}
       {{ dlRow("Привод", data.drive, className + "__description") }}
       {{ dlRow("КПП", data.transmission, className + "__description") }}
-      {{ dlRow(data.priceLabel, data.priceValue, className + "__description", modifier="price", visuallyHidden=true) }}
-      {{ dlRow("Статус автомобиля", data.statusText, className + "__description", modifier=data.status, visuallyHidden=true) }}
+      {{ dlRow(data.priceLabel, data.priceValue, className + "__description", modifier="price", visuallyHidden=false) }}
+      {{ dlRow("Статус автомобиля", data.statusText, className + "__description", modifier=data.status, visuallyHidden=true, isStatus=true) }}
+
     </dl>
   </a>
 {% endmacro %}
