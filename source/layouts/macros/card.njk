@@ -9,15 +9,15 @@
       <source type="image/webp" srcset="images/card-images/{{ data.image }}@1x.webp 1x, images/card-images/{{ data.image }}@2x.webp 2x"> #}
       <img class="{{ className }}__image" src="images/card-images/{{ data.image }}@1x.jpg" srcset="images/card-images/{{ data.image }}@2x.jpg 2x" width="{{ data.width }}" height="{{ data.height }}" alt="{{ data.title }}">
     </picture>
-    <dl class="{{ className }}__description">
-      {{ dlRow("Объем двигателя", data.engine, className + "__description") }}
-      {{ dlRow("Год", data.year, className + "__description") }}
-      {{ dlRow("Пробег", data.mileage, className + "__description") }}
-      {{ dlRow("Тип оформления", data.customs, className + "__description", modifier="full", visuallyHidden=true) }}
-      {{ dlRow("Привод", data.drive, className + "__description") }}
-      {{ dlRow("КПП", data.transmission, className + "__description") }}
-      {{ dlRow(data.priceLabel, data.priceValue, className + "__description", modifier="price", visuallyHidden=false) }}
-      {{ dlRow("Статус автомобиля", data.statusText, className + "__description", modifier=data.status, visuallyHidden=true, isStatus=true) }}
+    <dl class="{{ className }}__info">
+      {{ dlRow("Объем двигателя", data.engine, className + "__info") }}
+      {{ dlRow("Год", data.year, className + "__info") }}
+      {{ dlRow("Пробег", data.mileage, className + "__info") }}
+      {{ dlRow("Тип оформления", data.customs, className + "__info", modifier="full", visuallyHidden=true) }}
+      {{ dlRow("Привод", data.drive, className + "__info") }}
+      {{ dlRow("КПП", data.transmission, className + "__info") }}
+      {{ dlRow(data.priceLabel, data.priceValue, className + "__info", modifier="price", visuallyHidden=false) }}
+      {{ dlRow("Статус автомобиля", data.statusText, className + "__info", modifier=data.status, visuallyHidden=true, isStatus=true) }}
 
     </dl>
   </a>

@@ -93,7 +93,7 @@
   margin-block-end: 10px;
 }
 
-.card__description {
+.card__info {
   display: grid;
   gap: 16px;
   order: 3;
@@ -101,21 +101,21 @@
   font-weight: 500;
 }
 
-.card__description-term {
+.card__info-term {
   color: var(--color-gray-500, gray);
 }
 
-.card__description__row {
+.card__info__row {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
 }
 
-.card__description-definition {
+.card__info-value {
   margin: 0;
 }
 
-.card__description__row--price {
+.card__info__row--price {
   flex-direction: column;
   margin-block-start: 19px;
   position: relative;
@@ -132,13 +132,13 @@
   }
 }
 
-.card__description-definition--price {
+.card__info-value--price {
   font-size: 24px;
   font-weight: 700;
   margin-block-start: 6px;
 }
 
-.card__description-term--price {
+.card__info-term--price {
   font-size: 14px;
 }
 

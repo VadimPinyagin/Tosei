@@ -15,8 +15,8 @@
 {% endmacro %}
 
 {% macro input(label, type="text", name="", placeholder="", className="") %}
-    <label class="{{ className }}__label" for="input-{{ name }}">{{ label }}</label>
-    <input class="{{ className }}__input" type="{{ type }}" name="{{ name }}" id="input-{{ name }}" placeholder="{{ placeholder }}">
+  <label class="{{ className }}__label" for="input-{{ name }}">{{ label }}</label>
+  <input class="{{ className }}__input" type="{{ type }}" name="{{ name }}" id="input-{{ name }}" placeholder="{{ placeholder }}">
 {% endmacro %}
 
 {% macro checkbox(label, name, checked=false, className="") %}
@@ -29,13 +29,13 @@
   <label class="{{ className }}-label" for="radio-{{ name }}-{{ value }}">{{ label }}</label>
 {% endmacro %}
 
-{% macro dlRow(term, definition, className, modifier="", visuallyHidden=false, isStatus=false) %}
+{% macro dlRow(term, value, className, modifier="", visuallyHidden=false, isStatus=false) %}
   <div class="{{ className }}__row {% if modifier %}{{ className }}__row--{{ modifier }}{% endif %}">
     <dt class="{% if visuallyHidden %}visually-hidden{% else %}{{ className }}-term{% endif %} {% if modifier and not visuallyHidden %}{{ className }}-term--{{ modifier }}{% endif %}">
       {{ term }}
     </dt>
-    <dd class="{% if isStatus %}{{ className | replace('__description', '') }}__status {{ className | replace('__description', '') }}__status--{{ modifier }}{% else %}{{ className }}-definition {% if modifier %}{{ className }}-definition--{{ modifier }}{% endif %}{% endif %}">
-      {{ definition }}
+    <dd class="{% if isStatus %}{{ className | replace('__info', '') }}__status {{ className | replace('__info', '') }}__status--{{ modifier }}{% else %}{{ className }}-value {% if modifier %}{{ className }}-value--{{ modifier }}{% endif %}{% endif %}">
+      {{ value }}
     </dd>
   </div>
 {% endmacro %}
