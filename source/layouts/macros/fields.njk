@@ -30,7 +30,7 @@
 {% endmacro %}
 
 {% macro dlRow(term, value, className, modifier="", visuallyHidden=false, isStatus=false) %}
-  <div class="{{ className }}__row {% if modifier %}{{ className }}__row--{{ modifier }}{% endif %}">
+  <div class="{{ className }}-row {% if modifier %}{{ className }}-row--{{ modifier }}{% endif %}">
     <dt class="{% if visuallyHidden %}visually-hidden{% else %}{{ className }}-term{% endif %} {% if modifier and not visuallyHidden %}{{ className }}-term--{{ modifier }}{% endif %}">
       {{ term }}
     </dt>

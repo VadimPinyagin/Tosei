@@ -35,7 +35,7 @@
   color: var(--color-gray-500, gray);
 }
 
-.card__info__row {
+.card__info-row {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
@@ -45,7 +45,7 @@
   margin: 0;
 }
 
-.card__info__row--price {
+.card__info-row--price {
   flex-direction: column;
   margin-block-start: 19px;
   position: relative;
