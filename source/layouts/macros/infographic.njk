@@ -1,0 +1,26 @@
+{% from "macros/components.njk" import sectionTitle %}
+
+{% macro infographic(title, blockName, modifier="") %}
+{# Убрали модификатор отсюда, оставив чистый системный класс blockName #}
+<section class="{{ blockName }}">
+  <div class="container">
+
+    {{ sectionTitle(title, blockName + "__title") }}
+
+    <ul class="{{ blockName }}__list">
+      {{ caller() }}
+    </ul>
+
+    {# Модификатор используем только как логический флаг для кнопки #}
+    {% if modifier == "purchase" %}
+      <div class="{{ blockName }}__actions">
+        <button class="{{ blockName }}__btn btn" type="button">Оставить заявку</button>
+      </div>
+    {% endif %}
+
+  </div>
+</section>
+{% endmacro %}
+
+
+

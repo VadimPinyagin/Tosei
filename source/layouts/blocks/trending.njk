@@ -1,9 +1,10 @@
+{% from "macros/components.njk" import sectionTitle %}
 {% from "macros/card.njk" import card %}
 {% from "macros/fields.njk" import radio %}
 {% from "macros/btn.njk" import button %}
 <section class="trending">
   <div class="trending__inner container">
-    <h2 class="trending__title">Популярные автомобили</h2>
+    {{ sectionTitle("Популярные автомобили","trending__title", visuallyHidden=false) }}
     <ul class="trending__radio-list">
       <li class="trending__radio-list-item">{{radio("Любые", "trending-filter", "any", checked=true, className="trending__radio") }}</li>
       <li class="trending__radio-list-item">{{radio("В наличии", "trending-filter", "available",checked=false, className="trending__radio") }}</li>
