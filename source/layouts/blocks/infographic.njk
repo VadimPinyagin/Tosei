@@ -1,0 +1,47 @@
+{% from "macros/infographic-template.njk" import infographic %}
+
+{% if not isPurchaseProcess %}
+  {% call infographic("Наши преимущества", blockName="infographic") %}
+    <li class="infographic__item">
+      <h3 class="infographic__item-title">20 лет на рынке</h3>
+      <p class="infographic__item-text">Мы&nbsp;транспортируем авто в&nbsp;порт Японии, грузим на&nbsp;судно и&nbsp;доставляем во&nbsp;Владивосток, где проходит таможенное оформление</p>
+    </li>
+    <li class="infographic__item">
+      <h3 class="infographic__item-title">Доставка по&nbsp;РФ</h3>
+      <p class="infographic__item-text">Мы&nbsp;транспортируем авто в&nbsp;порт Японии, грузим на&nbsp;судно и&nbsp;доставляем во&nbsp;Владивосток, где проходит таможенное оформление</p>
+    </li>
+    <li class="infographic__item">
+      <h3 class="infographic__item-title">Персональный менеджер</h3>
+      <p class="infographic__item-text">Мы&nbsp;транспортируем авто в&nbsp;порт Японии, грузим на&nbsp;судно и&nbsp;доставляем во&nbsp;Владивосток, где проходит таможенное оформление</p>
+    </li>
+    <li class="infographic__item">
+      <h3 class="infographic__item-title">Собственное представительство в Японии</h3>
+      <p class="infographic__item-text">Мы&nbsp;транспортируем авто в&nbsp;порт Японии, грузим на&nbsp;судно и&nbsp;доставляем во&nbsp;Владивосток, где проходит таможенное оформление</p>
+    </li>
+  {% endcall %}
+
+{% else %}
+  {% call infographic("Как происходит покупка", blockName="infographic", modifier="purchase") %}
+    <li class="infographic__item infographic__item--support">
+      <h3 class="infographic__item-title">Оставляете заявку</h3>
+      <p class="infographic__item-text">Вы&nbsp;оставляете заявку на&nbsp;сайте, либо связываетесь с&nbsp;нами удобным для вас способом.</p>
+    </li>
+    <li class="infographic__item infographic__item--document">
+      <h3 class="infographic__item-title">Заключаем договор</h3>
+      <p class="infographic__item-text">Заключаем договор, Вы&nbsp;вносите гарантийный депозит.</p>
+    </li>
+    <li class="infographic__item infographic__item--market">
+      <h3 class="infographic__item-title">Подбор и&nbsp;покупка авто</h3>
+      <p class="infographic__item-text">Вам предлагаются подходящие варианты с&nbsp;аукционов, Вы&nbsp;принимаете решение, автомобиль выкупается.</p>
+    </li>
+    <li class="infographic__item infographic__item--delivery">
+      <h3 class="infographic__item-title">Доставка в&nbsp;РФ и&nbsp;оформление</h3>
+      <p class="infographic__item-text">Мы&nbsp;транспортируем авто в&nbsp;порт Японии, грузим на&nbsp;судно и&nbsp;доставляем во&nbsp;Владивосток, где проходит таможенное оформление</p>
+    </li>
+    <li class="infographic__item infographic__item--guarantee">
+      <h3 class="infographic__item-title">Доставка до&nbsp;вашего города</h3>
+      <p class="infographic__item-text">Мы&nbsp;доставляем авто в&nbsp;любой регион России выбранным Вами способом, либо&nbsp;Вы сами забираете его во&nbsp;Владивостоке.</p>
+    </li>
+  {% endcall %}
+{% endif %}
+

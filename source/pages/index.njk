@@ -6,6 +6,8 @@
 {% block main %}
   {% include "./blocks/intro.njk" %}
   {% include "./blocks/trending.njk" %}
-  {% include "./blocks/advantages.njk" %}
-  {% include "./blocks/process.njk" %}
+  {% set isPurchaseProcess = false %}
+  {% include "./blocks/infographic.njk" %}
+  {% set isPurchaseProcess = true %}
+  {% include "./blocks/infographic.njk" %}
 {% endblock %}
