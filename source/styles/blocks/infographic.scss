@@ -1,3 +1,11 @@
+.infographic {
+  --s-icon: 50px;
+
+  &--purchase {
+    --s-icon: 42px;
+  }
+}
+
 .infographic__inner {
   display: grid;
   justify-content: center;
@@ -18,8 +26,6 @@
 
 .infographic__item {
   --icon: url("../../icons/globe.svg");
-  --s-icon: 50px;
-  --c-icon: var(--color-gray-350, lightgray);
   padding-inline-start: 66px;
   width: 335px;
   position: relative;
@@ -27,13 +33,32 @@
   &::before {
     content: "";
     display: block;
-    mask: var(--icon) no-repeat center / cover;
+    background: var(--icon) no-repeat center / contain;
     width: var(--s-icon);
     height: var(--s-icon);
-    background-color: var(--c-icon);
     position: absolute;
     top: 0;
     left: 0;
+  }
+
+  &--support {
+    --icon: url("../../icons/request.svg");
+  }
+
+  &--document {
+    --icon: url("../../icons/conversation.svg");
+  }
+
+  &--market {
+    --icon: url("../../icons/car.svg");
+  }
+
+  &--delivery {
+    --icon: url("../../icons/cargo.svg");
+  }
+
+  &--guarantee {
+    --icon: url("../../icons/delivery.svg");
   }
 }
 
