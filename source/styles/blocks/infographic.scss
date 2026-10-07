@@ -5,27 +5,49 @@
 
 .infographic__title {
   margin-block: 0 10px;
+  margin-inline-start: -5px;
 }
 
 .infographic__list {
   list-style: none;
-  margin: 0;
+  margin-block: 25px 47px;
   padding: 0;
+  display: grid;
+  gap: 25px;
 }
 
 .infographic__item {
+  --icon: url("../../icons/globe.svg");
+  --s-icon: 50px;
+  --c-icon: var(--color-gray-350, lightgray);
   padding-inline-start: 66px;
   width: 335px;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    mask: var(--icon) no-repeat center / cover;
+    width: var(--s-icon);
+    height: var(--s-icon);
+    background-color: var(--c-icon);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }
 
 .infographic__item-title {
   font-size: 18px;
   font-weight: 700;
   line-height: 1.1;
+  margin-block: 0 8px;
 }
 
 .infographic__item-text {
   font-size: 14px;
   font-weight: 500;
+  line-height: 1.2;
   color: var(--color-gray-500, gray);
+  margin: 0;
 }
