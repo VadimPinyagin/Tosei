@@ -1,0 +1,15 @@
+.review-card__rating {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+.review-card__rating-item {
+  width: 16px;
+  height: 16px;
+  background: url("../../icons/star-empty.svg") no-repeat center / contain;
+}
+
+.review-card__rating-item--active {
+  background: url("../../icons/star-filled.svg") no-repeat center / contain;
+}

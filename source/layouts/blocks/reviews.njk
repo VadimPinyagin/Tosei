@@ -1,0 +1,19 @@
+{% import "macros/review-card.njk" as reviewCard %}
+{% import "macros/components.njk" as components %}
+
+<section class="reviews">
+  <div class="reviews__inner container">
+    {{ components.sectionTitle("Отзывы", "reviews__title") }}
+    <div class="reviews__slider swiper">
+      <ul class="reviews__wrapper swiper-wrapper">
+        {% for review in data.reviews %}
+          <li class="reviews__item swiper-slide">
+            {{ reviewCard.reviewCard(review, "review-card") }}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <a href="#" class="reviews__btn btn btn--secondary">Ещё отзывы</a>
+  </div>
+</section>
+

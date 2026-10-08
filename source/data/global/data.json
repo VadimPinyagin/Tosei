@@ -48,5 +48,36 @@
       "status": "available",
       "statusText": "В наличии"
     }
+  ],
+  "reviews": [
+    {
+      "image": "gennady-sergeevich",
+      "rating": 5,
+      "author": "Геннадий Сергеевич",
+      "car": "Toyota Allion",
+      "videoUrl": "#"
+    },
+    {
+      "image": "olga-arkhipova",
+      "rating": 4,
+      "author": "Ольга Архипова",
+      "car": "Toyota Allion",
+      "videoUrl": "#"
+    },
+    {
+      "image": "nikolay-evgenievich",
+      "rating": 5,
+      "author": "Николай Евгеньевич",
+      "car": "Toyota Allion",
+      "videoUrl": "#"
+    },
+    {
+      "image": "roman-yurievich",
+      "rating": 5,
+      "author": "Роман Юрьевич",
+      "car": "Toyota Allion",
+      "videoUrl": "#"
+    }
   ]
 }
+
