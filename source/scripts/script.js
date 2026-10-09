@@ -8,7 +8,6 @@ import './utils/to-top.js';
 import './utils/sticky-header.js';
 import './utils/full-year.js';
 
-
 window.addEventListener('DOMContentLoaded', () => {
 
   window.focusLock = new FocusLock();

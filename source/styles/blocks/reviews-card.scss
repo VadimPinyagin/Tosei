@@ -1,3 +1,28 @@
+.review-card__media{
+  display: grid;
+  align-items: center;
+  justify-items: center;
+
+  &:before {
+    content: "";
+    display: block;
+    width: 36px;
+    height: 29px;
+    background: url("../../icons/play.svg") no-repeat center / contain;
+    z-index: 1;
+    grid-area: 1/1;
+    transition: transform 0.2s ease;
+  }
+
+  &:hover::before {
+    transform: scale(1.1);
+  }
+}
+
+.review-card__image {
+  grid-area: 1/1;
+}
+
 .review-card__rating {
   list-style: none;
   padding: 0;

@@ -1,13 +1,9 @@
-{# Финальный, кристально чистый макрос #}
-{% macro reviewCard(data, className="review-card", folder="review-images", width="335", height="200") %}
+{% from "macros/components.njk" import pictureResponsive %}
+
+{% macro reviewCard(data, className="review-card", folder="review-images", width="202", height="") %}
 <article class="{{ className }}">
   <a class="{{ className }}__media" href="{{ data.videoUrl if data.videoUrl else '#' }}" target="_blank" rel="noopener" aria-label="Смотреть видео отзыв от {{ data.author }}">
-    <picture>
-    <source type="image/webp" media="(min-width: 1440px)" srcset="images/{{ folder }}/{{ data.image }}-desktop@1x.webp 1x, images/{{ folder }}/{{ data.image }}-desktop@2x.webp 2x">
-    <source type="image/jpeg" media="(min-width: 1440px)" srcset="images/{{ folder }}/{{ data.image }}-desktop@1x.jpg 1x, images/{{ folder }}/{{ data.image }}-desktop@2x.jpg 2x">
-    <source type="image/webp" srcset="images/{{ folder }}/{{ data.image }}-mobile@1x.webp 1x, images/{{ folder }}/{{ data.image }}-mobile@2x.webp 2x">
-    <img class="{{ className }}__image" src="images/{{ folder }}/{{ data.image }}-mobile@1x.jpg" srcset="images/{{ folder }}/{{ data.image }}-mobile@2x.jpg 2x" width="{{ width }}" height="{{ height }}" alt="Фото к отзыву от {{ data.author }}">
-    </picture>
+    {{ pictureResponsive(data, folder, width=width, height=height, desktopWidth="270", desktopHeight="160", tabletDesktop=true, className=className + "__image") }}
   </a>
   <ul class="{{ className }}__rating">
     {% for i in range(0, 5) %}
@@ -18,4 +14,3 @@
   <p class="{{ className }}__car">{{ data.car }}</p>
 </article>
 {% endmacro %}
-
