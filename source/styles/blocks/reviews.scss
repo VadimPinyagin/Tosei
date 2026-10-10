@@ -1,18 +1,29 @@
 .reviews__wrapper {
   list-style: none;
   padding-inline: 20px;
+  margin-block: 5px 0;
+
 }
 
 .reviews__inner {
   justify-content: center;
   padding-block: 33px 34px;
   display: grid;
+
 }
 
 .reviews__title {
   margin-block-start: 0;
+  padding-inline-start: 20px;
 }
 
 .reviews__slider {
   overflow: visible;
+}
+
+.reviews__btn {
+  text-decoration: none;
+  width: 335px;
+  justify-self: center;
+  margin-block-start: 25px;
 }
