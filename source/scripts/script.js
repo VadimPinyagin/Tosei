@@ -1,4 +1,5 @@
 import './utils/theme-toggle.js';
+import './utils/defines-swiper.js';
 import './utils/toggle-menu.js';
 import './utils/check-macos.js';
 import './utils/modal.js';
@@ -16,4 +17,9 @@ window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
 
   });
+});
+
+new Swiper('.reviews__slider', {
+  slidesPerView: 'auto',
+  spaceBetween: 20,
 });
