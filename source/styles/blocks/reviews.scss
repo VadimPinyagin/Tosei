@@ -1,6 +1,6 @@
 .reviews__wrapper {
   list-style: none;
-  padding: 0;
+  padding-inline: 20px;
 }
 
 .reviews__inner {
@@ -11,4 +11,8 @@
 
 .reviews__title {
   margin-block-start: 0;
+}
+
+.reviews__slider {
+  overflow: visible;
 }
