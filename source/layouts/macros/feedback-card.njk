@@ -1,6 +1,6 @@
 {% from "macros/components.njk" import pictureResponsive %}
 
-{% macro reviewCard(data, className="review-card", folder="review-images", width="202", height="") %}
+{% macro feedbackCard(data, className="feedback-card", folder="feedback-images", width="202", height="") %}
 <article class="{{ className }}">
   <a class="{{ className }}__media" href="{{ data.videoUrl if data.videoUrl else '#' }}" target="_blank" rel="noopener" aria-label="Смотреть видео отзыв от {{ data.author }}">
     {{ pictureResponsive(data, folder, width=width, height=height, desktopWidth="270", desktopHeight="160", tabletDesktop=true, className=className + "__image") }}

@@ -1,9 +1,12 @@
 .infographic {
   --s-icon: 50px;
+  --padding-start: 66px;
 
-  &--purchase {
-    --s-icon: 42px;
-  }
+    &--purchase {
+      --s-icon: 42px;
+      --padding-start: 59px;
+      padding-block-end: 43px;
+    }
 }
 
 .infographic__inner {
@@ -24,9 +27,15 @@
   gap: 25px;
 }
 
+.infographic__list--purchase {
+  margin-block-start: 16px;
+  margin-block-end: 22px;
+  gap: 24px;
+}
+
 .infographic__item {
   --icon: url("../../icons/globe.svg");
-  padding-inline-start: 66px;
+  padding-inline-start: var(--padding-start);
   width: 335px;
   position: relative;
 
@@ -69,6 +78,13 @@
   margin-block: 0 8px;
 }
 
+.infographic__item-title--purchase {
+  margin-block-start: 3px;
+  margin-block-end: 10px;
+  font-size: 16px;
+  line-height: 1;
+}
+
 .infographic__item-text {
   font-size: 14px;
   font-weight: 500;
@@ -76,3 +92,25 @@
   color: var(--color-gray-500, gray);
   margin: 0;
 }
+
+.infographic__title--purchase {
+  margin-inline-start: 0;
+}
+
+.infographic__btn--purchase {
+  font-size: 16px;
+  font-weight: 700;
+  background-color: transparent;
+  border: 1px dashed var(--basic-red, red);
+  padding-block: 15px;
+  gap: 16px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 31px;
+    height: 31px;
+    background-image: url("../../icons/mail-send.svg");
+  }
+}
+

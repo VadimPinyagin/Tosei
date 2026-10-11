@@ -3,21 +3,19 @@
 {% macro infographic(title, blockName, modifier="") %}
 <section class="{{ blockName }} {% if modifier %}{{ blockName }}--{{ modifier }}{% endif %}">
   <div class="{{ blockName }}__inner container">
-
-    {{ sectionTitle(title, blockName + "__title") }}
-
-    <ul class="{{ blockName }}__list">
+    {{ sectionTitle(title, blockName + "__title" + ((" " + blockName + "__title--" + modifier) if modifier else "")) }}
+    <ul class="{{ blockName }}__list{% if modifier %} {{ blockName }}__list--{{ modifier }}{% endif %}">
       {{ caller() }}
     </ul>
     {% if modifier == "purchase" %}
       <div class="{{ blockName }}__actions">
-        <button class="{{ blockName }}__btn btn" type="button">Оставить заявку</button>
+        <button class="{{ blockName }}__btn {{ blockName }}__btn--{{ modifier }} btn" type="button">Оставить заявку</button>
       </div>
     {% endif %}
-
   </div>
 </section>
 {% endmacro %}
+
 
 
 

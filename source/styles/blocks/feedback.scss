@@ -1,27 +1,30 @@
-.reviews__wrapper {
+.feedback {
+  margin-block-end: 11px;
+}
+
+.feedback__wrapper {
   list-style: none;
   padding-inline: 20px;
   margin-block: 5px 0;
-
 }
 
-.reviews__inner {
+.feedback__inner {
   justify-content: center;
   padding-block: 33px 34px;
   display: grid;
 
 }
 
-.reviews__title {
+.feedback__title {
   margin-block-start: 0;
   padding-inline-start: 20px;
 }
 
-.reviews__slider {
+.feedback__slider {
   overflow: visible;
 }
 
-.reviews__btn {
+.feedback__btn {
   text-decoration: none;
   width: 335px;
   justify-self: center;

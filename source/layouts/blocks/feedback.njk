@@ -1,0 +1,19 @@
+{% import "macros/feedback-card.njk" as feedbackCard %}
+{% import "macros/components.njk" as components %}
+
+<section class="feedback">
+  <div class="feedback__inner container">
+    {{ components.sectionTitle("Отзывы", "feedback__title") }}
+    <div class="feedback__slider swiper">
+      <ul class="feedback__wrapper swiper-wrapper">
+        {% for feedback in data.feedback %}
+          <li class="feedback__item swiper-slide">
+            {{ feedbackCard.feedbackCard(feedback, "feedback-card") }}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <a href="#" class="feedback__btn btn btn--more">Ещё отзывы</a>
+  </div>
+</section>
+

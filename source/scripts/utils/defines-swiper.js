@@ -1,5 +1,5 @@
-const reviewsSwiper = () => {
-  new Swiper('.reviews__slider', {
+const feedbackSwiper = () => {
+  new Swiper('.feedback__slider', {
     loop: true,
     loopedSlides: 'auto',
     centeredSlides: false,
@@ -10,4 +10,4 @@ const reviewsSwiper = () => {
   });
 };
 
-reviewsSwiper();
+feedbackSwiper();
