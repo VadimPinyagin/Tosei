@@ -49,6 +49,7 @@
       "statusText": "В наличии"
     }
   ],
+
   "feedback": [
     {
       "image": "gennady-sergeevich",
@@ -76,6 +77,30 @@
       "rating": 5,
       "author": "Роман Юрьевич",
       "car": "Toyota Allion",
+      "videoUrl": "#"
+    }
+  ],
+
+  "reviewsData": [
+    {
+      "image": "honda-fit-shuttle",
+      "title": "Космический Shuttle | HONDA FIT SHUTTLE 2013",
+      "views": "391 просмотр",
+      "date": "3 недели назад",
+      "videoUrl": "#"
+    },
+    {
+      "image": "toyota-siena",
+      "title": "Компактный минивен I Toyota Siena 2017 г.",
+      "views": "391 просмотр",
+      "date": "3 недели назад",
+      "videoUrl": "#"
+    },
+    {
+      "image": "kato-kb1500r",
+      "title": "Спецтехника по-крупному | KATO KB1500R",
+      "views": "391 просмотр",
+      "date": "3 недели назад",
       "videoUrl": "#"
     }
   ]

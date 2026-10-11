@@ -1,0 +1,16 @@
+{% from "macros/components.njk" import sectionTitle %}
+{% from "macros/review-card.njk" import reviewCard %}
+
+<section class="reviews">
+  <div class="reviews__inner container">
+    {{ sectionTitle("Наши обзоры", "reviews__title") }}
+    <ul class="reviews__list">
+      {% for item in data.reviewsData %}
+        <li class="reviews__item">
+          {{ reviewCard(data=item) }}
+        </li>
+      {% endfor %}
+    </ul>
+      <button class="reviews__btn btn btn--more" type="button">Все обзоры</button>
+  </div>
+</section>

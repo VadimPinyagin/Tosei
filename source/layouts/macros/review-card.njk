@@ -1,0 +1,12 @@
+{% from "macros/components.njk" import pictureResponsive, metaDate %}
+
+{% macro reviewCard(data, className="review-card", folder="reviews-images", width="332", height="172") %}
+<article class="{{ className }}">
+  <a class="{{ className }}__media" href="#">
+    {{ pictureResponsive(data=data, folder=folder, width=width, height=height, desktopWidth="360", desktopHeight="200", tabletDesktop=true, className=className + "__image") }}
+  </a>
+  <h3 class="{{ className }}__title">{{ data.title }}</h3>
+  {{ metaDate(views=data.views, date=data.date, classContainer=className + "__meta", classViews=className + "__meta-views", classDate=className + "__meta-date") }}
+</article>
+{% endmacro %}
+

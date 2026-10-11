@@ -1,0 +1,17 @@
+.reviews__list {
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+.reviews__inner {
+  width: 332px;
+}
+
+.reviews__list {
+  display: grid;
+}
+
+.reviews__title {
+  margin-block-start: 0;
+  margin-block-end: 25px;
+}

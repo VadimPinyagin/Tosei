@@ -28,6 +28,14 @@
     <source type="image/jpeg" media="(min-width: 768px)" srcset="images/{{ folder }}/{{ data.image }}-tablet@1x.jpg 1x, images/{{ folder }}/{{ data.image }}-tablet@2x.jpg 2x" width="{{ tabletWidth }}" height="{{ tabletHeight }}">
   {% endif %}
   <source type="image/webp" srcset="images/{{ folder }}/{{ data.image }}-mobile@1x.webp 1x, images/{{ folder }}/{{ data.image }}-mobile@2x.webp 2x">
-  <img class="{{ className }}" src="images/{{ folder }}/{{ data.image }}-mobile@1x.jpg" srcset="images/{{ folder }}/{{ data.image }}-mobile@2x.jpg 2x" width="{{ width }}" height="{{ height }}" alt="Фото: {{ data.title if data.title else data.author }}">
+  <img class="{{ className }}" src="images/{{ folder }}/{{ data.image }}-mobile@1x.jpg" srcset="images/{{ folder }}/{{ data.image }}-mobile@2x.jpg 2x" width="{{ width }}" height="{{ height }}" alt="{{ data.title if data.title else data.author }}">
 </picture>
 {% endmacro %}
+
+{% macro metaDate(views, date, classContainer="", classViews="", classDate="") %}
+  <div class="{{ classContainer }}">
+    <span class="{{ classViews }}">{{ views }}</span>
+    <span class="{{ classDate }}">{{ date }}</span>
+  </div>
+{% endmacro %}
+

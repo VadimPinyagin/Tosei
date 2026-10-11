@@ -1,0 +1,35 @@
+.review-card {
+  display: grid;
+  gap: 8px;
+}
+.review-card__media {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+}
+.review-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-gray-500, lightgray);
+
+  &::before {
+    content: "";
+    display: block;
+    width: 4px;
+    height: 4px;
+    background-color: var(--color-gray-500, lightgray);
+    border-radius: 50%;
+    order: 2;
+  }
+}
+
+.review-card__meta-views {
+  order: 2;
+}
+
+.review-card__title {
+  margin-block: 0;
+}
