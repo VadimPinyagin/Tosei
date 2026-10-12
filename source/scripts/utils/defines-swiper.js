@@ -7,6 +7,9 @@ const feedbackSwiper = () => {
     slidesPerView: 1,
     width: 202,
     spaceBetween: 20,
+    observer: true,
+    observeParents: true,
+    resizeObserver: true,
   });
 };
 
