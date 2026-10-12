@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="preload" href="/fonts/Montserrat-Regular" type="font/woff2" as="font" crossorigin="anonymous">
+
+  <link rel="preload" href="/fonts/Montserrat-Medium" type="font/woff2" as="font" crossorigin="anonymous">
+
+  <link rel="preload" href="/fonts/Montserrat-SemiBold" type="font/woff2" as="font" crossorigin="anonymous">
+
+  <link rel="preload" href="/fonts/Montserrat-Bold" type="font/woff2" as="font" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="styles/styles.css?20261012065036000">
+
+<link rel="icon" href="favicon.ico">
+<link rel="icon" href="favicons/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="favicons/favicon-apple-180.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="vendor/swiper/swiper-bundle.min.css">
+
+
+<meta name="description" content="">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#990000">
+
+    <title>page name</title>
+  </head>
+  <body class="page">
+      <header class="page__header header">
+  <div class="header__inner container">
+    <a class="header__logo logo" href="/">
+      <img src="images/logo.svg" width="40" height="40" alt="Tosei - автомобили из Японии с доставкой по все России">
+      <p class="logo__title">tosei</p>
+    </a>
+    <button class="burger burger--lines" type="button" aria-label="Меню"></button>
+
+
+  </div>
+</header>
+
+      <nav class="nav">
+  <ul class="nav__list">
+    <li class="nav__item">
+      <a class="nav__link" href="#">Услуги</a>
+    </li>
+    <li class="nav__item">
+      <a class="nav__link" href="#">Каталог&nbsp;техники</a>
+    </li>
+    <li class="nav__item">
+      <a class="nav__link" href="#">Аукционы</a>
+    </li>
+    <li class="nav__item">
+      <a class="nav__link" href="#">Информация</a>
+    </li>
+    <li class="nav__item">
+      <a class="nav__link" href="#">О&nbsp;нас</a>
+    </li>
+    <li class="nav__item">
+      <a class="nav__link" href="#">Отзывы</a>
+    </li>
+    <li class="nav__item">
+      <a class="nav__link" href="#">Контакты</a>
+    </li>
+  </ul>
+</nav>
+
+    <main class="page__main">
+      
+  <section class="intro">
+  <div class="intro__inner container">
+    <div class="intro__content">
+      <h1 class="intro__title">Доставим любую технику из&nbsp;Японии за&nbsp;3&nbsp;недели</h1>
+      
+      
+      
+
+
+<form class="form intro__form" action="#" method="post">
+
+  
+    <fieldset class="form__module">
+      <legend class="visually-hidden">Формат таможенного оформления</legend>
+      <ul class="form__list">
+        <li class="form__list-item">
+          
+  <input class="form__module-checkbox" type="checkbox" name="duty" id="check-duty" checked>
+  <label class="form__module-label form__module-label--checkbox" for="check-duty">Полная пошлина</label>
+
+        </li>
+        <li class="form__list-item">
+          
+  <input class="form__module-checkbox" type="checkbox" name="dismantling" id="check-dismantling" checked>
+  <label class="form__module-label form__module-label--checkbox" for="check-dismantling">Распил или конструктор</label>
+
+        </li>
+      </ul>
+    </fieldset>
+    <fieldset class="form__module">
+      <legend class="visually-hidden">Автомобиль</legend>
+      <ul class="form__list">
+        <li class="form__list-item">
+          
+    
+      <label class="form__module-label form__module-label--select" for="field-brand">
+        Производитель
+      </label>
+    
+    <select class="form__module-select" id="field-brand" name="brand"
+      >
+      
+        <option value="not selected" >
+          Не выбрано
+        </option>
+      
+    </select>
+
+        </li>
+        <li class="form__list-item">
+          
+    
+      <label class="form__module-label form__module-label--select" for="field-model">
+        Марка
+      </label>
+    
+    <select class="form__module-select" id="field-model" name="model"
+      >
+      
+        <option value="not selected" >
+          Не выбрано
+        </option>
+      
+    </select>
+
+        </li>
+      </ul>
+    </fieldset>
+    <fieldset class="form__module">
+      <legend class="form__legend">Год выпуска</legend>
+      <ul class="form__list form__list--range">
+        <li class="form__list-item">
+          
+    
+    <select class="form__module-select" id="field-year_from" name="year_from"
+       aria-label="year_from">
+      
+        <option value="year_from" >
+          от
+        </option>
+      
+    </select>
+
+        </li>
+        <li class="form__list-item">
+          
+    
+    <select class="form__module-select" id="field-year_to" name="year_to"
+       aria-label="year_to">
+      
+        <option value="year_to" >
+          до
+        </option>
+      
+    </select>
+
+        </li>
+      </ul>
+    </fieldset>
+    <ul class="form__action">
+      <li class="form__action-item">
+        
+  <button class="btn form__btn btn--extended" type="button">
+    Расширенный поиск
+  </button>
+
+      </li>
+      <li class="form__action-item">
+        
+  <button class="btn form__btn btn--submit" type="submit">
+    Найти
+  </button>
+
+      </li>
+      <li class="form__action-item form__action-item--counter">
+        <p class="form__counter">
+          <span>Автомобилей в наличии:</span>
+          <output class="form__counter-value">256</output>
+        </p>
+      </li>
+    </ul>
+  
+
+  
+
+</form>
+
+
+    </div>
+      <picture>
+        <source type="image/webp" media="(min-width: 1280px)" width="1080" height="316" srcset="../../images/intro-bg-desktop@1x.webp 1x, ../../images/intro-bg-desktop@2x.webp 2x">
+        <source type="image/jpeg" media="(min-width: 1280px)" width="1080" height="316" srcset="../../images/intro-bg-desktop@1x.jpg 1x, ../../images/intro-bg-desktop@2x.jpg 2x">
+        <source type="image/webp" media="(min-width: 375px)" width="375" height="316" srcset="../../images/intro-bg-mobile@1x.webp 1x, ../../images/intro-bg-mobile@2x.webp 2x">
+        <img class="intro__bg" src="../../images/intro-bg-mobile@1x.jpg" srcset="../../images/intro-bg-mobile@1x.jpg 2x" width="375" height="316" alt="Ряд современных легковых автомобилей разных цветов на парковке автодилера">
+      </picture>
+  </div>
+</section>
+
+  
+
+
+
+<section class="trending">
+  <div class="trending__inner container">
+    
+  
+  <h2 class="section-title trending__title">
+    Популярные автомобили
+  </h2>
+
+    <ul class="trending__radio-list">
+      <li class="trending__radio-list-item">
+  <input class="trending__radio-input" type="radio" id="radio-trending-filter-any" name="trending-filter" value="any" checked>
+  <label class="trending__radio-label" for="radio-trending-filter-any">Любые</label>
+</li>
+      <li class="trending__radio-list-item">
+  <input class="trending__radio-input" type="radio" id="radio-trending-filter-available" name="trending-filter" value="available" >
+  <label class="trending__radio-label" for="radio-trending-filter-available">В наличии</label>
+</li>
+      <li class="trending__radio-list-item">
+  <input class="trending__radio-input" type="radio" id="radio-trending-filter-order" name="trending-filter" value="order" >
+  <label class="trending__radio-label" for="radio-trending-filter-order">Под заказ</label>
+</li>
+    </ul>
+    <ul class="trending__list">
+      
+        <li class="trending__item">
+          
+  <a class="card" href="#">
+    <h3 class="card__title">Honda Fit</h3>
+    <picture>
+      
+      <img class="card__image" src="images/card-images/honda-fit@1x.jpg" srcset="images/card-images/honda-fit@2x.jpg 2x" width="303" height="198" alt="Honda Fit">
+    </picture>
+    <dl class="card__info">
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Объем двигателя
+    </dt>
+    <dd class="card__info-value ">
+      1,2 л.с.
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Год
+    </dt>
+    <dd class="card__info-value ">
+      2015 г.
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Пробег
+    </dt>
+    <dd class="card__info-value ">
+      34 000 км
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row card__info-row--full">
+    <dt class="visually-hidden ">
+      Тип оформления
+    </dt>
+    <dd class="card__info-value card__info-value--full">
+      Под полную пошлину
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Привод
+    </dt>
+    <dd class="card__info-value ">
+      Задний
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      КПП
+    </dt>
+    <dd class="card__info-value ">
+      Автомат
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row card__info-row--price">
+    <dt class="card__info-term card__info-term--price">
+      Стоимость во Владивостоке
+    </dt>
+    <dd class="card__info-value card__info-value--price">
+      630 000 ₽
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row card__info-row--available">
+    <dt class="visually-hidden ">
+      Статус автомобиля
+    </dt>
+    <dd class="card__status card__status--available">
+      В наличии
+    </dd>
+  </div>
+
+
+    </dl>
+  </a>
+
+        </li>
+      
+        <li class="trending__item">
+          
+  <a class="card" href="#">
+    <h3 class="card__title">BMW - X5 2005</h3>
+    <picture>
+      
+      <img class="card__image" src="images/card-images/bmw-x5-2005@1x.jpg" srcset="images/card-images/bmw-x5-2005@2x.jpg 2x" width="303" height="198" alt="BMW - X5 2005">
+    </picture>
+    <dl class="card__info">
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Объем двигателя
+    </dt>
+    <dd class="card__info-value ">
+      1,2 л.с.
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Год
+    </dt>
+    <dd class="card__info-value ">
+      2015 г.
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Пробег
+    </dt>
+    <dd class="card__info-value ">
+      34 000 км
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row card__info-row--full">
+    <dt class="visually-hidden ">
+      Тип оформления
+    </dt>
+    <dd class="card__info-value card__info-value--full">
+      Под полную пошлину
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Привод
+    </dt>
+    <dd class="card__info-value ">
+      Задний
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      КПП
+    </dt>
+    <dd class="card__info-value ">
+      Автомат
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row card__info-row--price">
+    <dt class="card__info-term card__info-term--price">
+      Стоимость во Владивостоке
+    </dt>
+    <dd class="card__info-value card__info-value--price">
+      630 000 ₽
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row card__info-row--order">
+    <dt class="visually-hidden ">
+      Статус автомобиля
+    </dt>
+    <dd class="card__status card__status--order">
+      Под заказ
+    </dd>
+  </div>
+
+
+    </dl>
+  </a>
+
+        </li>
+      
+        <li class="trending__item">
+          
+  <a class="card" href="#">
+    <h3 class="card__title">Honda Fit</h3>
+    <picture>
+      
+      <img class="card__image" src="images/card-images/toyota-prius@1x.jpg" srcset="images/card-images/toyota-prius@2x.jpg 2x" width="303" height="198" alt="Honda Fit">
+    </picture>
+    <dl class="card__info">
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Объем двигателя
+    </dt>
+    <dd class="card__info-value ">
+      1,2 л.с.
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Год
+    </dt>
+    <dd class="card__info-value ">
+      2015 г.
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Пробег
+    </dt>
+    <dd class="card__info-value ">
+      34 000 км
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row card__info-row--full">
+    <dt class="visually-hidden ">
+      Тип оформления
+    </dt>
+    <dd class="card__info-value card__info-value--full">
+      Под полную пошлину
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Привод
+    </dt>
+    <dd class="card__info-value ">
+      Задний
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      КПП
+    </dt>
+    <dd class="card__info-value ">
+      Автомат
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row card__info-row--price">
+    <dt class="card__info-term card__info-term--price">
+      Стоимость во Владивостоке
+    </dt>
+    <dd class="card__info-value card__info-value--price">
+      630 000 ₽
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row card__info-row--available">
+    <dt class="visually-hidden ">
+      Статус автомобиля
+    </dt>
+    <dd class="card__status card__status--available">
+      В наличии
+    </dd>
+  </div>
+
+
+    </dl>
+  </a>
+
+        </li>
+      
+    </ul>
+    
+  <button class="btn trending__btn btn--more" type="button">
+    Показать еще
+  </button>
+
+  </div>
+</section>
+
+  
+  
+
+
+  
+<section class="infographic ">
+  <div class="infographic__inner container">
+    
+  
+  <h2 class="section-title infographic__title">
+    Наши преимущества
+  </h2>
+
+    <ul class="infographic__list">
+      
+    <li class="infographic__item">
+      <h3 class="infographic__item-title">20 лет на рынке</h3>
+      <p class="infographic__item-text">Мы&nbsp;транспортируем авто в&nbsp;порт Японии, грузим на&nbsp;судно и доставляем во&nbsp;Владивосток, где проходит таможенное оформление</p>
+    </li>
+    <li class="infographic__item">
+      <h3 class="infographic__item-title">Доставка по&nbsp;РФ</h3>
+      <p class="infographic__item-text">Мы&nbsp;транспортируем авто в&nbsp;порт Японии, грузим на&nbsp;судно и доставляем во&nbsp;Владивосток, где проходит таможенное оформление</p>
+    </li>
+    <li class="infographic__item">
+      <h3 class="infographic__item-title">Персональный менеджер</h3>
+      <p class="infographic__item-text">Мы&nbsp;транспортируем авто в&nbsp;порт Японии, грузим на&nbsp;судно и доставляем во&nbsp;Владивосток, где проходит таможенное оформление</p>
+    </li>
+    <li class="infographic__item">
+      <h3 class="infographic__item-title">Собственное представительство в Японии</h3>
+      <p class="infographic__item-text">Мы&nbsp;транспортируем авто в&nbsp;порт Японии, грузим на&nbsp;судно и доставляем во&nbsp;Владивосток, где проходит таможенное оформление</p>
+    </li>
+  
+    </ul>
+    
+  </div>
+</section>
+
+
+
+
+
+  
+
+
+<section class="feedback">
+  <div class="feedback__inner container">
+    
+  
+  <h2 class="section-title feedback__title">
+    Отзывы
+  </h2>
+
+    <div class="feedback__slider swiper">
+      <ul class="feedback__wrapper swiper-wrapper">
+        
+          <li class="feedback__item swiper-slide">
+            
+<article class="feedback-card">
+  <a class="feedback-card__media" href="#" target="_blank" rel="noopener" aria-label="Смотреть видео отзыв от Генадий Сергеевич">
+    
+<picture>
+  
+    <source type="image/webp" media="(min-width: 1440px)" srcset="images/feedback-images/gennady-sergeevich-desktop@1x.webp 1x, images/feedback-images/gennady-sergeevich-desktop@2x.webp 2x" width="270" height="160">
+    <source type="image/jpeg" media="(min-width: 1440px)" srcset="images/feedback-images/gennady-sergeevich-desktop@1x.jpg 1x, images/feedback-images/gennady-sergeevich-desktop@2x.jpg 2x" width="270" height="160">
+  
+  
+  <source type="image/webp" srcset="images/feedback-images/gennady-sergeevich-mobile@1x.webp 1x, images/feedback-images/gennady-sergeevich-mobile@2x.webp 2x">
+  <img class="feedback-card__image" src="images/feedback-images/gennady-sergeevich-mobile@1x.jpg" srcset="images/feedback-images/gennady-sergeevich-mobile@2x.jpg 2x" width="202" height="" alt="Генадий Сергеевич">
+</picture>
+
+  </a>
+  <ul class="feedback-card__rating">
+    
+      <li class="feedback-card__rating-item feedback-card__rating-item--active"></li>
+    
+      <li class="feedback-card__rating-item feedback-card__rating-item--active"></li>
+    
+      <li class="feedback-card__rating-item feedback-card__rating-item--active"></li>
+    
+      <li class="feedback-card__rating-item feedback-card__rating-item--active"></li>
+    
+      <li class="feedback-card__rating-item feedback-card__rating-item--active"></li>
+    
+  </ul>
+  <h3 class="feedback-card__author">Генадий Сергеевич</h3>
+  <p class="feedback-card__car">Toyota Allion</p>
+</article>
+
+          </li>
+        
+          <li class="feedback__item swiper-slide">
+            
+<article class="feedback-card">
+  <a class="feedback-card__media" href="#" target="_blank" rel="noopener" aria-label="Смотреть видео отзыв от Ольга Архипова">
+    
+<picture>
+  
+    <source type="image/webp" media="(min-width: 1440px)" srcset="images/feedback-images/olga-arkhipova-desktop@1x.webp 1x, images/feedback-images/olga-arkhipova-desktop@2x.webp 2x" width="270" height="160">
+    <source type="image/jpeg" media="(min-width: 1440px)" srcset="images/feedback-images/olga-arkhipova-desktop@1x.jpg 1x, images/feedback-images/olga-arkhipova-desktop@2x.jpg 2x" width="270" height="160">
+  
+  
+  <source type="image/webp" srcset="images/feedback-images/olga-arkhipova-mobile@1x.webp 1x, images/feedback-images/olga-arkhipova-mobile@2x.webp 2x">
+  <img class="feedback-card__image" src="images/feedback-images/olga-arkhipova-mobile@1x.jpg" srcset="images/feedback-images/olga-arkhipova-mobile@2x.jpg 2x" width="202" height="" alt="Ольга Архипова">
+</picture>
+
+  </a>
+  <ul class="feedback-card__rating">
+    
+      <li class="feedback-card__rating-item feedback-card__rating-item--active"></li>
+    
+      <li class="feedback-card__rating-item feedback-card__rating-item--active"></li>
+    
+      <li class="feedback-card__rating-item feedback-card__rating-item--active"></li>
+    
+      <li class="feedback-card__rating-item feedback-card__rating-item--active"></li>
+    
+      <li class="feedback-card__rating-item"></li>
+    
+  </ul>
+  <h3 class="feedback-card__author">Ольга Архипова</h3>
+  <p class="feedback-card__car">Toyota Allion</p>
+</article>
+
+          </li>
+        
+          <li class="feedback__item swiper-slide">
+            
+<article class="feedback-card">
+  <a class="feedback-card__media" href="#" target="_blank" rel="noopener" aria-label="Смотреть видео отзыв от Николай Евгеньевич">
+    
+<picture>
+  
+    <source type="image/webp" media="(min-width: 1440px)" srcset="images/feedback-images/nikolay-evgenievich-desktop@1x.webp 1x, images/feedback-images/nikolay-evgenievich-desktop@2x.webp 2x" width="270" height="160">
+    <source type="image/jpeg" media="(min-width: 1440px)" srcset="images/feedback-images/nikolay-evgenievich-desktop@1x.jpg 1x, images/feedback-images/nikolay-evgenievich-desktop@2x.jpg 2x" width="270" height="160">
+  
+  
+  <source type="image/webp" srcset="images/feedback-images/nikolay-evgenievich-mobile@1x.webp 1x, images/feedback-images/nikolay-evgenievich-mobile@2x.webp 2x">
+  <img class="feedback-card__image" src="images/feedback-images/nikolay-evgenievich-mobile@1x.jpg" srcset="images/feedback-images/nikolay-evgenievich-mobile@2x.jpg 2x" width="202" height="" alt="Николай Евгеньевич">
+</picture>
+
+  </a>
+  <ul class="feedback-card__rating">
+    
+      <li class="feedback-card__rating-item feedback-card__rating-item--active"></li>
+    
+      <li class="feedback-card__rating-item feedback-card__rating-item--active"></li>
+    
+      <li class="feedback-card__rating-item feedback-card__rating-item--active"></li>
+    
+      <li class="feedback-card__rating-item feedback-card__rating-item--active"></li>
+    
+      <li class="feedback-card__rating-item feedback-card__rating-item--active"></li>
+    
+  </ul>
+  <h3 class="feedback-card__author">Николай Евгеньевич</h3>
+  <p class="feedback-card__car">Toyota Allion</p>
+</article>
+
+          </li>
+        
+          <li class="feedback__item swiper-slide">
+            
+<article class="feedback-card">
+  <a class="feedback-card__media" href="#" target="_blank" rel="noopener" aria-label="Смотреть видео отзыв от Роман Юрьевич">
+    
+<picture>
+  
+    <source type="image/webp" media="(min-width: 1440px)" srcset="images/feedback-images/roman-yurievich-desktop@1x.webp 1x, images/feedback-images/roman-yurievich-desktop@2x.webp 2x" width="270" height="160">
+    <source type="image/jpeg" media="(min-width: 1440px)" srcset="images/feedback-images/roman-yurievich-desktop@1x.jpg 1x, images/feedback-images/roman-yurievich-desktop@2x.jpg 2x" width="270" height="160">
+  
+  
+  <source type="image/webp" srcset="images/feedback-images/roman-yurievich-mobile@1x.webp 1x, images/feedback-images/roman-yurievich-mobile@2x.webp 2x">
+  <img class="feedback-card__image" src="images/feedback-images/roman-yurievich-mobile@1x.jpg" srcset="images/feedback-images/roman-yurievich-mobile@2x.jpg 2x" width="202" height="" alt="Роман Юрьевич">
+</picture>
+
+  </a>
+  <ul class="feedback-card__rating">
+    
+      <li class="feedback-card__rating-item feedback-card__rating-item--active"></li>
+    
+      <li class="feedback-card__rating-item feedback-card__rating-item--active"></li>
+    
+      <li class="feedback-card__rating-item feedback-card__rating-item--active"></li>
+    
+      <li class="feedback-card__rating-item feedback-card__rating-item--active"></li>
+    
+      <li class="feedback-card__rating-item feedback-card__rating-item--active"></li>
+    
+  </ul>
+  <h3 class="feedback-card__author">Роман Юрьевич</h3>
+  <p class="feedback-card__car">Toyota Allion</p>
+</article>
+
+          </li>
+        
+      </ul>
+    </div>
+    <a href="#" class="feedback__btn btn btn--more">Ещё отзывы</a>
+  </div>
+</section>
+
+
+  
+  
+
+
+  
+<section class="infographic infographic--purchase">
+  <div class="infographic__inner container">
+    
+  
+  <h2 class="section-title infographic__title infographic__title--purchase">
+    Как происходит покупка
+  </h2>
+
+    <ul class="infographic__list infographic__list--purchase">
+      
+    <li class="infographic__item infographic__item--support">
+      <h3 class="infographic__item-title infographic__item-title--purchase">Оставляете заявку</h3>
+      <p class="infographic__item-text infographic__item-text--purchase">Вы&nbsp;оставляете заявку на&nbsp;сайте, либо связываетесь с&nbsp;нами удобным для вас способом.</p>
+    </li>
+    <li class="infographic__item infographic__item--document">
+      <h3 class="infographic__item-title infographic__item-title--purchase">Заключаем договор</h3>
+      <p class="infographic__item-text infographic__item-text--purchase">Заключаем договор, Вы&nbsp;вносите&nbsp;гарантийный депозит.</p>
+    </li>
+    <li class="infographic__item infographic__item--market">
+      <h3 class="infographic__item-title infographic__item-title--purchase">Подбор и&nbsp;покупка авто</h3>
+      <p class="infographic__item-text infographic__item-text--purchase">Вам предлагаются подходящие варианты с&nbsp;аукционов,&nbsp;Вы принимаете решение, автомобиль выкупается.</p>
+    </li>
+    <li class="infographic__item infographic__item--delivery">
+      <h3 class="infographic__item-title infographic__item-title--purchase">Доставка в&nbsp;РФ и&nbsp;оформление</h3>
+      <p class="infographic__item-text infographic__item-text--purchase">Мы&nbsp;транспортируем авто в&nbsp;порт Японии, грузим на&nbsp;судно&nbsp;и доставляем во&nbsp;Владивосток, где проходит таможенное оформление</p>
+    </li>
+    <li class="infographic__item infographic__item--guarantee">
+      <h3 class="infographic__item-title infographic__item-title--purchase">Доставка до&nbsp;вашего города</h3>
+      <p class="infographic__item-text infographic__item-text--purchase">Мы&nbsp;доставляем авто в&nbsp;любой регион России выбранным Вами способом, либо&nbsp;Вы сами забираете его&nbsp;во Владивостоке.</p>
+    </li>
+  
+    </ul>
+    
+      <div class="infographic__actions">
+        <button class="infographic__btn infographic__btn--purchase btn" type="button">Оставить заявку</button>
+      </div>
+    
+  </div>
+</section>
+
+
+
+
+  
+
+
+<section class="reviews">
+  <div class="reviews__inner container">
+    
+  
+  <h2 class="section-title reviews__title">
+    Наши обзоры
+  </h2>
+
+    <ul class="reviews__list">
+      
+        <li class="reviews__item">
+          
+<article class="review-card">
+  <a class="review-card__media" href="#">
+    
+<picture>
+  
+    <source type="image/webp" media="(min-width: 1440px)" srcset="images/reviews-images/honda-fit-shuttle-desktop@1x.webp 1x, images/reviews-images/honda-fit-shuttle-desktop@2x.webp 2x" width="360" height="200">
+    <source type="image/jpeg" media="(min-width: 1440px)" srcset="images/reviews-images/honda-fit-shuttle-desktop@1x.jpg 1x, images/reviews-images/honda-fit-shuttle-desktop@2x.jpg 2x" width="360" height="200">
+  
+  
+  <source type="image/webp" srcset="images/reviews-images/honda-fit-shuttle-mobile@1x.webp 1x, images/reviews-images/honda-fit-shuttle-mobile@2x.webp 2x">
+  <img class="review-card__image" src="images/reviews-images/honda-fit-shuttle-mobile@1x.jpg" srcset="images/reviews-images/honda-fit-shuttle-mobile@2x.jpg 2x" width="332" height="172" alt="Космический Shuttle | HONDA FIT SHUTTLE 2013">
+</picture>
+
+  </a>
+  <h3 class="review-card__title">Космический Shuttle | HONDA FIT SHUTTLE 2013</h3>
+  
+  <div class="review-card__meta">
+    <span class="review-card__meta-views">391 просмотр</span>
+    <span class="review-card__meta-date">3 недели назад</span>
+  </div>
+
+</article>
+
+        </li>
+      
+        <li class="reviews__item">
+          
+<article class="review-card">
+  <a class="review-card__media" href="#">
+    
+<picture>
+  
+    <source type="image/webp" media="(min-width: 1440px)" srcset="images/reviews-images/toyota-siena-desktop@1x.webp 1x, images/reviews-images/toyota-siena-desktop@2x.webp 2x" width="360" height="200">
+    <source type="image/jpeg" media="(min-width: 1440px)" srcset="images/reviews-images/toyota-siena-desktop@1x.jpg 1x, images/reviews-images/toyota-siena-desktop@2x.jpg 2x" width="360" height="200">
+  
+  
+  <source type="image/webp" srcset="images/reviews-images/toyota-siena-mobile@1x.webp 1x, images/reviews-images/toyota-siena-mobile@2x.webp 2x">
+  <img class="review-card__image" src="images/reviews-images/toyota-siena-mobile@1x.jpg" srcset="images/reviews-images/toyota-siena-mobile@2x.jpg 2x" width="332" height="172" alt="Компактный минивен | Toyota Siena 2017 г.">
+</picture>
+
+  </a>
+  <h3 class="review-card__title">Компактный минивен | Toyota Siena 2017 г.</h3>
+  
+  <div class="review-card__meta">
+    <span class="review-card__meta-views">391 просмотр</span>
+    <span class="review-card__meta-date">3 недели назад</span>
+  </div>
+
+</article>
+
+        </li>
+      
+        <li class="reviews__item">
+          
+<article class="review-card">
+  <a class="review-card__media" href="#">
+    
+<picture>
+  
+    <source type="image/webp" media="(min-width: 1440px)" srcset="images/reviews-images/kato-kb1500r-desktop@1x.webp 1x, images/reviews-images/kato-kb1500r-desktop@2x.webp 2x" width="360" height="200">
+    <source type="image/jpeg" media="(min-width: 1440px)" srcset="images/reviews-images/kato-kb1500r-desktop@1x.jpg 1x, images/reviews-images/kato-kb1500r-desktop@2x.jpg 2x" width="360" height="200">
+  
+  
+  <source type="image/webp" srcset="images/reviews-images/kato-kb1500r-mobile@1x.webp 1x, images/reviews-images/kato-kb1500r-mobile@2x.webp 2x">
+  <img class="review-card__image" src="images/reviews-images/kato-kb1500r-mobile@1x.jpg" srcset="images/reviews-images/kato-kb1500r-mobile@2x.jpg 2x" width="332" height="172" alt="Спецтехника по-крупному | KATO KB1500R">
+</picture>
+
+  </a>
+  <h3 class="review-card__title">Спецтехника по-крупному | KATO KB1500R</h3>
+  
+  <div class="review-card__meta">
+    <span class="review-card__meta-views">391 просмотр</span>
+    <span class="review-card__meta-date">3 недели назад</span>
+  </div>
+
+</article>
+
+        </li>
+      
+    </ul>
+      <button class="reviews__btn btn btn--more" type="button">Все обзоры</button>
+  </div>
+</section>
+
+
+    </main>
+    <footer class="page__footer footer">
+  <div class="footer__inner container">
+
+    <ul class="social">
+  
+    <li class="social__item">
+      <a class="social__link social__link--vk" href="#" title="Мы в контакте" style="--icon: url('../icons/stack.svg#social-vk')">
+        <span class="visually-hidden">Мы в контакте</span>
+      </a>
+    </li>
+  
+    <li class="social__item">
+      <a class="social__link social__link--tg" href="#" title="Мы в телеграме" style="--icon: url('../icons/stack.svg#social-telegram')">
+        <span class="visually-hidden">Мы в телеграме</span>
+      </a>
+    </li>
+  
+</ul>
+
+
+    <p>
+      
+        <a href="tel:+7(812)0000000">+7 (812) 000 00 00</a>
+      
+        <a href="tel:+7(812)0000000">+7 (812) 000 00 00</a>
+      
+    </p>
+    <p>
+      <span>Санкт-Петербург,</span> ул.&nbsp;Улица, д.1
+    </p>
+    <p>
+      Пн. – Пт.: с 9:00 до 18:00
+    </p>
+
+    <p class="footer__year year" data-copyright>© <span data-startYear>2026</span>
+    </p>
+  </div>
+</footer>
+
+    <script src="vendor/swiper/swiper-bundle.min.js"></script>
+<script src="scripts/script.js?20261012065036000" type="module"></script>
+
+
+  </body>
+</html>
