@@ -20,9 +20,9 @@
   },
   "themeColor": "#990000",
   "preloadFonts": [
-    "Montserrat-Regular",
-    "Montserrat-Medium",
-    "Montserrat-SemiBold",
-    "Montserrat-Bold"
+    "Montserrat-Regular.woff2",
+    "Montserrat-Medium.woff2",
+    "Montserrat-SemiBold.woff2",
+    "Montserrat-Bold.woff2"
   ]
 }
