@@ -281,6 +281,13 @@ export function removeBuild(done) {
   done();
 }
 
+// Таск для копирования манифеста и служебных файлов из корня source в build
+const copyManifest = () => {
+  return gulp.src('source/*.{ico,png,svg,webmanifest,json}')
+    .pipe(gulp.dest('build/'));
+};
+
+
 export function buildProd(done) {
   isDevelopment = false;
   series(
@@ -291,6 +298,7 @@ export function buildProd(done) {
       processScripts,
       createStack,
       copyStatic,
+      copyManifest,
     ),
   )(done);
 }
@@ -307,3 +315,4 @@ export function runDev(done) {
     startServer,
   )(done);
 }
+
