@@ -18,8 +18,3 @@ window.addEventListener('DOMContentLoaded', () => {
 
   });
 });
-
-new Swiper('.feedback__slider', {
-  slidesPerView: 'auto',
-  spaceBetween: 20,
-});
