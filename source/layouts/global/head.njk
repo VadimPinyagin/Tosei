@@ -1,12 +1,11 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<link rel="stylesheet" href="styles/styles.css?{{ versionNumber }}">
+<link rel="stylesheet" href="./vendor/swiper/swiper-bundle.min.css">
 {% for font in global.preloadFonts %}
   <link rel="preload" href="fonts/{{ font }}" type="font/woff2" as="font" crossorigin="anonymous">
 {% endfor %}
-<link rel="stylesheet" href="styles/styles.css?{{ versionNumber }}">
-<link rel="stylesheet" href="./vendor/swiper/swiper-bundle.min.css">
 <link rel="icon" href="favicon.ico">
 <link rel="icon" href="favicons/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="favicons/favicon-apple-180.png">
