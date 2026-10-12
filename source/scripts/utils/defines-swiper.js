@@ -10,4 +10,6 @@ const feedbackSwiper = () => {
   });
 };
 
-feedbackSwiper();
+document.addEventListener('DOMContentLoaded', () => {
+  feedbackSwiper();
+});
