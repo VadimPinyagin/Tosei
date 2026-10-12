@@ -1,11 +1,13 @@
 .review-card {
-  display: grid;
-  gap: 8px;
+  margin-inline-start: -2px;
 }
+
 .review-card__media {
   font-size: 16px;
   font-weight: 700;
   line-height: 1;
+  display: block;
+  margin-block-end: 11px;
 }
 .review-card__meta {
   display: flex;
@@ -26,10 +28,14 @@
   }
 }
 
-.review-card__meta-views {
-  order: 2;
+.review-card__meta-date {
+  order: 3;
 }
 
 .review-card__title {
-  margin-block: 0;
+  margin-block: 0 10px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.2;
+  width: 308px;
 }

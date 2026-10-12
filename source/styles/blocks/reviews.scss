@@ -1,6 +1,8 @@
 .reviews__list {
   list-style: none;
   padding-inline-start: 0;
+  margin-block-end: 23px;
+  gap: 20px;
 }
 
 .reviews__inner {
@@ -12,6 +14,5 @@
 }
 
 .reviews__title {
-  margin-block-start: 0;
-  margin-block-end: 25px;
+  margin-block: 0 25px;
 }
