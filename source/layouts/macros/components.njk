@@ -39,3 +39,21 @@
   </div>
 {% endmacro %}
 
+{% macro contactRow(termDisplay, linkValue, note, type="tel", className="address") %}
+  <div class="{{ className }}__row">
+    <dt class="{{ className }}__term">
+      {% if type == "tel" %}
+        <a href="tel:{{ linkValue }}" class="{{ className }}__link {{ className }}__link--phone">{{ termDisplay }}</a>
+      {% elif type == "whatsapp" %}
+        <a href="https://wa.me{{ linkValue }}" class="{{ className }}__link {{ className }}__link--wa" target="_blank" rel="noopener">{{ termDisplay }}</a>
+      {% elif type == "mailto" %}
+        <a href="mailto:{{ linkValue }}" class="{{ className }}__link {{ className }}__link--email">{{ termDisplay }}</a>
+      {% endif %}
+    </dt>
+    {% if note %}
+      <dd class="{{ className }}__value">{{ note }}</dd>
+    {% endif %}
+  </div>
+{% endmacro %}
+
+

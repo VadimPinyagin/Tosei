@@ -1,0 +1,18 @@
+{% from "macros/components.njk" import sectionTitle %}
+{% from "macros/components.njk" import contactRow %}
+
+<section class="contacts">
+  {{ sectionTitle("Как с нами связаться?", "contacts__title") }}
+  <address class="contacts__address address">
+    <dl class="address__info">
+      {{ contactRow("+7 (423) 208-11-18", "+74232081118", "для заказа авто", "tel") }}
+      {{ contactRow("+7 (984) 197-77-78", "+79841977778", "для заказа авто и мото техники", "tel") }}
+      {{ contactRow("+7 (914) 691-85-05", "+79146918505", "для заказа спецтехники", "tel") }}
+      {{ contactRow("+7 (984) 197-77-78", "+79841977778", "", "whatsapp") }}
+      {{ contactRow("+7 (984) 198-11-18", "+79841981118", "", "whatsapp") }}
+      {{ contactRow("spec@tosei.ru", "spec@tosei.ru", "", "mailto") }}
+    </dl>
+  </address>
+  <div class="contacts__callback callback"></div>
+  <div class="contacts__map map" id="map"></div>
+</section>
