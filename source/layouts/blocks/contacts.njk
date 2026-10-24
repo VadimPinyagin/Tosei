@@ -2,21 +2,23 @@
 {% from "macros/components.njk" import contactRow %}
 
 <section class="contacts">
-  {{ sectionTitle("Как с нами связаться?", "contacts__title") }}
-  <address class="contacts__address address">
-    <dl class="address__info">
-      {{ contactRow("+7 (423) 208-11-18", "+74232081118", "для заказа авто", "tel") }}
-      {{ contactRow("+7 (984) 197-77-78", "+79841977778", "для заказа авто и мото техники", "tel") }}
-      {{ contactRow("+7 (914) 691-85-05", "+79146918505", "для заказа спецтехники", "tel") }}
-      {{ contactRow("+7 (984) 197-77-78", "+79841977778", "", "whatsapp") }}
-      {{ contactRow("+7 (984) 198-11-18", "+79841981118", "", "whatsapp") }}
-      {{ contactRow("spec@tosei.ru", "spec@tosei.ru", "", "mailto") }}
-    </dl>
-  </address>
-  <div class="contacts__callback callback">
-    {% set formType = "callback" %}
-    {% set mixClass = "contacts__callback" %}
-    {% include "blocks/callback.njk" %}
+  <div class="contacts__inner container">
+    {{ sectionTitle("Как с нами связаться?", "contacts__title") }}
+    <address class="contacts__address address">
+      <dl class="address__info">
+        {{ contactRow("+7 (423) 208-11-18", "+74232081118", "для заказа авто", "tel") }}
+        {{ contactRow("+7 (984) 197-77-78", "+79841977778", "для заказа авто и мото техники", "tel") }}
+        {{ contactRow("+7 (914) 691-85-05", "+79146918505", "для заказа спецтехники", "tel") }}
+        {{ contactRow("+7 (984) 197-77-78", "+79841977778", "", "whatsapp") }}
+        {{ contactRow("+7 (984) 198-11-18", "+79841981118", "", "whatsapp") }}
+        {{ contactRow("spec@tosei.ru", "spec@tosei.ru", "", "mailto") }}
+      </dl>
+    </address>
+    <div class="contacts__callback callback">
+      {% set formType = "callback" %}
+      {% set mixClass = "contacts__callback" %}
+      {% include "blocks/callback.njk" %}
+    </div>
   </div>
   <div class="contacts__map map" id="map">
     <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A9b6e9b1612a861a6ab6245823280663c339c252242e8f9e08d0695f9645bac98&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
