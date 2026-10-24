@@ -13,6 +13,10 @@
       {{ contactRow("spec@tosei.ru", "spec@tosei.ru", "", "mailto") }}
     </dl>
   </address>
-  <div class="contacts__callback callback"></div>
+  <div class="contacts__callback callback">
+    {% set formType = "callback" %}
+    {% set mixClass = "contacts__callback" %}
+    {% include "blocks/callback.njk" %}
+  </div>
   <div class="contacts__map map" id="map"></div>
 </section>

@@ -1,8 +1,8 @@
 {% from "macros/fields.njk" import select, input, checkbox %}
 {% from "macros/btn.njk" import button %}
 
+{% macro renderForm(formType, mixClass="") %}
 <form class="form {{ mixClass }}" action="#" method="post">
-
   {% if formType == "filter" %}
     <fieldset class="form__module">
       <legend class="visually-hidden">Формат таможенного оформления</legend>
@@ -52,7 +52,6 @@
       </li>
     </ul>
   {% endif %}
-
   {% if formType == "callback" %}
     <fieldset class="form__module">
       <legend class="visually-hidden">Контактные данные для обратной связи</legend>
@@ -68,6 +67,5 @@
     </fieldset>
     {{ button("Проконсультировать бесплатно", "submit", "form__btn form__btn--submit") }}
   {% endif %}
-
 </form>
-
+{% endmacro %}
