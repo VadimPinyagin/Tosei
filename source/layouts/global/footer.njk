@@ -1,5 +1,19 @@
-<footer class="page__footer footer">
-  <div class="footer__inner container">
+{% from "macros/components.njk" import contactRow %}
 
+<footer class="footer">
+  <div class="footer__container container">
+    <p class="footer__copyright">© Тосэй 2021. Все права защищены
+    </p>
+    <address class="footer__address">
+      <p class="footer__text">г. Владивосток, ул. Фадеева, д. 47, строение 1</p>
+      <ul class="footer__socials">
+        <li class="footer__socials-item">
+          {{ contactRow("+7 (984) 197-77-78", "+79841977778", "", "whatsapp") }}
+        </li>
+        <li class="footer__socials-item">
+          {{ contactRow("+7 (984) 198-11-18", "+79841981118", "", "whatsapp") }}
+        </li>
+      </ul>
+    </address>
   </div>
 </footer>
