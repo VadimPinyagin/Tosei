@@ -1,5 +1,6 @@
 {% from "macros/fields.njk" import select, input, checkbox %}
 {% from "macros/btn.njk" import button %}
+{% from "macros/components.njk" import sectionTitle %}
 
 {% macro renderForm(formType, mixClass="") %}
 <form class="form {{ mixClass }}" action="#" method="post">
@@ -53,19 +54,19 @@
     </ul>
   {% endif %}
   {% if formType == "callback" %}
-    <fieldset class="form__module">
+    <fieldset class="form__module form__module--callback">
       <legend class="visually-hidden">Контактные данные для обратной связи</legend>
-      <h2 class="form__title">Обратная связь</h2>
-      <ul class="form__list">
-        <li class="form__list-item">
+      {{ sectionTitle("Обратная связь", "form__title") }}
+      <ul class="form__list form__list--callback">
+        <li class="form__list-item form__list-item--callback">
           {{ input("Ваше имя", "text", "user_name", "Ввести", "form") }}
         </li>
-        <li class="form__list-item">
+        <li class="form__list-item form__list-item--callback">
           {{ input("Контактный телефон", "tel", "user_phone", "+7", "form") }}
         </li>
       </ul>
     </fieldset>
-    {{ button("Проконсультировать бесплатно", "submit", "form__btn form__btn--submit") }}
+    {{ button("Проконсультировать бесплатно", "submit", "form__btn btn--submit") }}
   {% endif %}
 </form>
 {% endmacro %}

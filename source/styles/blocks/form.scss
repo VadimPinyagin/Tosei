@@ -56,6 +56,10 @@
   }
 }
 
+.form__list-item--callback::before {
+  display: none;
+}
+
 .form__module-checkbox {
   appearance: none;
   margin: 0;
@@ -92,9 +96,12 @@
   --lh: 1;
 }
 
+.form__label {
+  font-size: 13px;
+}
 
-
-.form__module-select {
+.form__module-select,
+.form__input {
   appearance: none;
   font-family: var(--font-main, "Arial"), sans-serif;
   font-size: 16px;
@@ -109,6 +116,10 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.form__input[type=text],[type=tel]{
+  font-size: 13px;
 }
 
 .form__legend {

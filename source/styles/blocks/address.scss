@@ -1,7 +1,69 @@
+.address {
+  font-style: normal;
+}
+
+.address__row {
+  display: flex;
+  flex-direction: column;
+
+    &:nth-last-child(2) {
+    margin-block:-6px;
+  }
+}
+
+.address__text {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.7;
+  margin-block: 0 16px;
+}
+
+.address__info {
+  --lh:1.9;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
 .address__link{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  line-height: var(--lh);
   text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+
+  &::before {
+    content: "";
+    display: block;
+    background: var(--icon) no-repeat center/contain;
+    width: var(--size);
+    height: var(--size);
+  }
+}
+
+.address__link--phone {
+  --icon: url("../../icons/phone.svg");
+  --size: 20px;
+  color: var(--basic-red, red);
+}
+
+.address__link--wa {
+  --icon: url("../../icons/wa.svg");
+  --size: 21px;
+  color: var(--color-gray-500);
+}
+
+.address__link--email {
+  --lh:1.7;
+  --icon: url("../../icons/mail.svg");
+  --size: 20px;
+  color: var(--basic-red, red);
 }
 
 .address__value {
-  margin-inline-start: 0;
+  margin-inline-start: 28px;
+  font-weight: 500;
+  color: var(--color-gray-500);
 }
