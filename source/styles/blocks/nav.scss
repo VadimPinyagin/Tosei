@@ -67,14 +67,14 @@
   position: fixed;
   top: 0;
   right: 0;
-  width: 75%;
+  width: 263px;
   max-width: 320px;
   height: 100%;
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
-  gap: 34px;
-  padding: 20px 20px;
+  gap: 39px;
+  padding: 20px 20px 20px 45px;
   transform: translateX(100%);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -110,11 +110,11 @@
 
 .nav__list {
   margin-block-start: 0;
-  padding-inline-start: 25px;
+  padding-inline-start: 0;
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 28px;
 }
 
 .nav__link {
@@ -125,13 +125,17 @@
 }
 
 .nav__footer {
-  padding-block-start: 52px;
+  padding-block-start: 55px;
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
 }
 
 .nav__contacts {
   margin-block-start: 0;
   display: flex;
   flex-direction: column;
+  gap: 6px;
 }
 
 .nav__phone-link {
@@ -144,5 +148,34 @@
 .nav__phone-desc {
   margin-inline-start: 0;
   font-size: 14px;
+  line-height: 1.2;
   color: var(--black, black);
 }
+
+.nav__social {
+  padding-inline-start: 0;
+  list-style: none;
+  display: flex;
+  justify-content: start;
+  gap: 16px;
+
+}
+
+.nav__social-link {
+  display: block;
+  background: var(--icon, initial) no-repeat center / contain;
+  width: 40px;
+  height: 40px;
+
+  &--whatsapp {
+    --icon: url("../../icons/watsapp.svg");
+  }
+  &--instagram {
+    --icon: url("../../icons/instagramm.svg");
+  }
+  &--youtube {
+    --icon: url("../../icons/youtube.svg");
+  }
+}
+
+

@@ -2,8 +2,6 @@
 @use "../global/mixins";
 
 .burger {
-  --icon: url("../../icons/burger.svg");
-
   position: relative;
   width: 40px;
   aspect-ratio: 1;
