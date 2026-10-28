@@ -19,17 +19,16 @@
 }
 
 .address__info {
-  --lh:1.9;
   display: flex;
   flex-direction: column;
   gap: 22px;
 }
 
 .address__link{
+  line-height: var(--lh);
   display: flex;
   align-items: center;
   gap: 8px;
-  line-height: var(--lh);
   text-decoration: none;
   font-size: 18px;
   font-weight: 500;
@@ -44,12 +43,14 @@
 }
 
 .address__link--phone {
+  --lh:1.9;
   --icon: url("../../icons/phone.svg");
   --size: 20px;
   color: var(--basic-red, red);
 }
 
 .address__link--wa {
+  --lh:1.9;
   --icon: url("../../icons/wa.svg");
   --size: 21px;
   color: var(--color-gray-500);

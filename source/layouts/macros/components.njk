@@ -1,6 +1,6 @@
 {% macro sectionTitle(text, mixClass="", visuallyHidden=false) %}
   {% set baseClass = "visually-hidden" if visuallyHidden else "section-title" %}
-  <h2 class="{{ baseClass }}{% if mixClass %} {{ mixClass }}{% endif %}">
+  <h2 class="{% if mixClass %}{{ mixClass }} {{ baseClass }}{% endif %}">
     {{ text }}
   </h2>
 {% endmacro %}

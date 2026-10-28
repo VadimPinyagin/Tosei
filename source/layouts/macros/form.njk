@@ -3,7 +3,7 @@
 {% from "macros/components.njk" import sectionTitle %}
 
 {% macro renderForm(formType, mixClass="") %}
-<form class="form {{ mixClass }}" action="#" method="post">
+<form class="{{ mixClass }} form" action="#" method="post">
   {% if formType == "filter" %}
     <fieldset class="form__module">
       <legend class="visually-hidden">Формат таможенного оформления</legend>
@@ -43,7 +43,7 @@
         {{ button("Расширенный поиск", "button", "form__btn btn--extended") }}
       </li>
       <li class="form__action-item">
-        {{ button("Найти", "submit", "form__btn btn--submit") }}
+        {{ button("Найти", "submit", "form__btn btn--search") }}
       </li>
       <li class="form__action-item form__action-item--counter">
         <p class="form__counter">
@@ -56,7 +56,7 @@
   {% if formType == "callback" %}
     <fieldset class="form__module form__module--callback">
       <legend class="visually-hidden">Контактные данные для обратной связи</legend>
-      {{ sectionTitle("Обратная связь", "form__title") }}
+      {{ sectionTitle("Обратная связь", "contacts__form-title") }}
       <ul class="form__list form__list--callback">
         <li class="form__list-item form__list-item--callback">
           {{ input("Ваше имя", "text", "user_name", "Ввести", "form") }}

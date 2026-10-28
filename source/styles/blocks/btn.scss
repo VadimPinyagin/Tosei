@@ -12,6 +12,7 @@
   background-color: var(--btn-bg);
   font-size: var(--font-size-btn);
   color: var(--color);
+  padding-block: var(--padding-b);
 }
 
 .btn--extended {
@@ -33,12 +34,17 @@
   }
 }
 
+.btn--search,
 .btn--submit {
   --font-size-btn: 18px;
   --color: var(--white, white);
   --btn-bg: var(--basic-red, red);
   --h-btn: 54px;
   border: none;
+}
+
+.btn--submit {
+  --padding-b: 20px;
 }
 
 .btn--more {

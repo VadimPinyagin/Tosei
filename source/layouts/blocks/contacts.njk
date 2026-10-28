@@ -15,11 +15,9 @@
         {{ contactRow("spec@tosei.ru", "spec@tosei.ru", "", "mailto") }}
       </dl>
     </address>
-    <div class="contacts__callback callback">
       {% set formType = "callback" %}
-      {% set mixClass = "contacts__callback" %}
+      {% set mixClass = "contacts__form form--collback" %}
       {% include "blocks/callback.njk" %}
-    </div>
   </div>
   <div class="contacts__map map" id="map">
     <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A9b6e9b1612a861a6ab6245823280663c339c252242e8f9e08d0695f9645bac98&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>

@@ -9,6 +9,13 @@
   border-radius: 6px;
 }
 
+.form--collback {
+  gap: 24px;
+  margin-block-start: 33px;
+  width: 332px;
+  padding-block: 27px 24px;
+}
+
 .form__module {
   margin: 0;
   padding: 0;
@@ -22,6 +29,10 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
+}
+
+.form__list--callback {
+  gap: 18px;
 }
 
 .form__list--range {
@@ -56,8 +67,12 @@
   }
 }
 
-.form__list-item--callback::before {
-  display: none;
+.form__list-item--callback {
+  gap: 10px;
+
+  &::before {
+    display: none;
+  }
 }
 
 .form__module-checkbox {
@@ -120,6 +135,7 @@
 
 .form__input[type=text],[type=tel]{
   font-size: 13px;
+  padding-block: 12px;
 }
 
 .form__legend {

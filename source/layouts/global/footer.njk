@@ -1,16 +1,16 @@
 {% from "macros/components.njk" import contactRow %}
 
 <footer class="footer">
-  <div class="footer__container container">
+  <div class="footer__inner container">
     <p class="footer__copyright">© Тосэй 2021. Все права защищены</p>
-    <p class="footer__about">Продажа грузовой и спецтехники, легковых автомобилей, водной техники. Любая техника из Японии, США, Кореи, Китая и Сингапура. Авто с аукционов.</p>
-    <address class="footer__address">
-      <p class="footer__text">г. Владивосток, ул. Фадеева, д. 47, строение 1</p>
-      <ul class="footer__socials">
-        <li class="footer__socials-item">
+    <p class="footer__about">Продажа грузовой и&nbsp;спецтехники, легковых автомобилей, водной техники. Любая техника&nbsp;из Японии, США, Кореи, Китая и&nbsp;Сингапура. Авто&nbsp;с аукционов.</p>
+    <address class="footer__address-wrapper">
+      <p class="footer__address">Владивосток, ул. Фадеева, д.&nbsp;47, строение&nbsp;1</p>
+      <ul class="footer__contacts">
+        <li class="footer__contacts-item">
           {{ contactRow("+7 (984) 197-77-78", "+79841977778", "", "whatsapp") }}
         </li>
-        <li class="footer__socials-item">
+        <li class="footer__contacts-item">
           {{ contactRow("+7 (984) 198-11-18", "+79841981118", "", "whatsapp") }}
         </li>
       </ul>
