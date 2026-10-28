@@ -22,3 +22,31 @@ toggleMenu();
 
 // end toggle menu
 //////////////////////////////////////////////////////////////////
+const navMenu = document.querySelector('.nav');
+const burgerOpenBtn = document.querySelector('.burger--lines');
+const burgerCloseBtn = navMenu.querySelector('.burger--cross');
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  const openMenu = () => {
+    navMenu.classList.remove('is-hidden');
+    void navMenu.offsetWidth;
+    navMenu.classList.add('is-active');
+  };
+
+  const closeMenu = () => {
+    navMenu.classList.remove('is-active');
+    navMenu.classList.add('is-hidden');
+  };
+
+  burgerOpenBtn.addEventListener('click', openMenu);
+
+  if (burgerCloseBtn) {
+    burgerCloseBtn.addEventListener('click', closeMenu);
+  }
+  navMenu.addEventListener('click', (event) => {
+    if (event.target === navMenu) {
+      closeMenu();
+    }
+  });
+});
