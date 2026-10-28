@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="styles/styles.css?20261028074445412">
+<link rel="stylesheet" href="styles/styles.css?20261028113321420">
 <link rel="stylesheet" href="./vendor/swiper/swiper-bundle.min.css">
 
   <link rel="preload" href="fonts/Montserrat-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
@@ -32,13 +32,16 @@
       <img src="images/logo.svg" width="40" height="40" alt="Tosei - автомобили из Японии с доставкой по все России">
       <p class="logo__title">tosei</p>
     </a>
-    <button class="burger burger--lines" type="button" aria-label="Меню"></button>
-
+    
+    <button class="burger--lines header__burger burger" type="button" aria-label="Меню"></button>
 
   </div>
 </header>
 
-      <nav class="nav">
+      <nav class="nav is-active">
+  
+  <button class="burger--cross nav__burger burger" type="button" aria-label="Меню"></button>
+
   <ul class="nav__list">
     <li class="nav__item">
       <a class="nav__link" href="#">Услуги</a>
@@ -62,7 +65,27 @@
       <a class="nav__link" href="#">Контакты</a>
     </li>
   </ul>
+  <div class="nav__footer">
+    <dl class="nav__contacts">
+      <dt class="nav__phone">
+        <a class="nav__phone-link" href="tel:88002507807">8 800 250-78-07</a>
+      </dt>
+      <dd class="nav__phone-desc">Бесплатный звонок по всей России</dd>
+    </dl>
+    <ul class="nav__socials">
+      <li class="nav__socials-item">
+        <a class="nav__socials-link nav__socials-link--whatsapp" href="#" aria-label="WhatsApp"></a>
+      </li>
+      <li class="nav__socials-item">
+        <a class="nav__socials-link nav__socials-link--instagram" href="#" aria-label="Instagram"></a>
+      </li>
+      <li class="nav__socials-item">
+        <a class="nav__socials-link nav__socials-link--youtube" href="#" aria-label="YouTube"></a>
+      </li>
+    </ul>
+  </div>
 </nav>
+
 
     <main class="page__main">
       
@@ -111,7 +134,7 @@
 </footer>
 
     <script src="./vendor/swiper/swiper-bundle.min.js"></script>
-<script src="scripts/script.js?20261028074445412" type="module"></script>
+<script src="scripts/script.js?20261028113321420" type="module"></script>
 
 
   </body>
