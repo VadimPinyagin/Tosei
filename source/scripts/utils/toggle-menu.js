@@ -44,9 +44,10 @@ document.addEventListener('DOMContentLoaded', () => {
   if (burgerCloseBtn) {
     burgerCloseBtn.addEventListener('click', closeMenu);
   }
-  navMenu.addEventListener('click', (event) => {
+});
+
+ navMenu.addEventListener('click', (event) => {
     if (event.target === navMenu) {
       closeMenu();
     }
   });
-});
