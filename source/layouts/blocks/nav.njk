@@ -1,4 +1,6 @@
-<nav class="nav">
+<nav class="nav is-active">
+  {% set burgerClass = "burger--cross nav__burger" %}
+  {% include "../blocks/burger.njk" %}
   <ul class="nav__list">
     <li class="nav__item">
       <a class="nav__link" href="#">Услуги</a>
@@ -22,4 +24,24 @@
       <a class="nav__link" href="#">Контакты</a>
     </li>
   </ul>
+  <div class="nav__footer">
+    <dl class="nav__contacts">
+      <dt class="nav__phone">
+        <a class="nav__phone-link" href="tel:88002507807">8 800 250-78-07</a>
+      </dt>
+      <dd class="nav__phone-desc">Бесплатный звонок по всей России</dd>
+    </dl>
+    <ul class="nav__socials">
+      <li class="nav__socials-item">
+        <a class="nav__socials-link nav__socials-link--whatsapp" href="#" aria-label="WhatsApp"></a>
+      </li>
+      <li class="nav__socials-item">
+        <a class="nav__socials-link nav__socials-link--instagram" href="#" aria-label="Instagram"></a>
+      </li>
+      <li class="nav__socials-item">
+        <a class="nav__socials-link nav__socials-link--youtube" href="#" aria-label="YouTube"></a>
+      </li>
+    </ul>
+  </div>
 </nav>
+
