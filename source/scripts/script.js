@@ -3,6 +3,7 @@ import './utils/defines-swiper.js';
 import './utils/toggle-menu.js';
 import './utils/check-macos.js';
 import './utils/modal.js';
+import './utils/toggle-nav.js';
 import {FocusLock} from './utils/focus-lock.js';
 import './utils/scroll-table.js';
 import './utils/to-top.js';
