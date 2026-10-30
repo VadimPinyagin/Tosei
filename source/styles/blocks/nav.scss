@@ -1,77 +1,11 @@
-// @use "../global/variables";
-// @use "../global/mixins";
-
-// $nav-width: variables.$lg;
-
-// @mixin media-nav {
-//   @media (min-width: $nav-width) {
-//     @content;
-//   }
-// }
-
-// @mixin media-nav-max {
-//   @media (max-width: ($nav-width - 0.02px)) {
-//     @content;
-//   }
-// }
-
-// .nav {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   column-gap: 3em;
-//   color: var(--color-nav, currentColor);
-// }
-
-// .nav--opened {
-//   @include media-nav-max {
-//     position: fixed;
-//     inset: 0;
-//     display: grid;
-//     grid-template-rows: 1fr min-content;
-//     justify-content: center;
-//     row-gap: 2em;
-//     width: 100%;
-//     height: 100dvh;
-//     padding: 40px 10px;
-//     font-size: 2rem;
-//     background: var(--color-bg, #ffffff);
-//     overflow-y: auto;
-//   }
-
-//   .nav__list {
-//     @include media-nav-max {
-//       align-self: start;
-//       display: grid;
-//       gap: 0.6em;
-//     }
-//   }
-// }
-
-// .nav__list {
-//   display: flex;
-//   align-items: center;
-//   gap: 20px;
-//   padding-left: 0;
-//   margin: 0;
-//   font-size: 0.8em;
-//   list-style-type: none;
-// }
-
-// .nav__link {
-//   text-decoration: none;
-//   color: inherit;
-// }
-
 .nav {
   position: fixed;
   top: 0;
   right: 0;
   z-index: 2;
   width: 263px;
-  max-width: 320px;
   height: 100%;
-  background-color: #ffffff;
+  background-color: var(--white, white);
   display: flex;
   flex-direction: column;
   gap: 39px;
@@ -86,9 +20,7 @@
     right: 100%;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.6);
-    z-index: -1;
-
+    background-color: rgba(0, 0, 0, 0.58);
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
@@ -163,7 +95,8 @@
 
 .nav__social-link {
   display: block;
-  background: var(--icon, initial) no-repeat center / contain;
+  background: var(--icon, var(--color-gray-300,gray)) no-repeat center / contain;
+  border-radius: 50%;
   width: 40px;
   height: 40px;
 
