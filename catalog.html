@@ -1,0 +1,1737 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles/styles.css?20261031155409904">
+<link rel="stylesheet" href="./vendor/swiper/swiper-bundle.min.css">
+
+  <link rel="preload" href="fonts/Montserrat-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+
+  <link rel="preload" href="fonts/Montserrat-Medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+
+  <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+
+  <link rel="preload" href="fonts/Montserrat-Bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+
+<link rel="icon" href="favicon.ico">
+<link rel="icon" href="favicons/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="favicons/favicon-apple-180.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="description" content="">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#990000">
+
+    <title>Каталог техники — Tosei</title>
+  </head>
+  <body class="page">
+      <header class="page__header header">
+  <div class="header__inner container">
+    <a class="header__logo logo" href="/">
+      <img src="images/logo.svg" width="40" height="40" alt="Tosei - автомобили из Японии с доставкой по все России">
+      <p class="logo__title">Tosei</p>
+    </a>
+    
+    <button class="burger--lines header__burger burger" type="button" aria-label="Меню"></button>
+
+  </div>
+</header>
+
+      <nav class="nav">
+  
+  <button class="burger--cross nav__burger burger" type="button" aria-label="Меню"></button>
+
+  <ul class="nav__list">
+    <li class="nav__item">
+      <a class="nav__link nav__item-link" href="#">Услуги</a>
+    </li>
+    <li class="nav__item">
+      <a class="nav__link nav__item-link" href="catalog.html">Каталог&nbsp;техники</a>
+    </li>
+    <li class="nav__item">
+      <a class="nav__link nav__item-link" href="#">Аукционы</a>
+    </li>
+    <li class="nav__item">
+      <a class="nav__link nav__item-link" href="#">Информация</a>
+    </li>
+    <li class="nav__item">
+      <a class="nav__link nav__item-link" href="#">О&nbsp;нас</a>
+    </li>
+    <li class="nav__item">
+      <a class="nav__link nav__item-link" href="#">Отзывы</a>
+    </li>
+    <li class="nav__item">
+      <a class="nav__link nav__item-link" href="#">Контакты</a>
+    </li>
+  </ul>
+  <div class="nav__footer">
+    <dl class="nav__contacts">
+      <dt class="nav__phone">
+        <a class="nav__link nav__phone-link" href="tel:88002507807">8&nbsp;800 250-78-07</a>
+      </dt>
+      <dd class="nav__phone-desc">Бесплатный звонок&nbsp;по всей&nbsp;России</dd>
+    </dl>
+    <ul class="nav__social">
+      <li class="nav__social-item">
+        <a class="nav__link nav__social-link nav__social-link--whatsapp" href="#" aria-label="WhatsApp"></a>
+      </li>
+      <li class="nav__social-item">
+        <a class="nav__link nav__social-link nav__social-link--instagram" href="#" aria-label="Instagram"></a>
+      </li>
+      <li class="nav__social-item">
+        <a class="nav__link nav__social-link nav__social-link--youtube" href="#" aria-label="YouTube"></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+    <main class="page__main">
+      
+  <section class="intro">
+  <div class="intro__inner container">
+    <div class="intro__content">
+      <h1 class="intro__title">Доставим любую технику из&nbsp;Японии за&nbsp;3&nbsp;недели</h1>
+      
+      
+      
+
+
+<form class="intro__form form" action="#" method="post">
+  
+    <fieldset class="form__module">
+      <legend class="visually-hidden">Формат таможенного оформления</legend>
+      <ul class="form__list">
+        <li class="form__list-item">
+          
+  <input class="form__module-checkbox" type="checkbox" name="duty" id="check-duty" checked>
+  <label class="form__module-label form__module-label--checkbox" for="check-duty">Полная пошлина</label>
+
+        </li>
+        <li class="form__list-item">
+          
+  <input class="form__module-checkbox" type="checkbox" name="dismantling" id="check-dismantling" checked>
+  <label class="form__module-label form__module-label--checkbox" for="check-dismantling">Распил или конструктор</label>
+
+        </li>
+      </ul>
+    </fieldset>
+    <fieldset class="form__module">
+      <legend class="visually-hidden">Автомобиль</legend>
+      <ul class="form__list">
+        <li class="form__list-item">
+          
+    
+      <label class="form__module-label form__module-label--select" for="field-brand">
+        Производитель
+      </label>
+    
+    <select class="form__module-select" id="field-brand" name="brand"
+      >
+      
+        <option value="not selected" >
+          Не выбрано
+        </option>
+      
+    </select>
+
+        </li>
+        <li class="form__list-item">
+          
+    
+      <label class="form__module-label form__module-label--select" for="field-model">
+        Марка
+      </label>
+    
+    <select class="form__module-select" id="field-model" name="model"
+      >
+      
+        <option value="not selected" >
+          Не выбрано
+        </option>
+      
+    </select>
+
+        </li>
+      </ul>
+    </fieldset>
+    <fieldset class="form__module">
+      <legend class="form__legend">Год выпуска</legend>
+      <ul class="form__list form__list--range">
+        <li class="form__list-item">
+          
+    
+    <select class="form__module-select" id="field-year_from" name="year_from"
+       aria-label="year_from">
+      
+        <option value="year_from" >
+          от
+        </option>
+      
+    </select>
+
+        </li>
+        <li class="form__list-item">
+          
+    
+    <select class="form__module-select" id="field-year_to" name="year_to"
+       aria-label="year_to">
+      
+        <option value="year_to" >
+          до
+        </option>
+      
+    </select>
+
+        </li>
+      </ul>
+    </fieldset>
+    <ul class="form__action">
+      <li class="form__action-item">
+        
+  <button class="btn form__btn btn--extended" type="button">
+    Расширенный поиск
+  </button>
+
+      </li>
+      <li class="form__action-item">
+        
+  <button class="btn form__btn btn--search" type="submit">
+    Найти
+  </button>
+
+      </li>
+      <li class="form__action-item form__action-item--counter">
+        <p class="form__counter">
+          <span>Автомобилей в наличии:</span>
+          <output class="form__counter-value">256</output>
+        </p>
+      </li>
+    </ul>
+  
+  
+</form>
+
+
+    </div>
+      <picture>
+        <source type="image/webp" media="(min-width: 1280px)" width="1080" height="316" srcset="images/intro-bg-desktop@1x.webp 1x, images/intro-bg-desktop@2x.webp 2x">
+        <source type="image/jpeg" media="(min-width: 1280px)" width="1080" height="316" srcset="images/intro-bg-desktop@1x.jpg 1x, images/intro-bg-desktop@2x.jpg 2x">
+        <source type="image/webp" media="(min-width: 375px)" width="375" height="316" srcset="images/intro-bg-mobile@1x.webp 1x, images/intro-bg-mobile@2x.webp 2x">
+        <img class="intro__bg" src="images/intro-bg-mobile@1x.jpg" srcset="images/intro-bg-mobile@1x.jpg 2x" width="375" height="316" alt="Ряд современных легковых автомобилей разных цветов на парковке автодилера">
+      </picture>
+  </div>
+</section>
+
+  
+  
+
+
+
+
+<section class="trending">
+  <div class="trending__inner container">
+    
+  
+  <h2 class="trending__title section-title">
+    Популярные автомобили
+  </h2>
+
+    <ul class="trending__radio-list">
+      <li class="trending__radio-list-item">
+  <input class="trending__radio-input" type="radio" id="radio-trending-filter-any" name="trending-filter" value="any" checked>
+  <label class="trending__radio-label" for="radio-trending-filter-any">Любые</label>
+</li>
+      <li class="trending__radio-list-item">
+  <input class="trending__radio-input" type="radio" id="radio-trending-filter-available" name="trending-filter" value="available" >
+  <label class="trending__radio-label" for="radio-trending-filter-available">В наличии</label>
+</li>
+      <li class="trending__radio-list-item">
+  <input class="trending__radio-input" type="radio" id="radio-trending-filter-order" name="trending-filter" value="order" >
+  <label class="trending__radio-label" for="radio-trending-filter-order">Под заказ</label>
+</li>
+    </ul>
+        
+      <div class="trending__slider">  
+        <ul class="trending__list">  
+          
+            <li class="swiper-slide trending__item">
+              
+  <a class="card" href="#">
+    <h3 class="card__title">Honda Fit</h3>
+    <picture>
+      
+      <img class="card__image" src="images/card-images/honda-fit@1x.jpg" srcset="images/card-images/honda-fit@2x.jpg 2x" width="303" height="198" alt="Honda Fit">
+    </picture>
+    <dl class="card__info">
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Объем двигателя
+    </dt>
+    <dd class="card__info-value ">
+      1,2 л.с.
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Год
+    </dt>
+    <dd class="card__info-value ">
+      2015 г.
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Пробег
+    </dt>
+    <dd class="card__info-value ">
+      34 000 км
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row card__info-row--full">
+    <dt class="visually-hidden ">
+      Тип оформления
+    </dt>
+    <dd class="card__info-value card__info-value--full">
+      Под полную пошлину
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Привод
+    </dt>
+    <dd class="card__info-value ">
+      Задний
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      КПП
+    </dt>
+    <dd class="card__info-value ">
+      Автомат
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row card__info-row--price">
+    <dt class="card__info-term card__info-term--price">
+      Стоимость во Владивостоке
+    </dt>
+    <dd class="card__info-value card__info-value--price">
+      630 000 ₽
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row card__info-row--available">
+    <dt class="visually-hidden ">
+      Статус автомобиля
+    </dt>
+    <dd class="card__status card__status--available">
+      В наличии
+    </dd>
+  </div>
+
+
+    </dl>
+  </a>
+
+            </li>
+          
+            <li class="swiper-slide trending__item">
+              
+  <a class="card" href="#">
+    <h3 class="card__title">BMW - X5 2005</h3>
+    <picture>
+      
+      <img class="card__image" src="images/card-images/bmw-x5-2005@1x.jpg" srcset="images/card-images/bmw-x5-2005@2x.jpg 2x" width="303" height="198" alt="BMW - X5 2005">
+    </picture>
+    <dl class="card__info">
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Объем двигателя
+    </dt>
+    <dd class="card__info-value ">
+      1,2 л.с.
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Год
+    </dt>
+    <dd class="card__info-value ">
+      2015 г.
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Пробег
+    </dt>
+    <dd class="card__info-value ">
+      34 000 км
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row card__info-row--full">
+    <dt class="visually-hidden ">
+      Тип оформления
+    </dt>
+    <dd class="card__info-value card__info-value--full">
+      Под полную пошлину
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Привод
+    </dt>
+    <dd class="card__info-value ">
+      Задний
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      КПП
+    </dt>
+    <dd class="card__info-value ">
+      Автомат
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row card__info-row--price">
+    <dt class="card__info-term card__info-term--price">
+      Стоимость во Владивостоке
+    </dt>
+    <dd class="card__info-value card__info-value--price">
+      630 000 ₽
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row card__info-row--order">
+    <dt class="visually-hidden ">
+      Статус автомобиля
+    </dt>
+    <dd class="card__status card__status--order">
+      Под заказ
+    </dd>
+  </div>
+
+
+    </dl>
+  </a>
+
+            </li>
+          
+            <li class="swiper-slide trending__item">
+              
+  <a class="card" href="#">
+    <h3 class="card__title">Honda Fit</h3>
+    <picture>
+      
+      <img class="card__image" src="images/card-images/toyota-prius@1x.jpg" srcset="images/card-images/toyota-prius@2x.jpg 2x" width="303" height="198" alt="Honda Fit">
+    </picture>
+    <dl class="card__info">
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Объем двигателя
+    </dt>
+    <dd class="card__info-value ">
+      1,2 л.с.
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Год
+    </dt>
+    <dd class="card__info-value ">
+      2015 г.
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Пробег
+    </dt>
+    <dd class="card__info-value ">
+      34 000 км
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row card__info-row--full">
+    <dt class="visually-hidden ">
+      Тип оформления
+    </dt>
+    <dd class="card__info-value card__info-value--full">
+      Под полную пошлину
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Привод
+    </dt>
+    <dd class="card__info-value ">
+      Задний
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      КПП
+    </dt>
+    <dd class="card__info-value ">
+      Автомат
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row card__info-row--price">
+    <dt class="card__info-term card__info-term--price">
+      Стоимость во Владивостоке
+    </dt>
+    <dd class="card__info-value card__info-value--price">
+      630 000 ₽
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row card__info-row--available">
+    <dt class="visually-hidden ">
+      Статус автомобиля
+    </dt>
+    <dd class="card__status card__status--available">
+      В наличии
+    </dd>
+  </div>
+
+
+    </dl>
+  </a>
+
+            </li>
+          
+            <li class="swiper-slide trending__item">
+              
+  <a class="card" href="#">
+    <h3 class="card__title">Honda Fit</h3>
+    <picture>
+      
+      <img class="card__image" src="images/card-images/honda-fit@1x.jpg" srcset="images/card-images/honda-fit@2x.jpg 2x" width="303" height="198" alt="Honda Fit">
+    </picture>
+    <dl class="card__info">
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Объем двигателя
+    </dt>
+    <dd class="card__info-value ">
+      1,2 л.с.
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Год
+    </dt>
+    <dd class="card__info-value ">
+      2015 г.
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Пробег
+    </dt>
+    <dd class="card__info-value ">
+      34 000 км
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row card__info-row--full">
+    <dt class="visually-hidden ">
+      Тип оформления
+    </dt>
+    <dd class="card__info-value card__info-value--full">
+      Под полную пошлину
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Привод
+    </dt>
+    <dd class="card__info-value ">
+      Задний
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      КПП
+    </dt>
+    <dd class="card__info-value ">
+      Автомат
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row card__info-row--price">
+    <dt class="card__info-term card__info-term--price">
+      Стоимость во Владивостоке
+    </dt>
+    <dd class="card__info-value card__info-value--price">
+      630 000 ₽
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row card__info-row--available">
+    <dt class="visually-hidden ">
+      Статус автомобиля
+    </dt>
+    <dd class="card__status card__status--available">
+      В наличии
+    </dd>
+  </div>
+
+
+    </dl>
+  </a>
+
+            </li>
+          
+            <li class="swiper-slide trending__item">
+              
+  <a class="card" href="#">
+    <h3 class="card__title">BMW - X5 2005</h3>
+    <picture>
+      
+      <img class="card__image" src="images/card-images/bmw-x5-2005@1x.jpg" srcset="images/card-images/bmw-x5-2005@2x.jpg 2x" width="303" height="198" alt="BMW - X5 2005">
+    </picture>
+    <dl class="card__info">
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Объем двигателя
+    </dt>
+    <dd class="card__info-value ">
+      1,2 л.с.
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Год
+    </dt>
+    <dd class="card__info-value ">
+      2015 г.
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Пробег
+    </dt>
+    <dd class="card__info-value ">
+      34 000 км
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row card__info-row--full">
+    <dt class="visually-hidden ">
+      Тип оформления
+    </dt>
+    <dd class="card__info-value card__info-value--full">
+      Под полную пошлину
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Привод
+    </dt>
+    <dd class="card__info-value ">
+      Задний
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      КПП
+    </dt>
+    <dd class="card__info-value ">
+      Автомат
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row card__info-row--price">
+    <dt class="card__info-term card__info-term--price">
+      Стоимость во Владивостоке
+    </dt>
+    <dd class="card__info-value card__info-value--price">
+      630 000 ₽
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row card__info-row--order">
+    <dt class="visually-hidden ">
+      Статус автомобиля
+    </dt>
+    <dd class="card__status card__status--order">
+      Под заказ
+    </dd>
+  </div>
+
+
+    </dl>
+  </a>
+
+            </li>
+          
+            <li class="swiper-slide trending__item">
+              
+  <a class="card" href="#">
+    <h3 class="card__title">Honda Fit</h3>
+    <picture>
+      
+      <img class="card__image" src="images/card-images/toyota-prius@1x.jpg" srcset="images/card-images/toyota-prius@2x.jpg 2x" width="303" height="198" alt="Honda Fit">
+    </picture>
+    <dl class="card__info">
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Объем двигателя
+    </dt>
+    <dd class="card__info-value ">
+      1,2 л.с.
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Год
+    </dt>
+    <dd class="card__info-value ">
+      2015 г.
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Пробег
+    </dt>
+    <dd class="card__info-value ">
+      34 000 км
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row card__info-row--full">
+    <dt class="visually-hidden ">
+      Тип оформления
+    </dt>
+    <dd class="card__info-value card__info-value--full">
+      Под полную пошлину
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Привод
+    </dt>
+    <dd class="card__info-value ">
+      Задний
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      КПП
+    </dt>
+    <dd class="card__info-value ">
+      Автомат
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row card__info-row--price">
+    <dt class="card__info-term card__info-term--price">
+      Стоимость во Владивостоке
+    </dt>
+    <dd class="card__info-value card__info-value--price">
+      630 000 ₽
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row card__info-row--available">
+    <dt class="visually-hidden ">
+      Статус автомобиля
+    </dt>
+    <dd class="card__status card__status--available">
+      В наличии
+    </dd>
+  </div>
+
+
+    </dl>
+  </a>
+
+            </li>
+          
+            <li class="swiper-slide trending__item">
+              
+  <a class="card" href="#">
+    <h3 class="card__title">Honda Fit</h3>
+    <picture>
+      
+      <img class="card__image" src="images/card-images/honda-fit@1x.jpg" srcset="images/card-images/honda-fit@2x.jpg 2x" width="303" height="198" alt="Honda Fit">
+    </picture>
+    <dl class="card__info">
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Объем двигателя
+    </dt>
+    <dd class="card__info-value ">
+      1,2 л.с.
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Год
+    </dt>
+    <dd class="card__info-value ">
+      2015 г.
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Пробег
+    </dt>
+    <dd class="card__info-value ">
+      34 000 км
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row card__info-row--full">
+    <dt class="visually-hidden ">
+      Тип оформления
+    </dt>
+    <dd class="card__info-value card__info-value--full">
+      Под полную пошлину
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Привод
+    </dt>
+    <dd class="card__info-value ">
+      Задний
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      КПП
+    </dt>
+    <dd class="card__info-value ">
+      Автомат
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row card__info-row--price">
+    <dt class="card__info-term card__info-term--price">
+      Стоимость во Владивостоке
+    </dt>
+    <dd class="card__info-value card__info-value--price">
+      630 000 ₽
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row card__info-row--available">
+    <dt class="visually-hidden ">
+      Статус автомобиля
+    </dt>
+    <dd class="card__status card__status--available">
+      В наличии
+    </dd>
+  </div>
+
+
+    </dl>
+  </a>
+
+            </li>
+          
+            <li class="swiper-slide trending__item">
+              
+  <a class="card" href="#">
+    <h3 class="card__title">BMW - X5 2005</h3>
+    <picture>
+      
+      <img class="card__image" src="images/card-images/bmw-x5-2005@1x.jpg" srcset="images/card-images/bmw-x5-2005@2x.jpg 2x" width="303" height="198" alt="BMW - X5 2005">
+    </picture>
+    <dl class="card__info">
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Объем двигателя
+    </dt>
+    <dd class="card__info-value ">
+      1,2 л.с.
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Год
+    </dt>
+    <dd class="card__info-value ">
+      2015 г.
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Пробег
+    </dt>
+    <dd class="card__info-value ">
+      34 000 км
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row card__info-row--full">
+    <dt class="visually-hidden ">
+      Тип оформления
+    </dt>
+    <dd class="card__info-value card__info-value--full">
+      Под полную пошлину
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Привод
+    </dt>
+    <dd class="card__info-value ">
+      Задний
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      КПП
+    </dt>
+    <dd class="card__info-value ">
+      Автомат
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row card__info-row--price">
+    <dt class="card__info-term card__info-term--price">
+      Стоимость во Владивостоке
+    </dt>
+    <dd class="card__info-value card__info-value--price">
+      630 000 ₽
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row card__info-row--order">
+    <dt class="visually-hidden ">
+      Статус автомобиля
+    </dt>
+    <dd class="card__status card__status--order">
+      Под заказ
+    </dd>
+  </div>
+
+
+    </dl>
+  </a>
+
+            </li>
+          
+            <li class="swiper-slide trending__item">
+              
+  <a class="card" href="#">
+    <h3 class="card__title">Honda Fit</h3>
+    <picture>
+      
+      <img class="card__image" src="images/card-images/toyota-prius@1x.jpg" srcset="images/card-images/toyota-prius@2x.jpg 2x" width="303" height="198" alt="Honda Fit">
+    </picture>
+    <dl class="card__info">
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Объем двигателя
+    </dt>
+    <dd class="card__info-value ">
+      1,2 л.с.
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Год
+    </dt>
+    <dd class="card__info-value ">
+      2015 г.
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Пробег
+    </dt>
+    <dd class="card__info-value ">
+      34 000 км
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row card__info-row--full">
+    <dt class="visually-hidden ">
+      Тип оформления
+    </dt>
+    <dd class="card__info-value card__info-value--full">
+      Под полную пошлину
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Привод
+    </dt>
+    <dd class="card__info-value ">
+      Задний
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      КПП
+    </dt>
+    <dd class="card__info-value ">
+      Автомат
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row card__info-row--price">
+    <dt class="card__info-term card__info-term--price">
+      Стоимость во Владивостоке
+    </dt>
+    <dd class="card__info-value card__info-value--price">
+      630 000 ₽
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row card__info-row--available">
+    <dt class="visually-hidden ">
+      Статус автомобиля
+    </dt>
+    <dd class="card__status card__status--available">
+      В наличии
+    </dd>
+  </div>
+
+
+    </dl>
+  </a>
+
+            </li>
+          
+            <li class="swiper-slide trending__item">
+              
+  <a class="card" href="#">
+    <h3 class="card__title">Honda Fit</h3>
+    <picture>
+      
+      <img class="card__image" src="images/card-images/honda-fit@1x.jpg" srcset="images/card-images/honda-fit@2x.jpg 2x" width="303" height="198" alt="Honda Fit">
+    </picture>
+    <dl class="card__info">
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Объем двигателя
+    </dt>
+    <dd class="card__info-value ">
+      1,2 л.с.
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Год
+    </dt>
+    <dd class="card__info-value ">
+      2015 г.
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Пробег
+    </dt>
+    <dd class="card__info-value ">
+      34 000 км
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row card__info-row--full">
+    <dt class="visually-hidden ">
+      Тип оформления
+    </dt>
+    <dd class="card__info-value card__info-value--full">
+      Под полную пошлину
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Привод
+    </dt>
+    <dd class="card__info-value ">
+      Задний
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      КПП
+    </dt>
+    <dd class="card__info-value ">
+      Автомат
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row card__info-row--price">
+    <dt class="card__info-term card__info-term--price">
+      Стоимость во Владивостоке
+    </dt>
+    <dd class="card__info-value card__info-value--price">
+      630 000 ₽
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row card__info-row--available">
+    <dt class="visually-hidden ">
+      Статус автомобиля
+    </dt>
+    <dd class="card__status card__status--available">
+      В наличии
+    </dd>
+  </div>
+
+
+    </dl>
+  </a>
+
+            </li>
+          
+            <li class="swiper-slide trending__item">
+              
+  <a class="card" href="#">
+    <h3 class="card__title">BMW - X5 2005</h3>
+    <picture>
+      
+      <img class="card__image" src="images/card-images/bmw-x5-2005@1x.jpg" srcset="images/card-images/bmw-x5-2005@2x.jpg 2x" width="303" height="198" alt="BMW - X5 2005">
+    </picture>
+    <dl class="card__info">
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Объем двигателя
+    </dt>
+    <dd class="card__info-value ">
+      1,2 л.с.
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Год
+    </dt>
+    <dd class="card__info-value ">
+      2015 г.
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Пробег
+    </dt>
+    <dd class="card__info-value ">
+      34 000 км
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row card__info-row--full">
+    <dt class="visually-hidden ">
+      Тип оформления
+    </dt>
+    <dd class="card__info-value card__info-value--full">
+      Под полную пошлину
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Привод
+    </dt>
+    <dd class="card__info-value ">
+      Задний
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      КПП
+    </dt>
+    <dd class="card__info-value ">
+      Автомат
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row card__info-row--price">
+    <dt class="card__info-term card__info-term--price">
+      Стоимость во Владивостоке
+    </dt>
+    <dd class="card__info-value card__info-value--price">
+      630 000 ₽
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row card__info-row--order">
+    <dt class="visually-hidden ">
+      Статус автомобиля
+    </dt>
+    <dd class="card__status card__status--order">
+      Под заказ
+    </dd>
+  </div>
+
+
+    </dl>
+  </a>
+
+            </li>
+          
+            <li class="swiper-slide trending__item">
+              
+  <a class="card" href="#">
+    <h3 class="card__title">Honda Fit</h3>
+    <picture>
+      
+      <img class="card__image" src="images/card-images/toyota-prius@1x.jpg" srcset="images/card-images/toyota-prius@2x.jpg 2x" width="303" height="198" alt="Honda Fit">
+    </picture>
+    <dl class="card__info">
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Объем двигателя
+    </dt>
+    <dd class="card__info-value ">
+      1,2 л.с.
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Год
+    </dt>
+    <dd class="card__info-value ">
+      2015 г.
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Пробег
+    </dt>
+    <dd class="card__info-value ">
+      34 000 км
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row card__info-row--full">
+    <dt class="visually-hidden ">
+      Тип оформления
+    </dt>
+    <dd class="card__info-value card__info-value--full">
+      Под полную пошлину
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Привод
+    </dt>
+    <dd class="card__info-value ">
+      Задний
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      КПП
+    </dt>
+    <dd class="card__info-value ">
+      Автомат
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row card__info-row--price">
+    <dt class="card__info-term card__info-term--price">
+      Стоимость во Владивостоке
+    </dt>
+    <dd class="card__info-value card__info-value--price">
+      630 000 ₽
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row card__info-row--available">
+    <dt class="visually-hidden ">
+      Статус автомобиля
+    </dt>
+    <dd class="card__status card__status--available">
+      В наличии
+    </dd>
+  </div>
+
+
+    </dl>
+  </a>
+
+            </li>
+          
+            <li class="swiper-slide trending__item">
+              
+  <a class="card" href="#">
+    <h3 class="card__title">Honda Fit</h3>
+    <picture>
+      
+      <img class="card__image" src="images/card-images/honda-fit@1x.jpg" srcset="images/card-images/honda-fit@2x.jpg 2x" width="303" height="198" alt="Honda Fit">
+    </picture>
+    <dl class="card__info">
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Объем двигателя
+    </dt>
+    <dd class="card__info-value ">
+      1,2 л.с.
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Год
+    </dt>
+    <dd class="card__info-value ">
+      2015 г.
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Пробег
+    </dt>
+    <dd class="card__info-value ">
+      34 000 км
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row card__info-row--full">
+    <dt class="visually-hidden ">
+      Тип оформления
+    </dt>
+    <dd class="card__info-value card__info-value--full">
+      Под полную пошлину
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Привод
+    </dt>
+    <dd class="card__info-value ">
+      Задний
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      КПП
+    </dt>
+    <dd class="card__info-value ">
+      Автомат
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row card__info-row--price">
+    <dt class="card__info-term card__info-term--price">
+      Стоимость во Владивостоке
+    </dt>
+    <dd class="card__info-value card__info-value--price">
+      630 000 ₽
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row card__info-row--available">
+    <dt class="visually-hidden ">
+      Статус автомобиля
+    </dt>
+    <dd class="card__status card__status--available">
+      В наличии
+    </dd>
+  </div>
+
+
+    </dl>
+  </a>
+
+            </li>
+          
+            <li class="swiper-slide trending__item">
+              
+  <a class="card" href="#">
+    <h3 class="card__title">BMW - X5 2005</h3>
+    <picture>
+      
+      <img class="card__image" src="images/card-images/bmw-x5-2005@1x.jpg" srcset="images/card-images/bmw-x5-2005@2x.jpg 2x" width="303" height="198" alt="BMW - X5 2005">
+    </picture>
+    <dl class="card__info">
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Объем двигателя
+    </dt>
+    <dd class="card__info-value ">
+      1,2 л.с.
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Год
+    </dt>
+    <dd class="card__info-value ">
+      2015 г.
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Пробег
+    </dt>
+    <dd class="card__info-value ">
+      34 000 км
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row card__info-row--full">
+    <dt class="visually-hidden ">
+      Тип оформления
+    </dt>
+    <dd class="card__info-value card__info-value--full">
+      Под полную пошлину
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Привод
+    </dt>
+    <dd class="card__info-value ">
+      Задний
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      КПП
+    </dt>
+    <dd class="card__info-value ">
+      Автомат
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row card__info-row--price">
+    <dt class="card__info-term card__info-term--price">
+      Стоимость во Владивостоке
+    </dt>
+    <dd class="card__info-value card__info-value--price">
+      630 000 ₽
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row card__info-row--order">
+    <dt class="visually-hidden ">
+      Статус автомобиля
+    </dt>
+    <dd class="card__status card__status--order">
+      Под заказ
+    </dd>
+  </div>
+
+
+    </dl>
+  </a>
+
+            </li>
+          
+            <li class="swiper-slide trending__item">
+              
+  <a class="card" href="#">
+    <h3 class="card__title">Honda Fit</h3>
+    <picture>
+      
+      <img class="card__image" src="images/card-images/toyota-prius@1x.jpg" srcset="images/card-images/toyota-prius@2x.jpg 2x" width="303" height="198" alt="Honda Fit">
+    </picture>
+    <dl class="card__info">
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Объем двигателя
+    </dt>
+    <dd class="card__info-value ">
+      1,2 л.с.
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Год
+    </dt>
+    <dd class="card__info-value ">
+      2015 г.
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Пробег
+    </dt>
+    <dd class="card__info-value ">
+      34 000 км
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row card__info-row--full">
+    <dt class="visually-hidden ">
+      Тип оформления
+    </dt>
+    <dd class="card__info-value card__info-value--full">
+      Под полную пошлину
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      Привод
+    </dt>
+    <dd class="card__info-value ">
+      Задний
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row ">
+    <dt class="card__info-term ">
+      КПП
+    </dt>
+    <dd class="card__info-value ">
+      Автомат
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row card__info-row--price">
+    <dt class="card__info-term card__info-term--price">
+      Стоимость во Владивостоке
+    </dt>
+    <dd class="card__info-value card__info-value--price">
+      630 000 ₽
+    </dd>
+  </div>
+
+      
+  <div class="card__info-row card__info-row--available">
+    <dt class="visually-hidden ">
+      Статус автомобиля
+    </dt>
+    <dd class="card__status card__status--available">
+      В наличии
+    </dd>
+  </div>
+
+
+    </dl>
+  </a>
+
+            </li>
+          
+        </ul>
+        <div class="swiper-pagination trending__pagination"></div>
+      </div>
+    
+    
+  </div>
+</section>
+
+
+    </main>
+    
+
+<footer class="footer">
+  <div class="footer__inner container">
+    <p class="footer__copyright">© Тосэй 2021. Все права защищены</p>
+    <p class="footer__about">Продажа грузовой и&nbsp;спецтехники, легковых автомобилей, водной техники. Любая техника&nbsp;из Японии, США, Кореи, Китая и&nbsp;Сингапура. Авто&nbsp;с аукционов.</p>
+    <address class="footer__address-wrapper">
+      <p class="footer__address">Владивосток, ул. Фадеева, д.&nbsp;47, строение&nbsp;1</p>
+      <ul class="footer__contacts">
+        <li class="footer__contacts-item">
+          
+  <div class="address__row">
+    <dt class="address__term">
+      
+        <a href="https://wa.me+79841977778" class="address__link address__link--wa" target="_blank" rel="noopener">+7 (984) 197-77-78</a>
+      
+    </dt>
+    
+  </div>
+
+        </li>
+        <li class="footer__contacts-item">
+          
+  <div class="address__row">
+    <dt class="address__term">
+      
+        <a href="https://wa.me+79841981118" class="address__link address__link--wa" target="_blank" rel="noopener">+7 (984) 198-11-18</a>
+      
+    </dt>
+    
+  </div>
+
+        </li>
+      </ul>
+    </address>
+  </div>
+</footer>
+
+    <script src="./vendor/swiper/swiper-bundle.min.js"></script>
+<script src="scripts/script.js?20261031155409904" type="module"></script>
+
+
+  </body>
+</html>
