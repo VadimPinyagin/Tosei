@@ -1,0 +1,70 @@
+.pagination {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  & > :is(:first-child, :last-child) > :first-child {
+    width: 24px;
+    height: 24px;
+    mask: var(--icon) center / contain no-repeat;
+    background-color: var(--color-gray-550, gray);
+  }
+}
+
+.pagination__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  aspect-ratio: 1;
+  padding: 0;
+  border-radius: 99em;
+  color: var(--black, black);
+  text-decoration: none;
+  font-weight: 500;
+  line-height: 1.4;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+
+}
+
+.pagination__link--prev,
+.pagination__link--next {
+  --icon: url("../../icons/arrow.svg");
+}
+
+.pagination__link--next {
+  transform: rotate(180deg);
+}
+
+
+
+.pagination__link--active {
+  background-color: var(--basic-red, red);
+  color: #fff;
+}
+
+.pagination__link--dots {
+  color: transparent;
+  font-size: 0;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 21px;
+    height: 3px;
+    background-image: url("../../icons/dots.svg");
+  }
+
+}
+
+
+
+.pagination__link--disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}

@@ -1,0 +1,10 @@
+{% extends template %}
+
+{% set pageTitle = "Каталог техники — Tosei" %}
+
+{% block main %}
+  {% include "./blocks/intro.njk" %}
+  {% set isCatalog = true %}
+  {% include "./blocks/trending.njk" %}
+{% endblock %}
+

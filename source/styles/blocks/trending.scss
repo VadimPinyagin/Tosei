@@ -9,6 +9,26 @@
   padding-inline-end: 3px;
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.trending__item {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.trending__item--hidden {
+  display: none;
+  animation: none;
+}
+
 .trending__radio-list {
   list-style: none;
   margin: 0;
