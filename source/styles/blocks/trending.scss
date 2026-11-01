@@ -1,3 +1,12 @@
+.trending__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+  margin-block: 28px 41px;
+}
+
 .trending__inner {
   display: grid;
   justify-content: center;
@@ -74,13 +83,4 @@
   font-weight: 500;
   line-height: 1.2;
   align-self: center;
-}
-
-.trending__list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  gap: 10px;
-  margin-block: 28px 9px;
 }

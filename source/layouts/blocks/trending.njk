@@ -28,7 +28,7 @@
             </li>
           {% endfor %}
         </ul>
-        <div class="swiper-pagination trending__pagination"></div>
+        {{ pagination() }}
       </div>
     {% endif %}
     {% if not isCatalog %}

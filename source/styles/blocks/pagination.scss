@@ -1,17 +1,16 @@
 .pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pagination__list{
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
   align-items: center;
-  gap: 12px;
-
-  & > :is(:first-child, :last-child) > :first-child {
-    width: 24px;
-    height: 24px;
-    mask: var(--icon) center / contain no-repeat;
-    background-color: var(--color-gray-550, gray);
-  }
+  gap: 8px;
 }
 
 .pagination__link {
@@ -27,15 +26,21 @@
   font-weight: 500;
   line-height: 1.4;
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
-
 }
 
-.pagination__link--prev,
-.pagination__link--next {
+.pagination__button {
+  width: 24px;
+  height: 24px;
+  mask: var(--icon) center / contain no-repeat;
+  background-color: var(--color-gray-550, gray);
+}
+
+.pagination__button--prev,
+.pagination__button--next {
   --icon: url("../../icons/arrow.svg");
 }
 
-.pagination__link--next {
+.pagination__button--next {
   transform: rotate(180deg);
 }
 
