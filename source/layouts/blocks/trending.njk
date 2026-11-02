@@ -18,12 +18,12 @@
     {% if isCatalog %}
     <div class="trending__slider">  {# Добавить класс swiper #}
       <ul class="trending__list">  {# Добавить класс swiper-wrapper #}
-        {% for car in data.cars %}
+          {% for car in data.cars %}
           <li class="swiper-slide trending__item">
             {{ card(car, "card") }}
           </li>
-        {% endfor %}
-      </ul>
+          {% endfor %}
+        </ul>
       {{ pagination() }}
     </div>
       {% else %}

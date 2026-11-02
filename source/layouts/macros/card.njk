@@ -1,12 +1,9 @@
 {% from "macros/components.njk" import dlRow %}
 
 {% macro card(data, className="") %}
-  <a class="{{ className }}" href="product.html" data-title="{{ car.title }}">
+  <a class="{{ className }}" href="product.html" data-title="{{ data.title }}">
     <h3 class="{{ className }}__title">{{ data.title }}</h3>
     <picture>
-      {# <source type="image/webp" media="(min-width: 1440px)" srcset="images/card-images/{{ data.image }}-desktop.webp 1x, images/card-images/{{ data.image }}-desktop@2x.webp 2x">
-      <source type="image/jpeg" media="(min-width: 1440px)" srcset="images/card-images/{{ data.image }}-desktop.jpg 1x, images/card-images/{{ data.image }}-desktop@2x.jpg 2x">
-      <source type="image/webp" srcset="images/card-images/{{ data.image }}@1x.webp 1x, images/card-images/{{ data.image }}@2x.webp 2x"> #}
       <img class="{{ className }}__image" src="images/card-images/{{ data.image }}@1x.jpg" srcset="images/card-images/{{ data.image }}@2x.jpg 2x" width="{{ data.width }}" height="{{ data.height }}" alt="{{ data.title }}">
     </picture>
     <dl class="{{ className }}__info">
@@ -18,7 +15,10 @@
       {{ dlRow("КПП", data.transmission, className + "__info") }}
       {{ dlRow(data.priceLabel, data.priceValue, className + "__info", modifier="price", visuallyHidden=false) }}
       {{ dlRow("Статус автомобиля", data.statusText, className + "__info", modifier=data.status, visuallyHidden=true, isStatus=true) }}
-
     </dl>
   </a>
 {% endmacro %}
+{# <source type="image/webp" media="(min-width: 1440px)" srcset="images/card-images/{{ data.image }}-desktop.webp 1x, images/card-images/{{ data.image }}-desktop@2x.webp 2x">
+      <source type="image/jpeg" media="(min-width: 1440px)" srcset="images/card-images/{{ data.image }}-desktop.jpg 1x, images/card-images/{{ data.image }}-desktop@2x.jpg 2x">
+      <source type="image/webp" srcset="images/card-images/{{ data.image }}@1x.webp 1x, images/card-images/{{ data.image }}@2x.webp 2x"> #}
+sessionStorage.getItem('currentProductTitle')
