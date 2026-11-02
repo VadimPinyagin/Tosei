@@ -1,0 +1,7 @@
+{% from "breadcrumbs.njk" import breadcrumbs %}
+
+{{ breadcrumbs([
+  { name: "Главная", url: "index.html" },
+  { name: "Каталог", url: "catalog.html" },
+  { name: '<span class="js-product-title">Загрузка...</span>', url: "#" }
+]) }}
