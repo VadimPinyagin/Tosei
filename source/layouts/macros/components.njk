@@ -1,10 +1,9 @@
-{% macro sectionTitle(text, mixClass="", visuallyHidden=false) %}
+{% macro sectionTitle(text, mixClass="", visuallyHidden=false, modClass="") %}
   {% set baseClass = "visually-hidden" if visuallyHidden else "section-title" %}
-  <h2 class="{% if mixClass %}{{ mixClass }} {{ baseClass }}{% endif %}">
+  <h2 class="{% if mixClass %}{{ mixClass }} {% endif %}{{ baseClass }}{% if modClass %} {{ modClass }}{% endif %}">
     {{ text }}
   </h2>
 {% endmacro %}
-
 
 {% macro dlRow(term, value, className, modifier="", visuallyHidden=false, isStatus=false) %}
   <div class="{{ className }}-row {% if modifier %}{{ className }}-row--{{ modifier }}{% endif %}">

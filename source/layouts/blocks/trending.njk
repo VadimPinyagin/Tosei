@@ -5,34 +5,38 @@
 {% from "macros/pagination.njk" import pagination %}
 <section class="trending">
   <div class="trending__inner container">
-    {{ sectionTitle("Популярные автомобили","trending__title", visuallyHidden=false) }}
-    <ul class="trending__radio-list">
-      <li class="trending__radio-list-item">{{radio("Любые", "trending-filter", "any", checked=true, className="trending__radio") }}</li>
-      <li class="trending__radio-list-item">{{radio("В наличии", "trending-filter", "available",checked=false, className="trending__radio") }}</li>
-      <li class="trending__radio-list-item">{{radio("Под заказ", "trending-filter", "order",checked=false, className="trending__radio") }}</li>
-    </ul>
-        {% if not isCatalog %}
-      <ul class="trending__list">
+    {% if isProduct %}
+      {{ sectionTitle("Обратите внимание", "trending__title", modClass="trending__title--product") }}
+    {% else %}
+      {{ sectionTitle("Популярные автомобили", "trending__title", visuallyHidden=false) }}
+      <ul class="trending__radio-list">
+        <li class="trending__radio-list-item">{{ radio("Любые", "trending-filter", "any", checked=true, className="trending__radio") }}</li>
+        <li class="trending__radio-list-item">{{ radio("В наличии", "trending-filter", "available", checked=false, className="trending__radio") }}</li>
+        <li class="trending__radio-list-item">{{ radio("Под заказ", "trending-filter", "order", checked=false, className="trending__radio") }}</li>
+      </ul>
+    {% endif %}
+    {% if isCatalog %}
+    <div class="trending__slider">  {# Добавить класс swiper #}
+      <ul class="trending__list">  {# Добавить класс swiper-wrapper #}
+        {% for car in data.cars %}
+          <li class="swiper-slide trending__item">
+            {{ card(car, "card") }}
+          </li>
+        {% endfor %}
+      </ul>
+      {{ pagination() }}
+    </div>
+      {% else %}
+      <ul class="trending__list{% if isProduct %} trending__list--product{% endif %}">
         {% for car in data.cars %}
           <li class="trending__item{% if loop.index > 3 %} trending__item--hidden{% endif %}">
             {{ card(car, "card") }}
           </li>
         {% endfor %}
       </ul>
-    {% else %}
-      <div class="trending__slider">  {# Добавить класс swiper #}
-        <ul class="trending__list">  {# Добавить класс swiper-wrapper #}
-          {% for car in data.cars %}
-            <li class="swiper-slide trending__item">
-              {{ card(car, "card") }}
-            </li>
-          {% endfor %}
-        </ul>
-        {{ pagination() }}
-      </div>
-    {% endif %}
-    {% if not isCatalog %}
-      {{ button("Показать еще", "button", "trending__btn btn--more") }}
-    {% endif %}
+      {% endif %}
+      {% if not isCatalog and not isProduct %}
+        {{ button("Показать еще", "button", "trending__btn btn--more") }}
+      {% endif %}
   </div>
 </section>
