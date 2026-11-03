@@ -1,0 +1,49 @@
+{% from "macros/components.njk" import sectionTitle, dlRow, pictureResponsive %}
+{% from "macros/btn.njk" import button %}
+{% from "macros/button-tab.njk" import tabButton %}
+
+<section class="product-info">
+  <div class="product-info__header">
+    {{ sectionTitle(car.title, mixClass="product-info__title", visuallyHidden=false) }}
+    <dl class="product-info__info">
+      {{ dlRow("Статус автомобиля", car.statusText, "product-info__info", modifier=car.status, visuallyHidden=true, isStatus=true) }}
+    </dl>
+  </div>
+  <div class="product-info__gallery swiper">
+    <ul class="swiper-wrapper">
+      <li class="swiper-slide">
+        {{ pictureResponsive(car, "card-images", car.width, car.height, className="product-info__image") }}
+      </li>
+    </ul>
+  </div>
+  <div class="product-info__tabs" role="tablist" aria-label="Характеристики и информация о товаре">
+    {{ tabButton("Характеристики", "specs", isActive=true) }}
+    {{ tabButton("Дополнительная информация", "additional", isActive=false) }}
+  </div>
+  <div class="product-info__content is-active" id="specs" role="tabpanel" tabindex="0" aria-labelledby="tab-specs">
+    <dl class="product-info__info">
+      {{ dlRow("Объем двигателя", car.engine, "product-info__info") }}
+      {{ dlRow("Год", car.year, "product-info__info") }}
+      {{ dlRow("Пробег", car.mileage, "product-info__info") }}
+      {{ dlRow("Тип оформления", car.customs, "product-info__info", modifier="full", visuallyHidden=true) }}
+      {{ dlRow("Привод", car.drive, "product-info__info") }}
+      {{ dlRow("КПП", car.transmission, "product-info__info") }}
+    </dl>
+  </div>
+  <div class="product-info__content" id="additional" role="tabpanel" tabindex="0" aria-labelledby="tab-additional" hidden>
+    <dl class="product-info__info">
+      {% for item in car.additionalInfo %}
+        {{ dlRow(item.term, item.value, "product-info__info") }}
+      {% endfor %}
+    </dl>
+  </div>
+  <div class="product-info__purchase">
+    <dl class="product-info__price-block">
+      {{ dlRow(car.priceLabel, car.priceValue, "product-info__info") }}
+    </dl>
+    <div class="product-info__actions">
+      {{ button("Консультация бесплатно", type="button", className="btn--consultation") }}
+      {{ button("Оставить заявку", type="button", className="btn--order") }}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,12 @@
+{% macro tabButton(text, targetId, isActive=false) %}
+  <button
+    class="product-info__tab {% if isActive %}is-active{% endif %}"
+    type="button"
+    role="tab"
+    aria-selected="{% if isActive %}true{% else %}false{% endif %}"
+    aria-controls="{{ targetId }}"
+    id="tab-{{ targetId }}"
+    {% if not isActive %}tabindex="-1"{% endif %}>
+    {{ text }}
+  </button>
+{% endmacro %}

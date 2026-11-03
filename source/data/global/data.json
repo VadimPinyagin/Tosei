@@ -47,6 +47,36 @@
       "priceValue": "630 000 ₽",
       "status": "available",
       "statusText": "В наличии"
+    },
+    {
+      "title": "Mazda CX-3 2017",
+      "image": "mazda-cx-3",
+      "width": "300",
+      "height": "204",
+      "engine": "1.5 л.",
+      "year": "2017",
+      "mileage": "40 000 км",
+      "customs": "Под полную пошлину",
+      "drive": "Передний",
+      "transmission": "Автомат",
+      "priceLabel": "Стоимость во Владивостоке",
+      "priceValue": "1 630 000 ₽",
+      "status": "booked",
+      "statusText": "Под заказ",
+
+      "additionalInfo": [
+        { "term": "Производитель", "value": "Mazda" },
+        { "term": "Тип", "value": "2017" },
+        { "term": "Тип кузова", "value": "Белый" },
+        { "term": "Пробег", "value": "40 000 км" },
+        { "term": "Двигатель", "value": "Бензиновый (1.5 м³)" },
+        { "term": "Мощность", "value": "л.с." },
+        { "term": "КПП", "value": "Автомат" },
+        { "term": "Аукцион", "value": "KCAA Fukuoka" },
+        { "term": "Дата аукциона", "value": "08.07.2021" },
+        { "term": "Местонахождение", "value": "Япония" },
+        { "term": "Статус", "value": "Под заказ" }
+      ]
     }
   ],
 
@@ -105,4 +135,3 @@
     }
   ]
 }
-
