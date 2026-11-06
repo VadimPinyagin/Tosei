@@ -1,13 +1,16 @@
-const container = document.querySelector('.product-info');
-const tabs = container.querySelectorAll('.product-info__tab');
-const panels = container.querySelectorAll('.product-info__content');
+
+
 
 const switchesTabs = (elements, callback) => {
   elements.forEach(callback);
 };
 
 const initProductTabs = () => {
+  const container = document.querySelector('.product-info');
   if (!container) return;
+
+  const tabs = container.querySelectorAll('.product-info__tab');
+  const panels = container.querySelectorAll('.product-info__content');
 
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {

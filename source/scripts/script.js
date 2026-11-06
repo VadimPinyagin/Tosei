@@ -10,7 +10,7 @@ import './utils/scroll-table.js';
 // import './utils/to-top.js';
 import './utils/sticky-header.js';
 import './utils/sync-product-title.js';
-// import './utils/switches-tabs.js';
+import './utils/switches-tabs.js';
 // import './utils/full-year.js';
 
 // document.addEventListener('DOMContentLoaded', () => {

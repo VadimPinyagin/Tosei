@@ -1,7 +1,7 @@
-{% from "blocks/breadcrumbs.njk" import breadcrumbs %}
+{% from "macros/breadcrumbs.njk" import breadcrumbs %}
 
 {{ breadcrumbs([
   { name: "Главная", url: "index.html" },
   { name: "Каталог", url: "catalog.html" },
-  { name: '<span class="js-product-title">Загрузка...</span>' | safe, url: "#" }
+  { name: car.title, url: "#" }
 ]) }}

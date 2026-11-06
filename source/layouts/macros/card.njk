@@ -1,7 +1,7 @@
 {% from "macros/components.njk" import dlRow %}
 
 {% macro card(data, className="") %}
-  <a class="{{ className }}" href="product.html" data-title="{{ data.title }}">
+  <a class="{{ className }}" href="product-{{ data.id }}.html" data-title="{{ data.title }}">
     <h3 class="{{ className }}__title">{{ data.title }}</h3>
     <picture>
       <img class="{{ className }}__image" src="images/card-images/{{ data.image }}@1x.jpg" srcset="images/card-images/{{ data.image }}@2x.jpg 2x" width="{{ data.width }}" height="{{ data.height }}" alt="{{ data.title }}">

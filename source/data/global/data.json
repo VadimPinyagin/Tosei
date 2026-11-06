@@ -1,6 +1,7 @@
 {
   "cars": [
     {
+      "id": "honda-fit-2015",
       "title": "Honda Fit",
       "image": "honda-fit",
       "width": "303",
@@ -14,9 +15,24 @@
       "priceLabel": "Стоимость во Владивостоке",
       "priceValue": "630 000 ₽",
       "status": "available",
-      "statusText": "В наличии"
+      "statusText": "В наличии",
+
+      "additionalInfo": [
+        { "term": "Производитель", "value": "Mazda" },
+        { "term": "Тип", "value": "2017" },
+        { "term": "Тип кузова", "value": "Белый" },
+        { "term": "Пробег", "value": "40 000 км" },
+        { "term": "Двигатель", "value": "Бензиновый (1.5 м³)" },
+        { "term": "Мощность", "value": "л.с." },
+        { "term": "КПП", "value": "Автомат" },
+        { "term": "Аукцион", "value": "KCAA Fukuoka" },
+        { "term": "Дата аукциона", "value": "08.07.2021" },
+        { "term": "Местонахождение", "value": "Япония" },
+        { "term": "Статус", "value": "Под заказ" }
+      ]
     },
     {
+      "id": "bmw-x5-2005",
       "title": "BMW - X5 2005",
       "image": "bmw-x5-2005",
       "width": "303",
@@ -30,9 +46,24 @@
       "priceLabel": "Стоимость во Владивостоке",
       "priceValue": "630 000 ₽",
       "status": "order",
-      "statusText": "Под заказ"
+      "statusText": "Под заказ",
+
+      "additionalInfo": [
+        { "term": "Производитель", "value": "Mazda" },
+        { "term": "Тип", "value": "2017" },
+        { "term": "Тип кузова", "value": "Белый" },
+        { "term": "Пробег", "value": "40 000 км" },
+        { "term": "Двигатель", "value": "Бензиновый (1.5 м³)" },
+        { "term": "Мощность", "value": "л.с." },
+        { "term": "КПП", "value": "Автомат" },
+        { "term": "Аукцион", "value": "KCAA Fukuoka" },
+        { "term": "Дата аукциона", "value": "08.07.2021" },
+        { "term": "Местонахождение", "value": "Япония" },
+        { "term": "Статус", "value": "Под заказ" }
+      ]
     },
     {
+      "id": "toyota-prius",
       "title": "Honda Fit",
       "image": "toyota-prius",
       "width": "303",
@@ -46,9 +77,24 @@
       "priceLabel": "Стоимость во Владивостоке",
       "priceValue": "630 000 ₽",
       "status": "available",
-      "statusText": "В наличии"
+      "statusText": "В наличии",
+
+      "additionalInfo": [
+        { "term": "Производитель", "value": "Mazda" },
+        { "term": "Тип", "value": "2017" },
+        { "term": "Тип кузова", "value": "Белый" },
+        { "term": "Пробег", "value": "40 000 км" },
+        { "term": "Двигатель", "value": "Бензиновый (1.5 м³)" },
+        { "term": "Мощность", "value": "л.с." },
+        { "term": "КПП", "value": "Автомат" },
+        { "term": "Аукцион", "value": "KCAA Fukuoka" },
+        { "term": "Дата аукциона", "value": "08.07.2021" },
+        { "term": "Местонахождение", "value": "Япония" },
+        { "term": "Статус", "value": "Под заказ" }
+      ]
     },
     {
+      "id": "mazda-cx-3",
       "title": "Mazda CX-3 2017",
       "image": "mazda-cx-3",
       "width": "300",

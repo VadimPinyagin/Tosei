@@ -1,3 +1,4 @@
+import { Transform } from 'node:stream';
 import {readFileSync, rmSync} from 'node:fs';
 import {readdir, readFile} from 'node:fs/promises';
 import { extname } from 'node:path';
@@ -140,6 +141,61 @@ export function processMarkup() {
     .pipe(server.stream());
 }
 
+export async function processProducts() {
+  const versionNumber = Number(new Date().toISOString().replace(/\D+/g, ''));
+  const globalData = await getGlobalData();
+
+  const dataJsonPath = `${PATH_TO_SOURCE}data/global/data.json`;
+  let cars = [];
+  try {
+    const content = readFileSync(dataJsonPath, 'utf8');
+    const parsed = JSON.parse(content);
+    cars = parsed.cars || [];
+  } catch (err) {
+    console.error(`Ошибка чтения data.json для генерации товаров: ${err.message}`);
+  }
+
+  if (cars.length === 0) {
+    return src(`${PATH_TO_SOURCE}pages/product.njk`, { base: `${PATH_TO_SOURCE}layouts/` })
+      .pipe(rename(() => {}));
+  }
+
+  return src(`${PATH_TO_SOURCE}pages/product.njk`, { base: `${PATH_TO_SOURCE}layouts/` })
+    .pipe(plumber(plumberOptions))
+    .pipe(new Transform({
+      objectMode: true,
+      transform(file, encoding, callback) {
+        cars.forEach((car) => {
+          const clonedFile = file.clone({ contents: true });
+          clonedFile.car = car; // прикрепляем данные конкретной машины к файлу
+          this.push(clonedFile);
+        });
+        callback();
+      }
+    }))
+    .pipe(data(async (file) => {
+      return {
+        versionNumber,
+        template: 'default.njk',
+        ...globalData,
+        car: file.car, // прокидываем объект машины в шаблон
+      };
+    }))
+    .pipe(nunjucksCompile({
+      manageEnv: (env) => {
+        env.opts.autoescape = false;
+      }
+    }))
+    .pipe(rename((pathObj, file) => {
+      if (file && file.car) {
+        pathObj.basename = `product-${file.car.id}`; // формируем имя файла: product-honda-fit-2015.html
+      }
+      pathObj.dirname = '';
+    }))
+    .pipe(dest(PATH_TO_DIST))
+    .pipe(server.stream());
+}
+
 export function lintBem() {
   return src(`${PATH_TO_DIST}**/*.html`)
     .pipe(bemlinter());
@@ -261,9 +317,12 @@ export function startServer() {
     });
   });
 
-  watch(`${PATH_TO_SOURCE}**/*.{html,njk}`, series(processMarkup));
+  watch(`${PATH_TO_SOURCE}**/*.{html,njk}`, series(processMarkup, processProducts));
+  watch(`${PATH_TO_SOURCE}data/global/data.json`, series(processProducts, reloadServer));
   watch(`${PATH_TO_SOURCE}styles/**/*.scss`, series(processStyles));
   watch(`${PATH_TO_SOURCE}scripts/**/*.js`, series(processScripts));
+
+
   watch(`${PATH_TO_SOURCE}icons/**/*.svg`, series(createStack, reloadServer));
   watch(PATHS_TO_STATIC, series(reloadServer));
 }
@@ -294,6 +353,7 @@ export function buildProd(done) {
     removeBuild,
     parallel(
       processMarkup,
+      processProducts,
       processStyles,
       processScripts,
       createStack,
@@ -308,9 +368,12 @@ export function runDev(done) {
     removeBuild,
     parallel(
       processMarkup,
+      processProducts,
       processStyles,
       processScripts,
       createStack,
+      copyStatic,
+      copyManifest,
     ),
     startServer,
   )(done);
