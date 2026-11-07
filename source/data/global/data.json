@@ -3,7 +3,16 @@
     {
       "id": "honda-fit-2015",
       "title": "Honda Fit",
-      "image": "honda-fit",
+      "folder": "products/honda/honda-fit-2015",
+      "coverImage": "honda-fit",
+      "productImages": [
+        "honda-fit-1",
+        "honda-fit-2",
+        "honda-fit-3",
+        "honda-fit-4",
+        "honda-fit-5",
+        "honda-fit-6"
+      ],
       "width": "303",
       "height": "198",
       "engine": "1,2 л.с.",
@@ -34,7 +43,16 @@
     {
       "id": "bmw-x5-2005",
       "title": "BMW - X5 2005",
-      "image": "bmw-x5-2005",
+      "folder": "products/bmw/bmw-x5-2005",
+      "coverImage": "bmw-x5-2005",
+      "productImages": [
+        "bmw-x5-2005-1",
+        "bmw-x5-2005-2",
+        "bmw-x5-2005-3",
+        "bmw-x5-2005-4",
+        "bmw-x5-2005-5",
+        "bmw-x5-2005-6"
+      ],
       "width": "303",
       "height": "198",
       "engine": "1,2 л.с.",
@@ -65,7 +83,16 @@
     {
       "id": "toyota-prius",
       "title": "Honda Fit",
-      "image": "toyota-prius",
+      "folder": "products/toyota/toyota-prius",
+      "coverImage": "toyota-prius",
+      "productImages": [
+        "toyota-prius-1",
+        "toyota-prius-2",
+        "toyota-prius-3",
+        "toyota-prius-4",
+        "toyota-prius-5",
+        "toyota-prius-6"
+      ],
       "width": "303",
       "height": "198",
       "engine": "1,2 л.с.",
@@ -96,7 +123,16 @@
     {
       "id": "mazda-cx-3",
       "title": "Mazda CX-3 2017",
-      "image": "mazda-cx-3",
+      "folder": "products/mazda/mazda-cx-3-2017",
+      "coverImage": "mazda-cx-3",
+      "productImages": [
+        "mazda-cx-3-1",
+        "mazda-cx-3-2",
+        "mazda-cx-3-3",
+        "mazda-cx-3-4",
+        "mazda-cx-3-5",
+        "mazda-cx-3-6"
+      ],
       "width": "300",
       "height": "204",
       "engine": "1.5 л.",

@@ -10,11 +10,13 @@
         {{ dlRow("Статус автомобиля", car.statusText, "product-info__info", modifier=car.status, visuallyHidden=true, isStatus=true) }}
       </dl>
     </div>
-    <div class="product-info__gallery swiper">
-      <ul class="swiper-wrapper">
-        <li class="swiper-slide">
-          {{ pictureResponsive(car, "card-images", car.width, car.height, className="product-info__image") }}
-        </li>
+    <div class="product-info__gallery">
+      <ul class="product-info__wrapper">
+        {% for imgName in car.productImages %}
+          <li class="product-info__slide">
+            {{ pictureResponsive({ image: imgName, title: car.title }, car.folder, car.width, car.height, className="product-info__image") }}
+          </li>
+        {% endfor %}
       </ul>
     </div>
     <div class="product-info__tabs" role="tablist" aria-label="Характеристики и информация о товаре">

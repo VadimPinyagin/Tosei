@@ -1,3 +1,5 @@
+{% from "macros/components.njk" import pictureResponsive %}
+
 <section class="intro">
   <div class="intro__inner container">
     <div class="intro__content">
@@ -6,11 +8,6 @@
       {% set mixClass = "intro__form" %}
       {% include "blocks/filter.njk" %}
     </div>
-      <picture>
-        <source type="image/webp" media="(min-width: 1280px)" width="1080" height="316" srcset="images/intro-bg-desktop@1x.webp 1x, images/intro-bg-desktop@2x.webp 2x">
-        <source type="image/jpeg" media="(min-width: 1280px)" width="1080" height="316" srcset="images/intro-bg-desktop@1x.jpg 1x, images/intro-bg-desktop@2x.jpg 2x">
-        <source type="image/webp" media="(min-width: 375px)" width="375" height="316" srcset="images/intro-bg-mobile@1x.webp 1x, images/intro-bg-mobile@2x.webp 2x">
-        <img class="intro__bg" src="images/intro-bg-mobile@1x.jpg" srcset="images/intro-bg-mobile@1x.jpg 2x" width="375" height="316" alt="Ряд современных легковых автомобилей разных цветов на парковке автодилера">
-      </picture>
+      {{ pictureResponsive(data={ image: "intro-bg", title: "Ряд современных легковых автомобилей разных цветов на парковке автодилера" }, folder="bg", width="375", height="316", desktopWidth="1080", desktopHeight="316", tabletDesktop=true, className="intro__bg") }}
   </div>
 </section>

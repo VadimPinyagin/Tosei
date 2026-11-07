@@ -1,11 +1,9 @@
-{% from "macros/components.njk" import dlRow %}
+{% from "macros/components.njk" import dlRow, pictureResponsive %}
 
 {% macro card(data, className="") %}
   <a class="{{ className }}" href="product-{{ data.id }}.html" data-title="{{ data.title }}">
     <h3 class="{{ className }}__title">{{ data.title }}</h3>
-    <picture>
-      <img class="{{ className }}__image" src="images/card-images/{{ data.image }}@1x.jpg" srcset="images/card-images/{{ data.image }}@2x.jpg 2x" width="{{ data.width }}" height="{{ data.height }}" alt="{{ data.title }}">
-    </picture>
+    {{ pictureResponsive({ image: data.coverImage, title: data.title }, data.folder, data.width, data.height, className=className + "__image") }}
     <dl class="{{ className }}__info">
       {{ dlRow("Объем двигателя", data.engine, className + "__info") }}
       {{ dlRow("Год", data.year, className + "__info") }}
@@ -19,6 +17,6 @@
   </a>
 {% endmacro %}
 {# <source type="image/webp" media="(min-width: 1440px)" srcset="images/card-images/{{ data.image }}-desktop.webp 1x, images/card-images/{{ data.image }}-desktop@2x.webp 2x">
-      <source type="image/jpeg" media="(min-width: 1440px)" srcset="images/card-images/{{ data.image }}-desktop.jpg 1x, images/card-images/{{ data.image }}-desktop@2x.jpg 2x">
-      <source type="image/webp" srcset="images/card-images/{{ data.image }}@1x.webp 1x, images/card-images/{{ data.image }}@2x.webp 2x"> #}
+<source type="image/jpeg" media="(min-width: 1440px)" srcset="images/card-images/{{ data.image }}-desktop.jpg 1x, images/card-images/{{ data.image }}-desktop@2x.jpg 2x">
+<source type="image/webp" srcset="images/card-images/{{ data.image }}@1x.webp 1x, images/card-images/{{ data.image }}@2x.webp 2x"> #}
 
