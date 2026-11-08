@@ -5,133 +5,150 @@
       "title": "Honda Fit",
       "folder": "products/honda/honda-fit-2015",
       "coverImage": "honda-fit",
+
       "productImages": [
-        "honda-fit-1",
-        "honda-fit-2",
-        "honda-fit-3",
-        "honda-fit-4",
-        "honda-fit-5",
-        "honda-fit-6"
+        { "src": "honda-fit-1", "alt": "Honda Fit 2015 — вид спереди" },
+        { "src": "honda-fit-2", "alt": "Honda Fit 2015 — вид сзади и профиль" },
+        { "src": "honda-fit-3", "alt": "Honda Fit 2015 — салон и приборная панель" },
+        { "src": "honda-fit-4", "alt": "Honda Fit 2015 — водительское сиденье" },
+        { "src": "honda-fit-5", "alt": "Honda Fit 2015 — задний ряд сидений" },
+        { "src": "honda-fit-6", "alt": "Honda Fit 2015 — багажное отделение" }
       ],
+
       "width": "303",
       "height": "198",
+
       "engine": "1,2 л.с.",
       "year": "2015 г.",
       "mileage": "34 000 км",
       "customs": "Под полную пошлину",
       "drive": "Задний",
       "transmission": "Автомат",
+
+      "manufacturer": "Mazda",
+      "type": "2017",
+      "bodyType": "Белый",
+      "power": "л.с.",
+      "auction": "KCAA Fukuoka",
+      "auctionDate": "08.07.2021",
+      "location": "Япония",
+      "carStatus": "Под заказ",
+
       "priceLabel": "Стоимость во Владивостоке",
       "priceValue": "630 000 ₽",
       "status": "available",
       "statusText": "В наличии",
 
-      "additionalInfo": [
-        { "term": "Производитель", "value": "Mazda" },
-        { "term": "Тип", "value": "2017" },
-        { "term": "Тип кузова", "value": "Белый" },
-        { "term": "Пробег", "value": "40 000 км" },
-        { "term": "Двигатель", "value": "Бензиновый (1.5 м³)" },
-        { "term": "Мощность", "value": "л.с." },
-        { "term": "КПП", "value": "Автомат" },
-        { "term": "Аукцион", "value": "KCAA Fukuoka" },
-        { "term": "Дата аукциона", "value": "08.07.2021" },
-        { "term": "Местонахождение", "value": "Япония" },
-        { "term": "Статус", "value": "Под заказ" }
-      ]
+      "descriptionParagraphs": [
+        "Honda Fit 2015 года выпуска — отличный городской хэтчбек с превосходной топливной экономичностью и продуманным трансформируемым салоном.",
+        "Автомобиль полностью растаможен, находится в отличном техническом состоянии и проверен на японских аукционах."
+      ],
+
+      "videoReview": {
+        "image": "honda-fit-shuttle",
+        "title": "Космический Shuttle | HONDA FIT SHUTTLE 2013",
+        "views": "391 просмотр",
+        "date": "3 недели назад",
+        "videoUrl": "#"
+      }
     },
     {
       "id": "bmw-x5-2005",
+      "reviewId": "bmw-x5-2005-review",
       "title": "BMW - X5 2005",
       "folder": "products/bmw/bmw-x5-2005",
       "coverImage": "bmw-x5-2005",
       "productImages": [
-        "bmw-x5-2005-1",
-        "bmw-x5-2005-2",
-        "bmw-x5-2005-3",
-        "bmw-x5-2005-4",
-        "bmw-x5-2005-5",
-        "bmw-x5-2005-6"
+        { "src": "bmw-x5-2005-1", "alt": "BMW X5 2005 — вид спереди" },
+        { "src": "bmw-x5-2005-2", "alt": "BMW X5 2005 — вид сзади" },
+        { "src": "bmw-x5-2005-3", "alt": "BMW X5 2005 — салон" },
+        { "src": "bmw-x5-2005-4", "alt": "BMW X5 2005 — приборная панель" },
+        { "src": "bmw-x5-2005-5", "alt": "BMW X5 2005 — пассажирские места" },
+        { "src": "bmw-x5-2005-6", "alt": "BMW X5 2005 — багажник" }
       ],
       "width": "303",
       "height": "198",
-      "engine": "1,2 л.с.",
-      "year": "2015 г.",
-      "mileage": "34 000 км",
-      "customs": "Под полную пошлину",
-      "drive": "Задний",
+
+      "manufacturer": "Mazda",
+      "type": "2017",
+      "bodyType": "Белый",
+      "mileage": "40 000 км",
+      "engine": "Бензиновый (1.5 м³)",
+      "power": "л.с.",
       "transmission": "Автомат",
+      "drive": "Задний",
+      "customs": "Под полную пошлину",
+      "auction": "KCAA Fukuoka",
+      "auctionDate": "08.07.2021",
+      "location": "Япония",
+      "carStatus": "Под заказ",
+
       "priceLabel": "Стоимость во Владивостоке",
       "priceValue": "630 000 ₽",
       "status": "order",
       "statusText": "Под заказ",
 
-      "additionalInfo": [
-        { "term": "Производитель", "value": "Mazda" },
-        { "term": "Тип", "value": "2017" },
-        { "term": "Тип кузова", "value": "Белый" },
-        { "term": "Пробег", "value": "40 000 км" },
-        { "term": "Двигатель", "value": "Бензиновый (1.5 м³)" },
-        { "term": "Мощность", "value": "л.с." },
-        { "term": "КПП", "value": "Автомат" },
-        { "term": "Аукцион", "value": "KCAA Fukuoka" },
-        { "term": "Дата аукциона", "value": "08.07.2021" },
-        { "term": "Местонахождение", "value": "Япония" },
-        { "term": "Статус", "value": "Под заказ" }
+      "descriptionParagraphs": [
+        "BMW X5 2005 года выпуска — мощный премиальный кроссовер.",
+        "Автомобиль полностью проверен и готов к оформлению."
       ]
     },
     {
       "id": "toyota-prius",
+      "reviewId": "toyota-prius-review",
       "title": "Honda Fit",
       "folder": "products/toyota/toyota-prius",
       "coverImage": "toyota-prius",
       "productImages": [
-        "toyota-prius-1",
-        "toyota-prius-2",
-        "toyota-prius-3",
-        "toyota-prius-4",
-        "toyota-prius-5",
-        "toyota-prius-6"
+        { "src": "toyota-prius-1", "alt": "Toyota Prius — вид спереди" },
+        { "src": "toyota-prius-2", "alt": "Toyota Prius — вид сзади" },
+        { "src": "toyota-prius-3", "alt": "Toyota Prius — салон" },
+        { "src": "toyota-prius-4", "alt": "Toyota Prius — приборная панель" },
+        { "src": "toyota-prius-5", "alt": "Toyota Prius — пассажирские места" },
+        { "src": "toyota-prius-6", "alt": "Toyota Prius — багажник" }
       ],
       "width": "303",
       "height": "198",
+
       "engine": "1,2 л.с.",
       "year": "2015 г.",
       "mileage": "34 000 км",
       "customs": "Под полную пошлину",
       "drive": "Задний",
       "transmission": "Автомат",
+
+      "manufacturer": "Mazda",
+      "type": "2017",
+      "bodyType": "Белый",
+      "power": "л.с.",
+      "auction": "KCAA Fukuoka",
+      "auctionDate": "08.07.2021",
+      "location": "Япония",
+      "carStatus": "Под заказ",
+
       "priceLabel": "Стоимость во Владивостоке",
       "priceValue": "630 000 ₽",
       "status": "available",
       "statusText": "В наличии",
 
-      "additionalInfo": [
-        { "term": "Производитель", "value": "Mazda" },
-        { "term": "Тип", "value": "2017" },
-        { "term": "Тип кузова", "value": "Белый" },
-        { "term": "Пробег", "value": "40 000 км" },
-        { "term": "Двигатель", "value": "Бензиновый (1.5 м³)" },
-        { "term": "Мощность", "value": "л.с." },
-        { "term": "КПП", "value": "Автомат" },
-        { "term": "Аукцион", "value": "KCAA Fukuoka" },
-        { "term": "Дата аукциона", "value": "08.07.2021" },
-        { "term": "Местонахождение", "value": "Япония" },
-        { "term": "Статус", "value": "Под заказ" }
+      "descriptionParagraphs": [
+        "Toyota Prius — технологичный гибридный автомобиль с превосходной топливной экономичностью.",
+        "Полностью растаможен, проверен по аукционным листам."
       ]
     },
     {
       "id": "mazda-cx-3",
+      "reviewId": "mazda-cx-3-review",
       "title": "Mazda CX-3 2017",
       "folder": "products/mazda/mazda-cx-3-2017",
       "coverImage": "mazda-cx-3",
       "productImages": [
-        "mazda-cx-3-1",
-        "mazda-cx-3-2",
-        "mazda-cx-3-3",
-        "mazda-cx-3-4",
-        "mazda-cx-3-5",
-        "mazda-cx-3-6"
+        { "src": "mazda-cx-3-1", "alt": "Mazda CX-3 2017 — вид спереди" },
+        { "src": "mazda-cx-3-2", "alt": "Mazda CX-3 2017 — вид сзади" },
+        { "src": "mazda-cx-3-3", "alt": "Mazda CX-3 2017 — салон" },
+        { "src": "mazda-cx-3-4", "alt": "Mazda CX-3 2017 — приборная панель" },
+        { "src": "mazda-cx-3-5", "alt": "Mazda CX-3 2017 — пассажирские места" },
+        { "src": "mazda-cx-3-6", "alt": "Mazda CX-3 2017 — багажник" }
       ],
       "width": "300",
       "height": "204",
@@ -141,23 +158,24 @@
       "customs": "Под полную пошлину",
       "drive": "Передний",
       "transmission": "Автомат",
+
+      "manufacturer": "Mazda",
+      "type": "2017",
+      "bodyType": "Белый",
+      "power": "л.с.",
+      "auction": "KCAA Fukuoka",
+      "auctionDate": "08.07.2021",
+      "location": "Япония",
+      "carStatus": "Под заказ",
+
       "priceLabel": "Стоимость во Владивостоке",
       "priceValue": "1 630 000 ₽",
       "status": "order",
       "statusText": "Под заказ",
 
-      "additionalInfo": [
-        { "term": "Производитель", "value": "Mazda" },
-        { "term": "Тип", "value": "2017" },
-        { "term": "Тип кузова", "value": "Белый" },
-        { "term": "Пробег", "value": "40 000 км" },
-        { "term": "Двигатель", "value": "Бензиновый (1.5 м³)" },
-        { "term": "Мощность", "value": "л.с." },
-        { "term": "КПП", "value": "Автомат" },
-        { "term": "Аукцион", "value": "KCAA Fukuoka" },
-        { "term": "Дата аукциона", "value": "08.07.2021" },
-        { "term": "Местонахождение", "value": "Япония" },
-        { "term": "Статус", "value": "Под заказ" }
+      "descriptionParagraphs": [
+        "Mazda CX-3 2017 года выпуска — стильный и динамичный компактный кроссовер.",
+        "Автомобиль находится в Японии и доставляется под заказ с полным пакетом документов."
       ]
     }
   ],
@@ -195,6 +213,7 @@
 
   "reviewsData": [
     {
+      "id": "honda-fit-2015-review",
       "image": "honda-fit-shuttle",
       "title": "Космический Shuttle | HONDA FIT SHUTTLE 2013",
       "views": "391 просмотр",
@@ -202,6 +221,7 @@
       "videoUrl": "#"
     },
     {
+      "id": "bmw-x5-2005-review",
       "image": "toyota-siena",
       "title": "Компактный минивен | Toyota Siena 2017 г.",
       "views": "391 просмотр",
@@ -209,10 +229,19 @@
       "videoUrl": "#"
     },
     {
+      "id": "toyota-prius-review",
       "image": "kato-kb1500r",
       "title": "Спецтехника по-крупному | KATO KB1500R",
       "views": "391 просмотр",
       "date": "3 недели назад",
+      "videoUrl": "#"
+    },
+    {
+      "id": "mazda-cx-3-review",
+      "image": "mazda-cx-3",
+      "title": "Стильный кроссовер | Mazda CX-3 2017",
+      "views": "1.2 тыс. просмотров",
+      "date": "2 недели назад",
       "videoUrl": "#"
     }
   ]

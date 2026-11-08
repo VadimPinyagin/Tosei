@@ -1,12 +1,20 @@
 {% from "macros/components.njk" import pictureResponsive, metaDate %}
 
-{% macro reviewCard(data, className="review-card", folder="reviews-images", width="335", height="172") %}
-<article class="{{ className }}">
-  <a class="{{ className }}__media" href="#">
-    {{ pictureResponsive(data=data, folder=folder, width=width, height=height, desktopWidth="360", desktopHeight="200", tabletDesktop=true, className=className + "__image") }}
-  </a>
-  <h3 class="{{ className }}__title">{{ data.title }}</h3>
-  {{ metaDate(views=data.views, date=data.date, classContainer=className + "__meta", classViews=className + "__meta-views", classDate=className + "__meta-date") }}
-</article>
-{% endmacro %}
+{% macro reviewCard(data, className="review-card", folder="reviews-images", width="335", height="172", modClass="") %}
+  {# Вытаскиваем суффикс модификатора (например,из "review-card--product" берём "--product") #}
+  {% set modSuffix = '--' + modClass.split('--')[1] if '--' in modClass else ('' if not modClass else '--' + modClass) %}
 
+  <article class="{{ className }}{{ ' ' + modClass if modClass }}">
+    <a class="{{ className }}__media{{ ' ' + className + '__media' + modSuffix if modSuffix }}" href="{{ data.videoUrl if data.videoUrl else '#' }}">
+      {{ pictureResponsive(data=data, folder=folder, width=width, height=height, desktopWidth="360", desktopHeight="200", tabletDesktop=true, className=className + "__image" + (' ' + className + '__image' + modSuffix if modSuffix)) }}
+    </a>
+    <h3 class="{{ className }}__title{{ ' ' + className + '__title' + modSuffix if modSuffix }}">{{ data.title }}</h3>
+    {{ metaDate(
+      views=data.views,
+      date=data.date,
+      classContainer=className + "__meta" + (' ' + className + '__meta' + modSuffix if modSuffix),
+      classViews=className + "__meta-views",
+      classDate=className + "__meta-date"
+    ) }}
+  </article>
+{% endmacro %}
