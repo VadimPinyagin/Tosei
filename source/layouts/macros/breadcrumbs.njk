@@ -4,7 +4,7 @@
       {% for link in links %}
         <li class="breadcrumbs__item">
           {% if loop.last %}
-            <span class="breadcrumbs__link breadcrumbs__link--current" aria-current="page">{{ link.name }}</span>
+            <a class="breadcrumbs__link breadcrumbs__link--current" aria-current="page">{{ link.name }}</a>
           {% else %}
             <a class="breadcrumbs__link" href="{{ link.url }}">{{ link.name }}</a>
           {% endif %}

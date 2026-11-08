@@ -1,3 +1,23 @@
 .product-info__inner {
-  width: 335px;
+  padding-inline: 20px;
+}
+
+.product-info__info {
+  margin: 0;
+}
+
+.product-info__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product-info__title {
+  margin-block: 0;
+}
+
+.product-info__wrapper {
+  list-style: none;
+  padding-inline-start: 0;
+
 }

@@ -143,7 +143,7 @@
       "transmission": "Автомат",
       "priceLabel": "Стоимость во Владивостоке",
       "priceValue": "1 630 000 ₽",
-      "status": "booked",
+      "status": "order",
       "statusText": "Под заказ",
 
       "additionalInfo": [

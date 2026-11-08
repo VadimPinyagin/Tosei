@@ -10,7 +10,7 @@
     <dt class="{% if visuallyHidden %}visually-hidden{% else %}{{ className }}-term{% endif %} {% if modifier and not visuallyHidden %}{{ className }}-term--{{ modifier }}{% endif %}">
       {{ term }}
     </dt>
-    <dd class="{% if isStatus %}{{ className | replace('__info', '') }}__status {{ className | replace('__info', '') }}__status--{{ modifier }}{% else %}{{ className }}-value {% if modifier %}{{ className }}-value--{{ modifier }}{% endif %}{% endif %}">
+    <dd class="{% if isStatus %}status status--{{ modifier }}{% else %}{{ className }}-value {% if modifier %}{{ className }}-value--{{ modifier }}{% endif %}{% endif %}">
       {{ value }}
     </dd>
   </div>

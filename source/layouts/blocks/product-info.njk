@@ -10,10 +10,10 @@
         {{ dlRow("Статус автомобиля", car.statusText, "product-info__info", modifier=car.status, visuallyHidden=true, isStatus=true) }}
       </dl>
     </div>
-    <div class="product-info__gallery">
-      <ul class="product-info__wrapper">
+    <div class="product-info__gallery swiper">
+      <ul class="product-info__wrapper swiper-wrapper">
         {% for imgName in car.productImages %}
-          <li class="product-info__slide">
+          <li class="product-info__slide swiper-slide">
             {{ pictureResponsive({ image: imgName, title: car.title }, car.folder, car.width, car.height, className="product-info__image") }}
           </li>
         {% endfor %}
@@ -22,6 +22,7 @@
     <div class="product-info__tabs" role="tablist" aria-label="Характеристики и информация о товаре">
       {{ tabButton("Характеристики", "specs", isActive=true) }}
       {{ tabButton("Дополнительная информация", "additional", isActive=false) }}
+      {{ tabButton("Видеообзор", "video-review", isActive=false) }}
     </div>
     <div class="product-info__content is-active" id="specs" role="tabpanel" tabindex="0" aria-labelledby="tab-specs">
       <dl class="product-info__info">

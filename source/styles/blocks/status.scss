@@ -1,0 +1,23 @@
+.status {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--white, white);
+  display: flex;
+  justify-content: center;
+  border-radius: 99em;
+  align-items: center;
+  height: 32px;
+  margin-inline-start: 0;
+  margin-block-start: -6px;
+  padding-inline: 16px;
+}
+
+.status--available {
+  background-color: var(--basic-green, green);
+  min-width: 106px;
+}
+
+.status--order {
+  background-color: var(--basic-yellow, yellow);
+  min-width: 101px;
+}

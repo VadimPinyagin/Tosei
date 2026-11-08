@@ -1,3 +1,7 @@
+.header {
+  border-bottom: 1px solid var(--color-gray-420, grey);
+}
+
 .header__inner {
   display: flex;
   justify-content: space-between;
