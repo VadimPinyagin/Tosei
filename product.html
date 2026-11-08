@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="styles/styles.css?20261107192809950">
+<link rel="stylesheet" href="styles/styles.css?20261108173353656">
 <link rel="stylesheet" href="./vendor/swiper/swiper-bundle.min.css">
 
   <link rel="preload" href="fonts/Montserrat-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
@@ -110,7 +110,7 @@
       
         <li class="breadcrumbs__item">
           
-            <span class="breadcrumbs__link breadcrumbs__link--current" aria-current="page"></span>
+            <a class="breadcrumbs__link breadcrumbs__link--current" aria-current="page"></a>
           
         </li>
       
@@ -137,15 +137,15 @@
     <dt class="visually-hidden ">
       Статус автомобиля
     </dt>
-    <dd class="product-info__status product-info__status--">
+    <dd class="status status--">
       
     </dd>
   </div>
 
       </dl>
     </div>
-    <div class="product-info__gallery">
-      <ul class="product-info__wrapper">
+    <div class="product-info__gallery swiper">
+      <ul class="product-info__wrapper swiper-wrapper">
         
       </ul>
     </div>
@@ -172,6 +172,18 @@
     id="tab-additional"
     tabindex="-1">
     Дополнительная информация
+  </button>
+
+      
+  <button
+    class="product-info__tab "
+    type="button"
+    role="tab"
+    aria-selected="false"
+    aria-controls="video-review"
+    id="tab-video-review"
+    tabindex="-1">
+    Видеообзор
   </button>
 
     </div>
@@ -379,7 +391,7 @@
     <dt class="visually-hidden ">
       Статус автомобиля
     </dt>
-    <dd class="card__status card__status--available">
+    <dd class="status status--available">
       В наличии
     </dd>
   </div>
@@ -477,7 +489,7 @@
     <dt class="visually-hidden ">
       Статус автомобиля
     </dt>
-    <dd class="card__status card__status--order">
+    <dd class="status status--order">
       Под заказ
     </dd>
   </div>
@@ -575,7 +587,7 @@
     <dt class="visually-hidden ">
       Статус автомобиля
     </dt>
-    <dd class="card__status card__status--available">
+    <dd class="status status--available">
       В наличии
     </dd>
   </div>
@@ -669,11 +681,11 @@
   </div>
 
       
-  <div class="card__info-row card__info-row--booked">
+  <div class="card__info-row card__info-row--order">
     <dt class="visually-hidden ">
       Статус автомобиля
     </dt>
-    <dd class="card__status card__status--booked">
+    <dd class="status status--order">
       Под заказ
     </dd>
   </div>
@@ -730,7 +742,7 @@
 </footer>
 
     <script src="./vendor/swiper/swiper-bundle.min.js"></script>
-<script src="scripts/script.js?20261107192809950" type="module"></script>
+<script src="scripts/script.js?20261108173353656" type="module"></script>
 
 
   </body>
