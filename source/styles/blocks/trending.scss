@@ -1,20 +1,21 @@
+.trending__inner {
+  display: grid;
+  padding-inline: 20px;
+  justify-content: center;
+  padding-block: 33px 34px;
+}
+
 .trending__list {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
   gap: 10px;
-  margin-block: 28px 41px;
+  margin-block: 28px 9px;
 }
 
 .trending__list--product {
   margin-block: 0;
-}
-
-.trending__inner {
-  display: grid;
-  justify-content: center;
-  padding-block: 33px 34px;
 }
 
 .trending__title {
