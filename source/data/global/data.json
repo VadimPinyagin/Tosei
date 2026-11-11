@@ -64,30 +64,35 @@
       ],
       "width": "303",
       "height": "198",
-
+      "engine": "1,2 л.с.",
+      "year": "2015 г.",
+      "mileage": "34 000 км",
+      "customs": "Под полную пошлину",
+      "drive": "Задний",
+      "transmission": "Автомат",
       "manufacturer": "BMW",
       "type": "2017",
       "bodyType": "Белый",
-      "mileage": "40 000 км",
-      "engine": "1.2 л.с.",
       "power": "л.с.",
-      "transmission": "Автомат",
-      "drive": "Задний",
-      "customs": "Под полную пошлину",
       "auction": "KCAA Fukuoka",
       "auctionDate": "08.07.2021",
       "location": "Япония",
       "carStatus": "Под заказ",
-
       "priceLabel": "Стоимость во Владивостоке",
       "priceValue": "630 000 ₽",
       "status": "order",
       "statusText": "Под заказ",
-
       "descriptionParagraphs": [
         "BMW X5 2005 года выпуска — мощный премиальный кроссовер.",
         "Автомобиль полностью проверен и готов к оформлению."
-      ]
+      ],
+      "videoReview": {
+        "image": "honda-fit-shuttle",
+        "title": "Космический Shuttle | HONDA FIT SHUTTLE 2013",
+        "views": "391 просмотр",
+        "date": "3 недели назад",
+        "videoUrl": "#"
+      }
     },
     {
       "id": "toyota-prius",
@@ -105,14 +110,12 @@
       ],
       "width": "303",
       "height": "198",
-
       "engine": "1,2 л.с.",
       "year": "2015 г.",
       "mileage": "34 000 км",
       "customs": "Под полную пошлину",
       "drive": "Задний",
       "transmission": "Автомат",
-
       "manufacturer": "Mazda",
       "type": "2017",
       "bodyType": "Белый",
@@ -121,16 +124,21 @@
       "auctionDate": "08.07.2021",
       "location": "Япония",
       "carStatus": "Под заказ",
-
       "priceLabel": "Стоимость во Владивостоке",
       "priceValue": "630 000 ₽",
       "status": "available",
       "statusText": "В наличии",
-
       "descriptionParagraphs": [
         "Toyota Prius — технологичный гибридный автомобиль с превосходной топливной экономичностью.",
         "Полностью растаможен, проверен по аукционным листам."
-      ]
+      ],
+      "videoReview": {
+        "image": "honda-fit-shuttle",
+        "title": "Космический Shuttle | HONDA FIT SHUTTLE 2013",
+        "views": "391 просмотр",
+        "date": "3 недели назад",
+        "videoUrl": "#"
+      }
     },
     {
       "id": "mazda-cx-3",
@@ -154,7 +162,6 @@
       "customs": "Под полную пошлину",
       "drive": "Передний",
       "transmission": "Автомат",
-
       "manufacturer": "Mazda",
       "type": "2017",
       "bodyType": "Белый",
@@ -163,16 +170,21 @@
       "auctionDate": "08.07.2021",
       "location": "Япония",
       "carStatus": "Под заказ",
-
       "priceLabel": "Стоимость во Владивостоке",
       "priceValue": "1 630 000 ₽",
       "status": "order",
       "statusText": "Под заказ",
-
       "descriptionParagraphs": [
         "Mazda CX-3 2017 года выпуска — стильный и динамичный компактный кроссовер.",
         "Автомобиль находится в Японии и доставляется под заказ с полным пакетом документов."
-      ]
+      ],
+      "videoReview": {
+        "image": "honda-fit-shuttle",
+        "title": "Космический Shuttle | HONDA FIT SHUTTLE 2013",
+        "views": "391 просмотр",
+        "date": "3 недели назад",
+        "videoUrl": "#"
+      }
     }
   ],
 
