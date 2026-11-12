@@ -21,42 +21,51 @@
         {% endfor %}
       </ul>
     </div>
-
     <div class="product-info__tabs" role="tablist" aria-label="Характеристики и информация о товаре">
       {{ tabButton("Характеристики", "specs", isActive=true) }}
       {{ tabButton("Дополнительная информация", "additional", isActive=false) }}
       {{ tabButton("Видеообзор", "video-review", isActive=false) }}
     </div>
 
-    <!-- Таб 1: Характеристики (теперь все данные плоские и лежат прямо в car) -->
-    <div class="product-info__content is-active" id="specs" role="tabpanel" tabindex="0" aria-labelledby="tab-specs">
-      <dl class="product-info__info">
-        {{ dlRow("Производитель", car.manufacturer, "product-info__info") }}
-        {{ dlRow("Тип", car.type, "product-info__info") }}
-        {{ dlRow("Тип кузова", car.bodyType, "product-info__info") }}
-        {{ dlRow("Год", car.year, "product-info__info") }}
-        {{ dlRow("Пробег", car.mileage, "product-info__info") }}
-        {{ dlRow("Двигатель", car.engine, "product-info__info") }}
-        {{ dlRow("Мощность", car.power, "product-info__info") }}
-        {{ dlRow("КПП", car.transmission, "product-info__info") }}
-        {{ dlRow("Привод", car.drive, "product-info__info") }}
-        {{ dlRow("Тип оформления", car.customs, "product-info__info", modifier="full", visuallyHidden=true) }}
-        {{ dlRow("Аукцион", car.auction, "product-info__info") }}
-        {{ dlRow("Дата аукциона", car.auctionDate, "product-info__info") }}
-        {{ dlRow("Местонахождение", car.location, "product-info__info") }}
-      </dl>
-    </div>
-    <div class="product-info__content" id="additional" role="tabpanel" tabindex="0" aria-labelledby="tab-additional" hidden>
-      <div class="product-description">
-        {% for text in car.descriptionParagraphs %}
-          <p class="product-description__text">{{ text }}</p>
-        {% endfor %}
+    <!-- Свайпер для контента табов -->
+    <div class="product-info__content-swiper swiper">
+      <div class="product-info__content-wrapper swiper-wrapper">
+
+        <!-- Слайд 1: Характеристики -->
+        <div class="product-info__content-slide swiper-slide" id="specs" role="tabpanel" tabindex="0">
+          <dl class="product-info__info">
+            {{ dlRow("Производитель", car.manufacturer, "product-info__info") }}
+            {{ dlRow("Тип", car.type, "product-info__info") }}
+            {{ dlRow("Тип кузова", car.bodyType, "product-info__info") }}
+            {{ dlRow("Год", car.year, "product-info__info") }}
+            {{ dlRow("Пробег", car.mileage, "product-info__info") }}
+            {{ dlRow("Двигатель", car.engine, "product-info__info") }}
+            {{ dlRow("Мощность", car.power, "product-info__info") }}
+            {{ dlRow("КПП", car.transmission, "product-info__info") }}
+            {{ dlRow("Привод", car.drive, "product-info__info") }}
+            {{ dlRow("Тип оформления", car.customs, "product-info__info", modifier="full", visuallyHidden=true) }}
+            {{ dlRow("Аукцион", car.auction, "product-info__info") }}
+            {{ dlRow("Дата аукциона", car.auctionDate, "product-info__info") }}
+            {{ dlRow("Местонахождение", car.location, "product-info__info") }}
+          </dl>
+        </div>
+
+        <!-- Слайд 2: Дополнительная информация -->
+        <div class="product-info__content-slide swiper-slide" id="additional" role="tabpanel" tabindex="0">
+          <div class="product-description">
+            {% for text in car.descriptionParagraphs %}
+              <p class="product-description__text">{{ text }}</p>
+            {% endfor %}
+          </div>
+        </div>
+
+        <!-- Слайд 3: Видеообзор -->
+        <div class="product-info__content-slide swiper-slide" id="video-review" role="tabpanel" tabindex="0">
+          {{ reviewCard(data=car.videoReview, modClass="review-card--product") }}
+        </div>
+
       </div>
     </div>
-    <div class="product-info__content" id="video-review" role="tabpanel" tabindex="0" aria-labelledby="tab-video-review" hidden>
-      {{ reviewCard(data=car.videoReview, modClass="review-card--product") }}
-    </div>
-
     <div class="product-info__purchase">
       <dl class="product-info__price-block">
         {{ dlRow(car.priceLabel, car.priceValue, "product-info__info") }}
