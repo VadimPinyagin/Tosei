@@ -46,14 +46,14 @@
         {{ dlRow("Местонахождение", car.location, "product-info__info") }}
       </dl>
     </div>
-    <div class="product-info__content" id="additional" role="tabpanel" tabindex="0" aria-labelledby="tab-additional" hidden>
+    <div class="product-info__content" id="additional" role="tabpanel" tabindex="0" aria-labelledby="tab-additional">
       <div class="product-description">
         {% for text in car.descriptionParagraphs %}
           <p class="product-description__text">{{ text }}</p>
         {% endfor %}
       </div>
     </div>
-    <div class="product-info__content" id="video-review" role="tabpanel" tabindex="0" aria-labelledby="tab-video-review" hidden>
+    <div class="product-info__content" id="video-review" role="tabpanel" tabindex="0" aria-labelledby="tab-video-review">
       {{ reviewCard(data=car.videoReview, modClass="review-card--product") }}
     </div>
 
