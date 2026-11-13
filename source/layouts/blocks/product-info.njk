@@ -21,12 +21,14 @@
         {% endfor %}
       </ul>
     </div>
-    <div class="product-info__tabs" role="tablist" aria-label="Характеристики и информация о товаре">
-      {{ tabButton("Характеристики", "specs", isActive=true) }}
-      {{ tabButton("Дополнительная информация", "additional", isActive=false) }}
-      {{ tabButton("Видеообзор", "video-review", isActive=false) }}
+    <div class="product-info__tabs-swiper swiper" data-tabs-swiper>
+      <div class="product-info__tabs swiper-wrapper" role="tablist" aria-label="Характеристики и информация о товаре">
+        {{ tabButton("Характеристики", "specs", isActive=true, hasDataAttr=true) }}
+        {{ tabButton("Дополнительная информация", "additional", isActive=false, hasDataAttr=true) }}
+        {{ tabButton("Видеообзор", "video-review", isActive=false, hasDataAttr=true) }}
+      </div>
+      <div class="product-info__scrollbar swiper-scrollbar" data-scrollbar></div>
     </div>
-
     <!-- Свайпер для контента табов -->
     <div class="product-info__content-swiper swiper">
       <div class="product-info__content-wrapper swiper-wrapper">

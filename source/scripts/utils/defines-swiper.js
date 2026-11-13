@@ -27,8 +27,29 @@ const initProductSwiper = () => {
   });
 };
 
+const initProductInfoSwiper = () => {
+  const tabsSwiper = new Swiper('.product-info__tabs-swiper', {
+    slidesPerView: 'auto',
+    watchSlidesProgress: true,
+    scrollbar: {
+      el: '.product-info__scrollbar',
+      draggable: true,
+      dragSize: 'auto',
+    },
+  });
+
+  new Swiper('.product-info__content-swiper', {
+    autoHeight: true,
+    speed: 400,
+    thumbs: {
+      swiper: tabsSwiper,
+    },
+  });
+};
+
 
 document.addEventListener('DOMContentLoaded', () => {
   initFeedbackSwiper();
   initProductSwiper ();
+  initProductInfoSwiper();
 });

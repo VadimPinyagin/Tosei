@@ -1,6 +1,7 @@
-{% macro tabButton(text, targetId, isActive=false) %}
+{% macro tabButton(text, targetId, isActive=false, className="product-info", hasDataAttr=false) %}
   <button
-    class="product-info__tab {% if isActive %}is-active{% endif %}"
+    class="{{ className }}__tab swiper-slide {% if isActive %}is-active{% endif %}"
+    {% if hasDataAttr %}data-tab-slide{% endif %}
     type="button"
     role="tab"
     aria-selected="{% if isActive %}true{% else %}false{% endif %}"
