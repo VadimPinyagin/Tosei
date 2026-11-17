@@ -5,7 +5,7 @@
   align-items: center;
   font-family: inherit;
   font-weight: 500;
-  line-height: 1;
+  line-height: var(--lh, 1);
   width: 100%;
   border-radius: 4px;
   min-height: var(--h-btn, 44px);
@@ -35,7 +35,8 @@
 }
 
 .btn--search,
-.btn--submit {
+.btn--submit,
+.btn--consultation {
   --font-size-btn: 18px;
   --color: var(--white, white);
   --btn-bg: var(--basic-red, red);
@@ -52,4 +53,18 @@
   --font-size-btn: 17px;
   --h-btn: 54px;
   border: none;
+}
+
+.btn--order {
+  --color: var(--basic-red, red);
+  --btn-bg: var(--white, white);
+  --h-btn: 49px;
+  border: 1px solid var(--color-gray-400, gainsboro);
+  gap: 4px;
+}
+
+.btn--consultation,
+.btn--order {
+  --font-size-btn: 16px;
+  --lh: 1.4;
 }

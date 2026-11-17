@@ -49,6 +49,10 @@
   display: block;
 }
 
+.product-info__purchase {
+  padding: 16px 3px;
+}
+
 .product-info__tabs {
   display: flex;
   gap: 24px;
@@ -92,3 +96,8 @@
   }
 }
 
+.product-info__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
