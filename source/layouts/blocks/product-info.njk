@@ -8,7 +8,7 @@
     <div class="product-info__header">
       {{ sectionTitle(car.title, mixClass="product-info__title", visuallyHidden=false) }}
       <dl class="product-info__info">
-        {{ dlRow("Статус автомобиля", car.statusText, "product-info__info", modifier=car.status, visuallyHidden=true, isStatus=true) }}
+        {{ dlRow("Статус автомобиля", car.carStatus, "product-info__info", modifier=car.status, visuallyHidden=true, isStatus=true) }}
       </dl>
     </div>
 
@@ -30,19 +30,22 @@
       <div class="product-info__swiper-wrapper swiper-wrapper">
         <div class="product-info__content swiper-slide" id="specs" role="tabpanel" tabindex="0" aria-labelledby="tab-specs">
           <dl class="product-info__info">
-            {{ dlRow("Производитель", car.manufacturer, "product-info__info") }}
-            {{ dlRow("Тип", car.type, "product-info__info") }}
-            {{ dlRow("Тип кузова", car.bodyType, "product-info__info") }}
-            {{ dlRow("Год", car.year, "product-info__info") }}
-            {{ dlRow("Пробег", car.mileage, "product-info__info") }}
-            {{ dlRow("Двигатель", car.engine, "product-info__info") }}
-            {{ dlRow("Мощность", car.power, "product-info__info") }}
-            {{ dlRow("КПП", car.transmission, "product-info__info") }}
-            {{ dlRow("Привод", car.drive, "product-info__info") }}
-            {{ dlRow("Тип оформления", car.customs, "product-info__info", modifier="full", visuallyHidden=true) }}
-            {{ dlRow("Аукцион", car.auction, "product-info__info") }}
-            {{ dlRow("Дата аукциона", car.auctionDate, "product-info__info") }}
-            {{ dlRow("Местонахождение", car.location, "product-info__info") }}
+            {{ dlRow("Производитель:", car.manufacturer, "product-info__info") }}
+            {{ dlRow("Год:", car.year, "product-info__info") }}
+            {{ dlRow("Тип кузова:", car.bodyType, "product-info__info") }}
+            {{ dlRow("Цвет:", car.color, "product-info__info") }}
+            {{ dlRow("Руль:", car.steering, "product-info__info") }}
+            {{ dlRow("Пробег:", car.mileage, "product-info__info") }}
+            {{ dlRow("Тип привода:", car.driveType, "product-info__info") }}
+            {{ dlRow("Двигатель:", car.engine, "product-info__info") }}
+            {{ dlRow("Мощность:", car.power, "product-info__info") }}
+            {{ dlRow("КПП:", car.transmission, "product-info__info") }}
+            {{ dlRow("Привод:", car.drive, "product-info__info") }}
+            {{ dlRow("Аукцион:", car.auction, "product-info__info") }}
+            {{ dlRow("Оценка:", car.grade, "product-info__info") }}
+            {{ dlRow("Дата аукциона:", car.auctionDate, "product-info__info") }}
+            {{ dlRow("Местонахождение:", car.location, "product-info__info") }}
+            {{ dlRow("Статус:", car.carStatus, "product-info__info") }}
           </dl>
         </div>
         <div class="product-info__content swiper-slide" id="additional" role="tabpanel" tabindex="0" aria-labelledby="tab-additional">
@@ -59,8 +62,9 @@
     </div>
     <div class="product-info__purchase">
       <dl class="product-info__price-block">
-        {{ dlRow(car.priceLabel, car.priceValue, "product-info__info") }}
+        {{ dlRow(car.priceLabel, car.priceValue, "product-info__info", "price") }}
       </dl>
+      <span class="product-info__purchase-note">Цена указана с учетом НДС</span>
       <div class="product-info__actions">
         {{ button("Консультация бесплатно", type="button", className="btn--consultation") }}
         {{ button("Оставить заявку", type="button", className="btn--order") }}

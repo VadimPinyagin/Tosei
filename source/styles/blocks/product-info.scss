@@ -3,7 +3,26 @@
 }
 
 .product-info__info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.product-info__info-row {
+  display: flex;
+  gap: 8px;
+}
+
+.product-info__info-value {
+  margin-inline-start: 0;
+}
+
+.product-info__info-term {
+  color: var(--color-gray-500, grey);
 }
 
 .product-info__header {
