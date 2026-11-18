@@ -19,6 +19,11 @@
   <input class="{{ className }}__input" type="{{ type }}" name="{{ name }}" id="input-{{ name }}" placeholder="{{ placeholder }}">
 {% endmacro %}
 
+{% macro textarea(label, name="", placeholder="", className="", rows="4") %}
+  <label class="{{ className }}__label" for="textarea-{{ name }}">{{ label }}</label>
+  <textarea class="{{ className }}__input" name="{{ name }}" id="textarea-{{ name }}" placeholder="{{ placeholder }}" rows="{{ rows }}"></textarea>
+{% endmacro %}
+
 {% macro checkbox(label, name, checked=false, className="") %}
   <input class="{{ className }}-checkbox" type="checkbox" name="{{ name }}" id="check-{{ name }}" {% if checked %}checked{% endif %}>
   <label class="{{ className }}-label {{ className }}-label--checkbox" for="check-{{ name }}">{{ label }}</label>

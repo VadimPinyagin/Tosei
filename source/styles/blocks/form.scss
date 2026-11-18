@@ -14,6 +14,18 @@
   margin-block-start: 33px;
   width: 332px;
   padding-block: 27px 24px;
+  margin-block-end: -217px;
+  z-index: 1;
+}
+
+.form--feedback {
+  width: 332px;
+  position: relative;
+  z-index: 1;
+  margin-block-start: -217px;
+  margin-block-end: 0;
+  margin-inline: auto;
+
 }
 
 .form__module {

@@ -12,7 +12,7 @@
       {{ dlRow("Привод", data.drive, className + "__info") }}
       {{ dlRow("КПП", data.transmission, className + "__info") }}
       {{ dlRow(data.priceLabel, data.priceValue, className + "__info", modifier="price", visuallyHidden=false) }}
-      {{ dlRow("Статус автомобиля", data.statusText, className + "__info", modifier=data.status, visuallyHidden=true, isStatus=true) }}
+      {{ dlRow("Статус автомобиля", data.carStatus, className + "__info", modifier=data.status, visuallyHidden=true, isStatus=true) }}
     </dl>
   </a>
 {% endmacro %}

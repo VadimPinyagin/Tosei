@@ -1,4 +1,4 @@
-{% from "macros/fields.njk" import select, input, checkbox %}
+{% from "macros/fields.njk" import select, input, checkbox, textarea %}
 {% from "macros/btn.njk" import button %}
 {% from "macros/components.njk" import sectionTitle %}
 
@@ -63,6 +63,24 @@
         </li>
         <li class="form__list-item form__list-item--callback">
           {{ input("Контактный телефон", "tel", "user_phone", "+7", "form") }}
+        </li>
+      </ul>
+    </fieldset>
+    {{ button("Проконсультировать бесплатно", "submit", "form__btn btn--submit") }}
+  {% endif %}
+  {% if formType == "feedback" %}
+    <fieldset class="form__module form__module--callback">
+      <legend class="visually-hidden">Контактные данные для обратной связи</legend>
+      {{ sectionTitle("Написать нам", "contacts__form-title") }}
+      <ul class="form__list form__list--callback">
+        <li class="form__list-item form__list-item--callback">
+          {{ input("Ваше имя", "text", "user_name", "Ввести", "form") }}
+        </li>
+        <li class="form__list-item form__list-item--callback">
+          {{ input("Контактный телефон", "tel", "user_phone", "+7", "form") }}
+        </li>
+        <li class="form__list-item form__list-item--callback">
+          {{ textarea("Ваше сообщение", "user_message", "", "form") }}
         </li>
       </ul>
     </fieldset>

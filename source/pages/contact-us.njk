@@ -1,0 +1,9 @@
+{% extends template %}
+
+{% set pageTitle = "Контакты" %}
+{% set currentPage = "contacts-us.njk" %}
+
+{% block main %}
+  {% include "./blocks/breadcrumbs-nav.njk" %}
+  {% include "./blocks/contacts.njk" %}
+{% endblock %}

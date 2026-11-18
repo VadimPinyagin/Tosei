@@ -1,7 +1,14 @@
 {% from "macros/breadcrumbs.njk" import breadcrumbs %}
 
-{{ breadcrumbs([
-  { name: "Главная", url: "index.html" },
-  { name: "Каталог", url: "catalog.html" },
-  { name: car.title, url: "#" }
-]) }}
+{% if car %}
+  {{ breadcrumbs([
+    { name: "Главная", url: "index.html" },
+    { name: "Каталог", url: "catalog.html" },
+    { name: car.title, url: "#" }
+  ]) }}
+{% else %}
+  {{ breadcrumbs([
+    { name: "Главная", url: "index.html" },
+    { name: "Контакты", url: "#" }
+  ]) }}
+{% endif %}

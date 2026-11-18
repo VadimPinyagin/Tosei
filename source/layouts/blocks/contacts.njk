@@ -3,7 +3,7 @@
 
 <section class="contacts">
   <div class="contacts__inner container">
-    {{ sectionTitle("Как с нами связаться?", "contacts__title") }}
+    {{ sectionTitle("Как с нами связаться?" if currentPage == "index.njk" else "Контакты", "contacts__title") }}
     <address class="contacts__address address">
       <p class="address__text">Владивосток,&nbsp;ул. Фадеева,&nbsp;д.&nbsp;47 строение&nbsp;1</p>
       <dl class="address__info">
@@ -15,11 +15,21 @@
         {{ contactRow("spec@tosei.ru", "spec@tosei.ru", "", "mailto") }}
       </dl>
     </address>
+
+    {% if currentPage == "index.njk" %}
       {% set formType = "callback" %}
       {% set mixClass = "contacts__form form--collback" %}
       {% include "blocks/callback.njk" %}
+    {% endif %}
   </div>
+
   <div class="contacts__map map" id="map">
     <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A9b6e9b1612a861a6ab6245823280663c339c252242e8f9e08d0695f9645bac98&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
   </div>
+
+  {% if currentPage != "index.njk" %}
+    {% set formType = "feedback" %}
+    {% set mixClass = "contacts__form form--feedback" %}
+    {% include "blocks/callback.njk" %}
+  {% endif %}
 </section>
