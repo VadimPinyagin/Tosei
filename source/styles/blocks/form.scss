@@ -19,13 +19,11 @@
 }
 
 .form--feedback {
-  width: 332px;
   position: relative;
   z-index: 1;
-  margin-block-start: -217px;
-  margin-block-end: 0;
+  margin-block: -217px 0;
   margin-inline: auto;
-
+  resize: vertical;
 }
 
 .form__module {
@@ -145,10 +143,15 @@
   text-overflow: ellipsis;
 }
 
-.form__input[type=text],[type=tel]{
-  font-size: 13px;
-  padding-block: 12px;
+.form__input{
+  resize: vertical;
+
+  &[type=text],[type=tel]{
+    font-size: 13px;
+    padding-block: 12px;
+  }
 }
+
 
 .form__legend {
   padding: 3px 0 9px;
