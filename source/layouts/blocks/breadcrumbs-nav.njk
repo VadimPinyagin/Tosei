@@ -7,8 +7,10 @@
     { name: car.title, url: "#" }
   ]) }}
 {% else %}
-  {{ breadcrumbs([
-    { name: "Главная", url: "index.html" },
-    { name: "Контакты", url: "#" }
-  ]) }}
+  {% set crumbs = [{ name: "Главная", url: "index.html" }] %}
+  {% if parentTitle %}
+    {% set crumbs = crumbs.concat([{ name: parentTitle }]) %}
+  {% endif %}
+  {% set crumbs = crumbs.concat([{ name: pageTitle }]) %}
+  {{ breadcrumbs(crumbs) }}
 {% endif %}

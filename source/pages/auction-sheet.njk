@@ -1,0 +1,10 @@
+{% extends template %}
+
+{% set parentTitle = "Информация" %}
+{% set pageTitle = "Аукционный лист" %}
+{% set currentPage = "auction-sheet.njk" %}
+
+{% block main %}
+  {% include "./blocks/breadcrumbs-nav.njk" %}
+  {% include "./blocks/auction-sheet-info.njk" %}
+{% endblock %}

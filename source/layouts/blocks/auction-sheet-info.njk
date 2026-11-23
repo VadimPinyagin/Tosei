@@ -1,0 +1,12 @@
+{% from "macros/components.njk" import sectionTitle %}
+
+<section class="auction-sheet-info">
+  <div class="container">
+    {{ sectionTitle("Как читать акционный лист", "auction-sheet-info__title") }}
+    <div class="auction-sheet-info__description">
+      {% for text in descriptions.descriptionList %}
+        <p class="auction-sheet-info__text">{{ text }}</p>
+      {% endfor %}
+    </div>
+  </div>
+</section>

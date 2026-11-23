@@ -5,8 +5,10 @@
         <li class="breadcrumbs__item">
           {% if loop.last %}
             <a class="breadcrumbs__link breadcrumbs__link--current" aria-current="page">{{ link.name }}</a>
-          {% else %}
+          {% elif link.url %}
             <a class="breadcrumbs__link" href="{{ link.url }}">{{ link.name }}</a>
+          {% else %}
+            <span class="breadcrumbs__link">{{ link.name }}</span>
           {% endif %}
         </li>
       {% endfor %}
